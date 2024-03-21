@@ -36,7 +36,7 @@
         rect {
             opacity: 60%;
             transition: 0.2s;
-
+            filter: url(desaturate.svg#greyscale);
             -moz-filter: grayscale(100%);
             -ms-filter: grayscale(100%);
             -o-filter: grayscale(100%);
@@ -45,6 +45,7 @@
 
         rect:hover {
             opacity: 100%;
+            filter: none;
             -moz-filter: grayscale(0%);
             -ms-filter: grayscale(0%);
             -o-filter: grayscale(0%);
@@ -78,6 +79,7 @@
 
         .highlightgroup {
             opacity: 100%;
+            filter: none;
             -moz-filter: grayscale(0%);
             -ms-filter: grayscale(0%);
             -o-filter: grayscale(0%);
@@ -85,21 +87,14 @@
 
 
         }
-
-        .semihighlight {
-            opacity: 85%;
-            filter: none;
-        }
-
         .search {
             margin-top: 1vw;
             border-radius: 8px;
+            filter: none;
             -moz-filter: grayscale(0%);
             -ms-filter: grayscale(0%);
             -o-filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
-
-
         }
 
         ul {
