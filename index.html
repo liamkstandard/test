@@ -34,18 +34,24 @@
 
 
         rect {
-            opacity: 40%;
+            opacity: 60%;
             transition: 0.2s;
 
+            -moz-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
             -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
         }
 
         rect:hover {
             opacity: 100%;
 
-
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
-
+            filter: none;
 
         }
 
@@ -74,14 +80,23 @@
 
         .highlightgroup {
             opacity: 100%;
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
-
+            filter: none;
 
         }
+
         .search {
             margin-top: 1vw;
             border-radius: 8px;
+
+            -moz-filter: grayscale(0%);
+            -ms-filter: grayscale(0%);
+            -o-filter: grayscale(0%);
             -webkit-filter: grayscale(0%);
+            filter: none;
         }
 
         ul {
@@ -112,6 +127,7 @@
         }
         function myFunction() {
             // Declare variables
+            let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById('myInput');
             filter = input.value.toUpperCase();
@@ -122,6 +138,16 @@
                 txtValue = rect[i].getAttribute('inkscape:label') || "";
                 if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != '') {
                     rect[i].classList.add('highlightgroup');
+                    if (isSafari == true) {
+                        seamless.scrollIntoView(rect[i], {
+                            behavior: "smooth",
+                            block: "center",
+                            inline: "center"
+                        });
+                    }
+                    else {
+                        rect[i].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+                    }
                 } else {
                     rect[i].classList.remove('highlightgroup');
                 }
@@ -166,6 +192,7 @@
                         transform="matrix(0.06313131,0,0,0.04960317,-15.232323,-20.86508)" clip-rule="evenodd"
                         id="path294" />
                 </clipPath>
+
             </defs>
             <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
                 inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
