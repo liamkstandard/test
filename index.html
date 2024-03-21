@@ -27,9 +27,7 @@
                 margin-top: 5%;
             }
 
-            #svg1 {
-
-            }
+            #svg1 {}
 
         }
 
@@ -70,8 +68,9 @@
             border-radius: 12px;
             transition: 0.2s;
         }
-        .clicked{
-            background-color: #161616 !important; 
+
+        .clicked {
+            background-color: #161616 !important;
             color: white !important;
         }
 
@@ -102,21 +101,25 @@
         ul {
             margin-bottom: 10%;
         }
-        
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@2.3.4"></script>
     <script>
 
-        function highlightgroup(groupname,classname) {
+        function highlightgroup(groupname, classname) {
             let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
             let li = document.getElementsByClassName(classname)
             let elements = document.getElementById(groupname).children
             for (let i = 0; i < elements.length; i++) {
                 elements[i].classList.toggle('highlightgroup');
-                if(isSafari == true){
-                    elements[i].scrollIntoViewIfNeeded()
+                if (isSafari == true) {
+                    seamless.scrollIntoView(elements[i], {
+                        behavior: "smooth",
+                        block: "center",
+                        inline: "center"
+                    });
                 }
-                else{
-                    elements[i].scrollIntoView({behavior:"smooth",block:"center",inline:"center"})
+                else {
+                    elements[i].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
                 }
             }
             li[0].classList.toggle('clicked')
@@ -147,8 +150,10 @@
             <input class="search w3-bar-item w3-input w3-white w3-mobile" id="myInput" onkeyup="myFunction()"
                 type="text" placeholder="Search..">
             <li class="cedar w3-bar-item w3-button " onclick="highlightgroup('layer1','cedar')">Cedar</li>
-            <li class="FramingLumber w3-bar-item w3-button " onclick="highlightgroup('layer2','FramingLumber')">Framing Lumber</li>
-            <li class="TreatedLumber w3-bar-item w3-button" onclick="highlightgroup('layer3','TreatedLumber')">Treated Lumber</li>
+            <li class="FramingLumber w3-bar-item w3-button " onclick="highlightgroup('layer2','FramingLumber')">Framing
+                Lumber</li>
+            <li class="TreatedLumber w3-bar-item w3-button" onclick="highlightgroup('layer3','TreatedLumber')">Treated
+                Lumber</li>
             <li class="Fascia w3-bar-item w3-button" onclick="highlightgroup('layer4','Fascia')">Fascia</li>
             <li class="Rebar w3-bar-item w3-button" onclick="highlightgroup('layer5','Rebar')">Rebar</li>
             <li class="Plywood w3-bar-item w3-button" onclick="highlightgroup('layer6','Plywood')">Plywood</li>
