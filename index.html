@@ -50,7 +50,6 @@
       }
 
 
-
       rect {
          opacity: 20%;
          transition: 0.2s;
@@ -72,6 +71,7 @@
          filter: none;
 
       }
+
 
       ul.categories {
          margin: 0;
@@ -118,6 +118,16 @@
 
       }
 
+      text {
+         transition: 0.2s;
+         pointer-events: none;
+      }
+
+      .nametext {
+         fill: white;
+
+      }
+
       .search {
          margin-top: 1vw;
          border-radius: 8px;
@@ -133,8 +143,26 @@
          margin-bottom: 10%;
       }
    </style>
+
    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@2.3.4"></script>
+   <script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.0/dist/svg-pan-zoom.min.js"></script>
    <script>
+      const SVG_NS = 'http://www.w3.org/2000/svg';
+      const queryString = window.location.search;
+      let product = ""
+      console.log(queryString)
+      if (queryString != "") {
+         const urlParams = new URLSearchParams(queryString);
+         product = urlParams.get('product').split(',')
+         console.log(product);
+      }
+
+
+      // shirt
+
+      // Declare variables
+
+
       function highlightgroup(groupname, classname) {
          let allli = document.getElementsByClassName('clicked')
          let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
@@ -144,38 +172,94 @@
          for (let i = 0; i < allelementsh.length; i++) {
             allelementsh[i].classList.remove('highlightgroup')
          }
-         if (allli.length == 0 ){
+         if (allli.length == 0) {
             for (let i = 0; i < elements.length; i++) {
-            elements[i].classList.add('highlightgroup');
-            if (isSafari == true) {
-               seamless.scrollIntoView(elements[i], {
-                  behavior: "smooth",
-                  block: "center",
-                  inline: "center"
-               });
+               elements[i].classList.add('highlightgroup');
+               if (isSafari == true) {
+
+                  seamless.scrollIntoView(elements[i], {
+                     behavior: "smooth",
+                     block: "center",
+                     inline: "center"
+                  });
+               }
+               else {
+                  elements[i].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+               }
             }
-            else {
-               elements[i].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+            for (let i = 0; i < allli.length; i++) {
+               console.log(allli)
+               allli[i].classList.remove('clicked')
             }
+            li[0].classList.toggle('clicked')
          }
-         for  (let i = 0; i < allli.length; i++){
-            console.log(allli)
-            allli[i].classList.remove('clicked')
-            }
-         li[0].classList.toggle('clicked')
-         }
-         else{
+         else {
             for (let i = 0; i < elements.length; i++) {
                elements[i].classList.remove('highlightgroup');
             }
-            for  (let i = 0; i < allli.length; i++){
-            allli[i].classList.remove('clicked')
+            for (let i = 0; i < allli.length; i++) {
+               allli[i].classList.remove('clicked')
             }
          }
 
 
       }
+      function showname(id) {
+         console.log(id)
+         let element = document.getElementById(id)
+         let alltext = document.querySelectorAll("text")
+         console.log(element.getAttributeNames())
+         let svg1 = document.querySelector(`rect#${id}`)
+         let svg = svg1.closest('g[id]')
+         //the array of the rects with a white fill
+         let rects = Array.from(svg.querySelectorAll(`rect[id='${id}']`));
+         //an array of true values as long as the rects array
+         let arr = Array(rects.length).fill(true);
+         //for each rect in the rects array
+         console.log(alltext)
+         console.log(document.querySelectorAll('text'))
+         document.querySelectorAll('text').forEach(e => e.remove());
 
+         rects.forEach((r, i) => {
+            //get the position end the size of the rect (the bounding box)
+            let bb = r.getBBox();
+            //the center of the rect
+            let x = bb.x + bb.width / 4;
+            let y = bb.y + bb.height / 2;
+            //on click
+            //if there isn't already a text element there
+            if (arr[i]) {
+               //add a text element
+               let txt = drawSVGelmt({ x: x, y: y }, "text", svg)
+               txt.textContent = svg1.children[1].innerHTML;
+               arr[i] = false;
+            }
+
+         })
+      }
+      function removename(id) {
+         let svg1 = document.querySelector(`rect#${id}`)
+         console.log(id)
+         console.log(document.querySelectorAll('text'))
+         document.querySelectorAll('text').forEach(e => e.remove())
+      }
+
+      // a function to create a new svg element
+      function drawSVGelmt(o, tag, parent) {
+         console.log(o)
+         let elmt = document.createElementNS(SVG_NS, tag);
+         elmt.classList.add("nametext")
+
+         console.log(elmt)
+         for (var name in o) {
+            if (o.hasOwnProperty(name)) {
+               elmt.setAttributeNS(null, name, o[name]);
+
+            }
+         }
+         parent.appendChild(elmt);
+         return elmt;
+      }
       function myFunction() {
          // Declare variables
          let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
@@ -189,6 +273,7 @@
             txtValue = rect[i].getAttribute('inkscape:label') || "";
             if (txtValue.toUpperCase().indexOf(filter) > -1 && filter != '') {
                rect[i].classList.add('highlightgroup');
+
                if (isSafari == true) {
                   seamless.scrollIntoView(rect[i], {
                      behavior: "smooth",
@@ -208,6 +293,7 @@
 </head>
 
 <body>
+
    <div class="navbar">
       <ul class="productlist w3-bar w3-light-grey">
          <input class="search w3-bar-item w3-input w3-white w3-mobile" id="myInput" onkeyup="myFunction()" type="text"
@@ -227,6 +313,8 @@
             <li class="FinishedLumbMould w3-bar-item w3-button" onclick="highlightgroup('layer8','FinishedLumbMould')">
                Finished Lumber / Mouldings</li>
             <li class="drywall w3-bar-item w3-button" onclick="highlightgroup('layer9','drywall')">Drywall</li>
+            <li class="EngineeredWood w3-bar-item w3-button" onclick="highlightgroup('layer17','EngineeredWood')">
+               Engineered Wood</li>
          </ul>
       </ul>
    </div>
@@ -249,9 +337,9 @@
          </defs>
          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
             inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="0.9963235" inkscape:cx="628.81183"
-            inkscape:cy="291.57197" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912"
-            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer8">
+            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="0.9963235" inkscape:cx="487.79337"
+            inkscape:cy="348.7823" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912"
+            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer17">
             <inkscape:page x="0" y="0" inkscape:label="1" id="page1" width="1007.68" height="437.60001" margin="0"
                bleed="0" />
          </sodipodi:namedview>
@@ -1653,7 +1741,12 @@
          <g inkscape:groupmode="layer" id="layer14" inkscape:label="Siding"
             transform="translate(-36.639999,-185.27998)">
             <rect style="fill:#800000;stroke-width:0.959333" id="rect58" width="109.90407" height="83.180809"
-               x="347.02585" y="334.47971" inkscape:label="fir siding" />
+               x="347.02585" y="334.47971" inkscape:label="fir siding" onclick="" onmouseover="showname(id)"
+               onmouseout="removename(id)">
+               <desc id="desc1">Fir Siding
+               </desc>
+               <title id="title1">Fir Siding</title>
+            </rect>
             <rect style="fill:#800000;stroke-width:0.292098" id="rect58-8" width="10.538753" height="80.420662"
                x="337.2673" y="334.55304" inkscape:label="fir siding" />
          </g>
@@ -1686,11 +1779,78 @@
                height="6.2100153" x="262.59494" y="358.58405"
                inkscape:label="simpson strong tie joist angle hanger post sadle hardware" />
          </g>
+         <g inkscape:groupmode="layer" id="layer17" inkscape:label="Engineered Wood">
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect60" width="25.845018" height="6.2730627"
+               x="835.19562" y="419.16608" inkscape:label="engineered wood parallam psl microllam lvl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect60-5" width="25.845018" height="6.2730627"
+               x="862.47601" y="419.21402" inkscape:label="engineered wood parallam psl microllam lvl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect60-6" width="25.845018" height="6.2730627"
+               x="889.78229" y="419.26569" inkscape:label="engineered wood parallam psl microllam lvl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect60-8" width="25.845018" height="6.2730627"
+               x="917.76752" y="419" inkscape:label="engineered wood parallam psl microllam lvl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect60-4" width="25.845018" height="6.2730627"
+               x="828.78229" y="396.9668" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.966104" id="rect60-4-6" width="34.125462"
+               height="5.0184503" x="836.09961" y="391.49445" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.88063" id="rect60-4-6-7" width="28.354244"
+               height="5.0184503" x="872.42804" y="391.49448" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.88063" id="rect60-4-6-7-7" width="28.354244"
+               height="5.0184503" x="908.12915" y="391.35486" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.964779" id="rect60-4-6-7-7-5" width="34.031971"
+               height="5.0184503" x="938.51721" y="391.58057" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.926209" id="rect60-2" width="25.092251"
+               height="6.2730627" x="855.21771" y="396.98523" inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.853923" id="rect60-57" width="21.328413"
+               height="6.2730627" x="903.14532" y="396.91257" inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.888389" id="rect60-57-9"
+               width="23.084871" height="6.2730627" x="925.60663" y="396.93466"
+               inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.944552" id="rect60-57-93"
+               width="26.095942" height="6.2730627" x="950.43317" y="397.19296"
+               inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.654929" id="rect60-57-93-2"
+               width="12.546125" height="6.2730627" x="946.6828" y="418.90085"
+               inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.667899" id="rect60-57-93-5"
+               width="13.047971" height="6.2730627" x="960.47247" y="418.80862"
+               inkscape:label="engineered wood parallam psl" />
+            <rect style="display:inline;fill:#008000;stroke:none;stroke-width:0.833589" id="rect60-21" width="20.324722"
+               height="6.2730627" x="881.56598" y="396.90884" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect61" width="5.4575648" height="13.298893"
+               x="823.21405" y="383.91144" inkscape:label="engineered wood parallam psl" />
+            <rect style="fill:#008000;stroke:none;stroke-width:0.94" id="rect62" width="5.6777287" height="13.041033"
+               x="977.36774" y="383.77896" inkscape:label="engineered wood parallam psl" />
+         </g>
       </svg>
-
-
    </div>
+   <script>
+      let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 
+      allg = document.querySelectorAll('[id*="layer"] > rect')
+      rect = allg
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < rect.length; i++) {
+         txtValue = rect[i].getAttribute('inkscape:label') || "";
+         for (k = 0; k < product.length; k++) {
+            console.log(product[k].toUpperCase())
+            if (txtValue.toUpperCase().indexOf(product[k].toUpperCase()) > -1 && product[k].toUpperCase() != '') {
+               rect[i].classList.add('highlightgroup');
+
+               if (isSafari == true) {
+                  seamless.scrollIntoView(rect[i], {
+                     behavior: "smooth",
+                     block: "center",
+                     inline: "center"
+                  });
+               }
+               else {
+                  rect[i].scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+               }
+            }
+         }
+
+      }
+   </script>
 </body>
 
 </html>
