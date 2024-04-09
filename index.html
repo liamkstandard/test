@@ -8,6 +8,7 @@
    <title>Document</title>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
    <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet">
@@ -182,6 +183,39 @@
          transition: 0.2s;
 
       }
+
+      .slide-top {
+         -webkit-animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
+         animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
+      }
+
+      @-webkit-keyframes slide-top {
+         0% {
+            -webkit-transform: translateY(+100px);
+            transform: translateY(+100px);
+         }
+
+         100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes slide-top {
+         0% {
+            -webkit-transform: translateY(+100px);
+            transform: translateY(+100px);
+         }
+
+         100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+         }
+      }
+
+      input.animate__fadeInDown {
+         animation-delay: 0.2s;
+      }
    </style>
 
    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@2.3.4"></script>
@@ -236,7 +270,6 @@
          }
       }
       function clearselected() {
-         console.log('test')
          document.querySelectorAll('ul > li').forEach(e => e.classList.remove('clicked'));
          document.querySelectorAll('div[class="productdropdown"] > ul > li').forEach(e => e.remove('clicked'))
          document.querySelectorAll('rect[class="highlightgroup"]').forEach(e => e.classList.remove('highlightgroup'));
@@ -252,6 +285,7 @@
                li.innerText = subproduct[i];
                li.style.animation = 'fade-in  0.5s';
                li.setAttribute('onclick', `showonlysubproduct(${groupname},"${subproduct[i]}")`)
+               li.classList.toggle('slide-top')
                ul.appendChild(li);
             }
          }
@@ -366,14 +400,16 @@
          }
       }
    </script>
+
+
 </head>
 
 <body onload="document.body.style.opacity='1'">
 
 
-   <ul class="productlist w3-bar w3-light-grey">
-      <input class="search w3-bar-item w3-input w3-white w3-mobile" id="myInput" onkeyup="myFunction()" type="text"
-         placeholder="Search for a product..">
+   <ul class="productlist animate__animated animate__fadeInDown w3-bar w3-light-grey">
+      <input class="search animate__animated animate__fadeInDown w3-bar-item w3-input w3-white w3-mobile" id="myInput"
+         onkeyup="myFunction()" type="text" placeholder="Search for a product..">
       <ul class="categories">
          <li class="cedar w3-bar-item w3-button " onclick="highlightgroup('layer1','cedar')">Cedar</li>
          <li class="FramingLumber w3-bar-item w3-button " onclick="highlightgroup('layer2','FramingLumber')">
@@ -398,8 +434,6 @@
          <li class="EngineeredWood w3-bar-item w3-button" onclick="highlightgroup('layer17','EngineeredWood')">
             Engineered Wood</li>
       </ul>
-
-
    </ul>
    </div>
    <div class="map">
@@ -421,9 +455,9 @@
          </defs>
          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
             inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="1.4090142" inkscape:cx="75.229902"
-            inkscape:cy="224.62513" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8"
-            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer17">
+            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="0.9963235" inkscape:cx="516.39854"
+            inkscape:cy="196.22141" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912"
+            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer2">
             <inkscape:page x="0" y="0" inkscape:label="1" id="page1" width="1007.68" height="437.60001" margin="0"
                bleed="0" />
          </sodipodi:namedview>
@@ -1676,7 +1710,6 @@
                style="fill:none;stroke:#000000;stroke-width:0.96;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
                transform="rotate(-90,351.03999,46.240005)" />
          </g>
-         <g inkscape:groupmode="layer" id="layer15" inkscape:label="building" />
          <g inkscape:groupmode="layer" id="layer1" inkscape:label="cedar" style="display:inline"
             transform="translate(-36.639999,-185.27998)">
             <desc id="desc3">Lattice,Siding,Fence boards,Fence panels,Beams,Shingles,Decking,Clear,Rough,Knotty</desc>
@@ -1705,13 +1738,19 @@
          </g>
          <g inkscape:groupmode="layer" id="layer2" inkscape:label="Framing Lumber" style="fill:#00ff00"
             transform="translate(-36.639999,-185.27998)">
-            <desc id="desc2">1x2, 2x2, 2x3,2x4, 2x6,2x8 ,2x10 ,2x12,CANTSTRIPS </desc>
-            <rect style="fill:#00ff00;stroke-width:0.66594192;stroke:none;stroke-opacity:1;stroke-dasharray:none"
-               id="rect8" width="104.84636" height="11.151912" x="471.05417" y="196.84502"
-               inkscape:label="2x4 2x6 KD fir framing lumber" />
-            <rect style="fill:#00ff00;stroke-width:0.61435794;stroke:none;stroke-opacity:1;stroke-dasharray:none"
-               id="rect8-6" width="89.232605" height="11.151912" x="576.06519" y="197.0266"
-               inkscape:label="2x4 2x6 KD fir framing lumber" />
+            <desc id="desc2">1x2,2x2,2x3,2x4,2x6,2x8,2x10,2x12,CANTSTRIPS </desc>
+            <rect style="fill:#00ff00;stroke:none;stroke-width:0.485867;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8" width="53.407242" height="11.653756" x="471.05417" y="196.5941"
+               inkscape:label="2x4 KD fir framing lumber" />
+            <rect style="fill:#00ff00;stroke:none;stroke-width:0.485868;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8-2" width="53.407242" height="11.653757" x="523.78021" y="196.44234"
+               inkscape:label="2x6 KD fir framing lumber" />
+            <rect style="fill:#00ff00;stroke:none;stroke-width:0.502191;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8-6" width="59.623749" height="11.151912" x="576.06519" y="197.0266"
+               inkscape:label="2x8 KD fir framing lumber" />
+            <rect style="fill:#00ff00;stroke:none;stroke-width:0.359276;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8-6-7" width="30.516733" height="11.151912" x="634.94995" y="196.69327"
+               inkscape:label="2x10 KD fir framing lumber" />
             <rect style="fill:#00ff00" id="rect9" width="327.20294" height="9.0332108" x="700.57562" y="194.71587"
                inkscape:label="fir 1x4 common 1x10 hemboard 1x8 shiplap framing lumber" />
             <rect style="fill:#00ff00;stroke-width:0.805949" id="rect10" width="6.1334634" height="203.76997"
@@ -1724,8 +1763,16 @@
                x="788.99878" y="301.25769" inkscape:label="2x8 2x12 2x10 spruce framing lumber" />
             <rect style="fill:#00ff00;stroke-width:0.709659" id="rect13" width="90.99646" height="16.413898"
                x="893.62347" y="347.27676" inkscape:label="2x10 2x6 KD spruce 8-16s framing lumber" />
-            <rect style="fill:#00ff00" id="rect14" width="134.49446" height="13.047971" x="490.80441" y="243.89668"
-               inkscape:label="1x2 2x2 COM 2x3 2x12 KD FIR CANTSTRIPS framing lumber" />
+            <rect style="fill:#00ff00;stroke-width:0.46721" id="rect14" width="29.357929" height="13.047971"
+               x="490.5535" y="243.89668" inkscape:label="1x2  framing lumber" />
+            <rect style="fill:#00ff00;stroke-width:0.376553" id="rect14-6" width="19.070107" height="13.047971"
+               x="519.15662" y="243.99585" inkscape:label="2x2  framing lumber" />
+            <rect style="fill:#00ff00;stroke-width:0.541631" id="rect14-6-2" width="39.455715" height="13.047971"
+               x="537.1142" y="243.86607" inkscape:label="2x3  framing lumber" />
+            <rect style="fill:#00ff00;stroke-width:0.518349" id="rect14-6-2-0" width="36.634682" height="12.870542"
+               x="576.57361" y="244.22093" inkscape:label="2x12  framing lumber" />
+            <rect style="fill:#00ff00;stroke-width:0.358793" id="rect14-6-2-0-0" width="17.313648" height="13.047971"
+               x="612.11969" y="244.29843" inkscape:label="cantstrips framing lumber" />
             <rect style="fill:#00ff00" id="rect15" width="96.35424" height="17.062731" x="672.47235" y="252.92989"
                inkscape:label="fir longs 22-24' MISC overstock framing lumber" />
             <rect style="fill:#00ff00" id="rect16" width="45.16605" height="13.047971" x="626.30261" y="251.92619"
@@ -1777,17 +1824,20 @@
          </g>
          <g inkscape:groupmode="layer" id="layer6" inkscape:label="Plywood"
             transform="translate(-36.639999,-185.27998)">
+            <desc id="desc6">Fir,OSB,Specialty</desc>
             <rect style="fill:#808000" id="rect30" width="99.365311" height="9.0332108" x="534.9668" y="406.49448"
                inkscape:label="plywood" />
             <rect style="fill:#808000" id="rect31" width="8.02952" height="118.43542" x="633.32843" y="417.53506"
                inkscape:label="specialty plywood" />
-            <rect style="display:inline;fill:#808000;stroke-width:1.05096" id="rect32" width="11.166053"
-               height="173.38745" x="254.93727" y="309.4502" inkscape:label="fir osb plywood" />
+            <rect style="display:inline;fill:#808000;stroke-width:0.699371" id="rect32" width="11.166053"
+               height="76.78228" x="254.93727" y="406.05536" inkscape:label="fir plywood" />
+            <rect style="display:inline;fill:#808000;stroke-width:0.78549" id="rect32-9" width="11.166053"
+               height="96.856079" x="255.0127" y="309.2652" inkscape:label="osb plywood" />
             <rect style="fill:#808000" id="rect33" width="58.214024" height="8.02952" x="928.41327" y="395.45389"
                inkscape:label="plywood" />
          </g>
          <g inkscape:groupmode="layer" id="layer7" inkscape:label="Concrete"
-            transform="translate(-36.639999,-185.27998)">
+            transform="translate(-36.639999,-185.27998)" style="display:inline">
             <rect style="fill:#ff6600;stroke-width:0.947571" id="rect34" width="22.963102" height="73.857323"
                x="314.57074" y="340.66666" inkscape:label="concrete mortal cement sand thinset" />
          </g>
@@ -1825,8 +1875,8 @@
             <rect style="fill:#008000;stroke-width:1.02681" id="rect52" width="34.125462" height="12.169742"
                x="574.11072" y="477.25461" inkscape:label="drywall" />
          </g>
-         <g inkscape:groupmode="layer" id="layer14" inkscape:label="Siding"
-            transform="translate(-36.639999,-185.27998)">
+         <g inkscape:groupmode="layer" id="layer14" inkscape:label="Siding" transform="translate(-36.639999,-185.27998)"
+            style="display:inline">
             <rect style="fill:#800000;stroke-width:0.959333" id="rect58" width="109.90407" height="83.180809"
                x="347.02585" y="334.47971" inkscape:label="fir siding" onclick="" onmouseover="showname(id)"
                onmouseout="removename(id)">
@@ -1910,15 +1960,11 @@
                x="977.36774" y="383.77896" inkscape:label="engineered wood parallam psl" />
          </g>
       </svg>
-
    </div>
-
    <div class="productdropdown">
       <ul>
       </ul>
    </div>
-
-
    <script>
       allg = document.querySelectorAll('[id*="layer"] > rect')
       rect = allg
