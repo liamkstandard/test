@@ -66,9 +66,10 @@
          #svg1 {}
       }
 
+
       rect {
          opacity: 20%;
-         transition: 0.2s;
+         transition: 0.35s;
 
          -moz-filter: grayscale(100%);
          -ms-filter: grayscale(100%);
@@ -145,6 +146,10 @@
       .nametext {
          fill: white;
 
+      }
+
+      .clickedsub {
+         background: #272727;
       }
 
       .search {
@@ -263,14 +268,30 @@
             li[0].classList.toggle('clicked')
             showsubproducts(groupname, subproducts)
          }
+
          else {
-            for (let i = 0; i < elements.length; i++) {
-               elements[i].classList.remove('highlightgroup');
+            if (!li[0].classList.contains('clicked')) {
+               clearsubproducts()
+               for (let i = 0; i < elements.length; i++) {
+                  elements[i].classList.add('highlightgroup');
+                  pan(elements[i])
+               }
+               for (let i = 0; i < allli.length; i++) {
+                  allli[i].classList.remove('clicked')
+               }
+               li[0].classList.toggle('clicked')
+               showsubproducts(groupname, subproducts)
             }
-            for (let i = 0; i < allli.length; i++) {
-               allli[i].classList.remove('clicked')
+            else {
+               for (let i = 0; i < elements.length; i++) {
+                  elements[i].classList.remove('highlightgroup');
+               }
+               for (let i = 0; i < allli.length; i++) {
+                  allli[i].classList.remove('clicked')
+               }
+               clearsubproducts()
             }
-            clearsubproducts()
+
          }
       }
       function clearselected() {
@@ -307,9 +328,18 @@
          }
 
       }
+
+      function randomIntFromInterval(min, max) { // min and max included 
+         return Math.floor(Math.random() * (max - min + 1) + min)
+      }
+
+
       function showonlysubproduct(groupname, product) {
          //console.log(product.toUpperCase())
          let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > rect`)
+         allelementsh.forEach((e) => {
+            e.classList.add('highlightgroup')
+         })
          for (let i = 0; i < allelementsh.length; i++) {
             if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().includes(product.toUpperCase())) {
                allelementsh[i].classList.toggle('highlightgroup')
@@ -353,6 +383,7 @@
             if (arr[i]) {
                //add a text element
                let txt = drawSVGelmt({ x: x, y: y }, "text", svg)
+
                txt.textContent = svg1.children[1].innerHTML;
                arr[i] = false;
             }
@@ -430,7 +461,7 @@
             Finished Lumber / Mouldings</li>
          <li class="Hardware w3-bar-item w3-button" onclick="highlightgroup('layer16','Hardware')">
             Hardware</li>
-         <li class="drywall w3-bar-item w3-button" onclick="highlightgroup('layer9','drywall')">Drywall</li>
+         <li class="drywall w3-bar-item w3-button" onclick="highlightgroup('layer10','drywall')">Drywall</li>
          <li class="Housewrap w3-bar-item w3-button" onclick="highlightgroup('layer13','Housewrap')">House Wrap</li>
          <li class="Insulation w3-bar-item w3-button" onclick="highlightgroup('layer9','Insulation')">
             Insulation</li>
@@ -459,9 +490,9 @@
          </defs>
          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
             inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="1.4090142" inkscape:cx="388.21468"
-            inkscape:cy="223.91541" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912"
-            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="g1">
+            inkscape:deskcolor="#d1d1d1" showgrid="false" inkscape:zoom="1.4090142" inkscape:cx="369.05235"
+            inkscape:cy="167.13813" inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912"
+            inkscape:window-y="-8" inkscape:window-maximized="1" inkscape:current-layer="layer10">
             <inkscape:page x="0" y="0" inkscape:label="1" id="page1" width="1007.68" height="437.60001" margin="0"
                bleed="0" />
          </sodipodi:namedview>
