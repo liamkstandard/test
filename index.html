@@ -168,36 +168,48 @@
 
       }
 
+
       .pulse {
          fill: #c4c4c4d5 !important;
          -webkit-animation: pulse 2s cubic-bezier(0.49, 0.01, 0, 1);
          animation: pulse 2s cubic-bezier(0.49, 0.01, 0, 1);
          -webkit-animation-delay: 0.11s;
          animation-delay: 0.11s;
+         
 
       }
+      path{
+         -webkit-transform-origin: 0% 0% !important;
+         transform-origin: 0% 0% !important;
+         transform-box: initial !important;
 
+      }
+      g *  {
+         -webkit-transform-origin: center;
+         transform-origin: center;
+         transform-box: fill-box;
+      }
       .pulse2 {
          fill: #6b6b6b93 !important;
          -webkit-animation: pulse2 2s cubic-bezier(0.49, 0.01, 0, 1);
          animation: pulse2 2s cubic-bezier(0.49, 0.01, 0, 1);
       }
 
+
+
       @-webkit-keyframes pulse2 {
 
-         0% {
 
-            r: 7;
+         0% {
+            -webkit-transform: scale(1);
          }
 
          30% {
-
-            r: 14;
+            -webkit-transform: scale(2.5);
          }
 
          100% {
-
-            r: 7;
+            -webkit-transform: scale(1);
          }
 
       }
@@ -206,17 +218,21 @@
 
          0% {
             fill: #ffffff00 !important;
-            r: 9;
+            -webkit-transform: scale(1);
+
+            
          }
 
          30% {
             fill: #9292928f !important;
-            r: 20;
+            -webkit-transform: scale(3);
+
          }
 
          100% {
             fill: #ffffff00 !important;
-            r: 9;
+            -webkit-transform: scale(1);
+
          }
 
       }
@@ -224,18 +240,15 @@
       @keyframes pulse2 {
 
          0% {
-
-            r: 7;
+            -webkit-transform: scale(1);
          }
 
          30% {
-
-            r: 14;
+            -webkit-transform: scale(2.5);
          }
 
          100% {
-
-            r: 7;
+            -webkit-transform: scale(1);
          }
 
       }
@@ -244,19 +257,22 @@
 
          0% {
             fill: #ffffff00 !important;
-            r: 9;
+            -webkit-transform: scale(1);
+
+            
          }
 
          30% {
             fill: #9292928f !important;
-            r: 20;
+            -webkit-transform: scale(3);
+
          }
 
          100% {
             fill: #ffffff00 !important;
-            r: 9;
-         }
+            -webkit-transform: scale(1);
 
+         }
       }
 
 
@@ -487,7 +503,7 @@
          let alltext = document.querySelectorAll("text")
          console.log(element.getAttributeNames())
          let svg1 = document.querySelector(`rect#${id}`)
-
+         let newg = document.createElementNS(SVG_NS,'g')
          let svg = svg1.closest('g[id]')
          //the array of the rects with a white fill
          let rects = Array.from(svg.querySelectorAll(`rect[id='${id}']`));
@@ -550,7 +566,7 @@
          clearselected()
          var input, filter, ul, li, a, i, txtValue;
          input = document.getElementById('myInput');
-         filter = input.value.toUpperCase();
+         filter = input.value.toUpperCase().trim();
          allg = document.querySelectorAll('[id*="layer"] > rect')
          rect = allg
          // Loop through all list items, and hide those who don't match the search query
