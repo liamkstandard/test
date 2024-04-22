@@ -511,15 +511,14 @@
          let arr = Array(rects.length).fill(true);
          //for each rect in the rects array
          //console.log(alltext)
-         console.log(document.querySelectorAll('text'))
          document.querySelectorAll('text').forEach(e => e.remove());
 
          rects.forEach((r, i) => {
             //get the position end the size of the rect (the bounding box)
             let bb = r.getBBox();
             //the center of the rect
-            let x = bb.x + bb.width / 4;
-            let y = bb.y + bb.height / 2;
+            let x = ( bb.x) + (bb.width) / 2;
+            let y = (bb.y) + (bb.height) / 2;
             //on click
             //if there isn't already a text element there
             if (arr[i]) {
