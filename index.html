@@ -64,9 +64,28 @@
             margin-top: 5%;
          }
 
+         #svg1 {}
+      }
 
-      
-      
+      .searchlist>li {
+         margin: 3px 1px;
+         padding: 6px;
+         background: #9badbf;
+         color: black;
+
+      }
+
+      ul.searchlist {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         align-content: center;
+         justify-content: space-around;
+         align-items: center;
+         margin: 0px;
+         padding: 1px;
+      }
+
       rect {
          opacity: 20%;
          transition: 0.35s;
@@ -168,27 +187,29 @@
 
       }
 
-
       .pulse {
          fill: #c4c4c4d5 !important;
          -webkit-animation: pulse 2s cubic-bezier(0.49, 0.01, 0, 1);
          animation: pulse 2s cubic-bezier(0.49, 0.01, 0, 1);
          -webkit-animation-delay: 0.11s;
          animation-delay: 0.11s;
-         
+
 
       }
-      path{
+
+      path {
          -webkit-transform-origin: 0% 0% !important;
          transform-origin: 0% 0% !important;
          transform-box: initial !important;
 
       }
-      g *  {
+
+      g * {
          -webkit-transform-origin: center;
          transform-origin: center;
          transform-box: fill-box;
       }
+
       .pulse2 {
          fill: #6b6b6b93 !important;
          -webkit-animation: pulse2 2s cubic-bezier(0.49, 0.01, 0, 1);
@@ -220,7 +241,7 @@
             fill: #ffffff00 !important;
             -webkit-transform: scale(1);
 
-            
+
          }
 
          30% {
@@ -259,7 +280,7 @@
             fill: #ffffff00 !important;
             -webkit-transform: scale(1);
 
-            
+
          }
 
          30% {
@@ -294,6 +315,19 @@
             opacity: 1;
          }
       }
+
+      @keyframes fade-in-top {
+         from {
+
+            transform: translateY(+80px);
+         }
+
+         to {
+
+            transform: translateY(0);
+         }
+      }
+
 
       div[class="productdropdown"]>ul>li {
          background-color: #808080;
@@ -331,18 +365,82 @@
          }
       }
 
+      .locationP2 {
+         fill: rgba(255, 72, 0, 0.705)!important;
+         -webkit-animation: locationP2 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s  infinite;
+         animation: locationP2 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s  infinite;
+      }
+
+      .locationP3 {
+         fill: rgba(255, 107, 22, 0.705)!important;
+         -webkit-animation: locationP3 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s infinite;
+         animation: locationP3 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s infinite;
+      }
+
+
+      @-webkit-keyframes locationP2 {
+         0% {
+            -webkit-transform: scale(1);
+         }
+
+
+         100% {
+            -webkit-transform: scale(3);
+            fill-opacity: 0%;
+         }
+      }
+
+      @keyframes locationP2 {
+         0% {
+            transform: scale(1);
+         }
+
+
+
+         100% {
+            transform: scale(3);
+            fill-opacity: 0%;
+         }
+      }
+
+      @-webkit-keyframes locationP3 {
+         0% {
+            -webkit-transform: scale(1);
+         }
+
+
+
+         100% {
+            -webkit-transform: scale(4);
+            fill-opacity: 0%;
+         }
+      }
+
+      @keyframes locationP3 {
+         0% {
+            transform: scale(1);
+         }
+
+
+
+         100% {
+            transform: scale(4);
+            fill-opacity: 0%;
+         }
+      }
+
+
       input.animate__fadeInDown {
          animation-delay: 0.2s;
       }
-   }
    </style>
 
    <script src="https://cdn.jsdelivr.net/npm/seamless-scroll-polyfill@2.3.4"></script>
    <script>
 
 
+
       const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-      const isAndroid = /android/i.test(navigator.userAgent)
       const SVG_NS = 'http://www.w3.org/2000/svg';
       const queryString = window.location.search;
       let product = ""
@@ -354,16 +452,40 @@
       }
 
       let productnames = []
+      const fuseOptions = {
+         // isCaseSensitive: false,
+         // includeScore: false,
+         // shouldSort: true,
+         // includeMatches: false,
+         // findAllMatches: false,
+         // minMatchCharLength: 1,
+         // location: 0,
+         // threshold: 0.6,
+         // distance: 100,
+         // useExtendedSearch: false,
+         // ignoreLocation: false,
+         // ignoreFieldNorm: false,
+         // fieldNormWeight: 1,
+         keys: [
+            "product"
+         ]
+      };
+
+
+
+
 
 
       function initproductname() {
          let rects = document.querySelectorAll('rect')
+         let pn = []
          for (i = 0; i < rects.length; i++) {
             txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
-            console.log(txtValue)
-            productnames.push(txtValue.split(' '))
-
+            pn.push(txtValue)
          }
+         productnames = [... new Set(pn)]
+
+
          console.log(productnames)
       }
 
@@ -387,13 +509,12 @@
          if (allli.length == 0) {
             for (let i = 0; i < elements.length; i++) {
                elements[i].classList.add('highlightgroup');
-               
+               pan(elements[i])
             }
             for (let i = 0; i < allli.length; i++) {
                console.log(allli)
                allli[i].classList.remove('clicked')
             }
-            pan(elements[elements.length - 1])
             li[0].classList.toggle('clicked')
             showsubproducts(groupname, subproducts)
          }
@@ -403,12 +524,11 @@
                clearsubproducts()
                for (let i = 0; i < elements.length; i++) {
                   elements[i].classList.add('highlightgroup');
-                  
+                  pan(elements[i])
                }
                for (let i = 0; i < allli.length; i++) {
                   allli[i].classList.remove('clicked')
                }
-               pan(elements[elements.length - 1])
                li[0].classList.toggle('clicked')
                showsubproducts(groupname, subproducts)
             }
@@ -446,14 +566,7 @@
          }
       }
       function pan(element) {
-         if (isSafari ) {
-            seamless.scrollIntoView(element, {
-               behavior: "smooth",
-               block: "center",
-               inline: "center"
-            });
-         }
-         if(isAndroid){
+         if (isSafari) {
             seamless.scrollIntoView(element, {
                behavior: "smooth",
                block: "center",
@@ -503,7 +616,7 @@
          let alltext = document.querySelectorAll("text")
          console.log(element.getAttributeNames())
          let svg1 = document.querySelector(`rect#${id}`)
-         let newg = document.createElementNS(SVG_NS,'g')
+
          let svg = svg1.closest('g[id]')
          //the array of the rects with a white fill
          let rects = Array.from(svg.querySelectorAll(`rect[id='${id}']`));
@@ -511,14 +624,15 @@
          let arr = Array(rects.length).fill(true);
          //for each rect in the rects array
          //console.log(alltext)
+         console.log(document.querySelectorAll('text'))
          document.querySelectorAll('text').forEach(e => e.remove());
 
          rects.forEach((r, i) => {
             //get the position end the size of the rect (the bounding box)
             let bb = r.getBBox();
             //the center of the rect
-            let x = ( bb.x) + (bb.width) / 2;
-            let y = (bb.y) + (bb.height) / 2;
+            let x = bb.x + bb.width / 2;
+            let y = bb.y + bb.height / 2;
             //on click
             //if there isn't already a text element there
             if (arr[i]) {
@@ -565,20 +679,28 @@
          clearselected()
          var input, filter, ul, li, a, i, txtValue;
          input = document.getElementById('myInput');
-         filter = input.value.toUpperCase().trim();
+         filter = input.value.toUpperCase();
          allg = document.querySelectorAll('[id*="layer"] > rect')
          rect = allg
+         allresults = document.querySelectorAll('.searchlist > li')
+         allresults.forEach(e => {
+            e.remove()
+         })
+         console.log(fuse.search(filter))
+         results = fuse.search(filter, { limit: 6 })
+         let searchlist = document.querySelector('.searchlist')
+         for (i = 0; i < results.length; i++) {
+            let newitem = document.createElement('li')
+            newitem.innerHTML = results[i].item
+            newitem.style.animation = `fade-in-top 0.${i + 3}s,  fade-in 0.8s`
+            searchlist.appendChild(newitem)
+         }
+
          // Loop through all list items, and hide those who don't match the search query
-         
          for (i = 0; i < rect.length; i++) {
-
             txtValue = rect[i].getAttribute('inkscape:label') || "";
-
-            console.log(filter.split(' '))
-            //            if ((txtValue.toUpperCase().indexOf(filter) > -1 && filter != '')) {
             if ((txtValue.toUpperCase().indexOf(filter) > -1 && filter != '')) {
 
-               console.log(txtValue.split(' '))
                rect[i].classList.add('highlightgroup');
                pan(rect[i])
             }
@@ -590,7 +712,6 @@
 
       }
 
-      
 
    </script>
 
@@ -601,8 +722,13 @@
 
 
    <ul class="productlist animate__animated animate__fadeInDown w3-bar w3-light-grey">
+
       <input class="search animate__animated animate__fadeInDown w3-bar-item w3-input w3-white w3-mobile" id="myInput"
          onkeyup="myFunction()" type="text" placeholder="Search for a product..">
+      <ul class="searchlist">
+
+      </ul>
+
       <ul class="categories">
          <li class="cedar w3-bar-item w3-button " onclick="highlightgroup('layer1','cedar')">Cedar</li>
          <li class="FramingLumber w3-bar-item w3-button " onclick="highlightgroup('layer2','FramingLumber')">
@@ -631,6 +757,8 @@
    </div>
    <div class="map">
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+      <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
       <svg version="1.1" id="svg1" width="1022" height="442.72" viewBox="0 0 1022 442.72"
          sodipodi:docname="QR code Map.svg" inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -651,9 +779,9 @@
          </defs>
          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
             inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-            inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.92424242" inkscape:cx="558.29508" inkscape:cy="222.34426"
+            inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.8484848" inkscape:cx="293.21312" inkscape:cy="263.18853"
             inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8"
-            inkscape:window-maximized="1" inkscape:current-layer="layer2">
+            inkscape:window-maximized="1" inkscape:current-layer="layer15">
             <inkscape:page x="0" y="0" inkscape:label="[1] QR code Map-Model" id="page1" width="1022" height="442.72"
                margin="0" bleed="0" />
          </sodipodi:namedview>
@@ -853,10 +981,19 @@
             <rect style="fill:#808000;stroke-width:0.89324" id="rect33" width="58.214024" height="6.406569"
                x="934.36414" y="393.28998" inkscape:label="plywood" />
          </g>
+         <g inkscape:groupmode="layer" id="layer15" inkscape:label="CurrentLocation">
+            <circle class="locationP3" style="fill:#ffeeaa;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
+               r="9.9458628" inkscape:label="YouAreHere" />
+            <circle class="locationP2" style="fill:#ffeeaa;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
+               r="9.9458628" inkscape:label="YouAreHere" />
+            <circle class="location" style="fill:#fc2222;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
+               r="9.9458628" inkscape:label="YouAreHere" />
+
+         </g>
          <g inkscape:groupmode="layer" id="layer7" inkscape:label="Concrete"
             transform="translate(-30.184502,-179.71587)" style="display:inline">
             <rect style="fill:#ff6600;stroke-width:0.938211" id="rect34" width="21.769093" height="76.376602"
-               x="308.99121" y="335.0871" inkscape:label="concrete mortal cement sand thinset" />
+               x="308.99121" y="335.0871" inkscape:label="concrete mortar cement sand thinset" />
          </g>
          <g inkscape:groupmode="layer" id="layer8" inkscape:label="Finished Lumber / Mouldings"
             transform="translate(-30.184502,-179.71587)">
@@ -959,7 +1096,7 @@
 
       }
       initproductname()
-
+      const fuse = new Fuse(productnames, fuseOptions);
    </script>
 </body>
 
