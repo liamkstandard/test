@@ -430,12 +430,15 @@
          }
       }
       function pan(element) {
-         if (isSafari || isAndroid) {
+         if (isSafari ) {
             seamless.scrollIntoView(element, {
                behavior: "smooth",
                block: "center",
                inline: "center"
             });
+         }
+         if(isAndroid){
+            element.scrollIntoView({ behavior: "instant", block: "center", inline: "center" })
          }
          else {
             element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
