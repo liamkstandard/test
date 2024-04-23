@@ -508,19 +508,19 @@
       function initcurrentlocation(){
          let initlocation = document.querySelector(`g[id="layer15"] > path`)
          initlocation.classList.add('location')
-         let group = initlocation.parentElement
-         let attributes = []
-         for (i = 0; i < initlocation.attributes.length; i++){
-            let names = initlocation.attributes[i].nodeName
-            let value = initlocation.attributes[i].nodeValue
-            attributes[names] = value
-         }
-         //let locationP3 = drawSVGelmt(attributes,'path',group)
-         //let locationP2 = drawSVGelmt(attributes,'path',group)
-         let location = drawSVGelmt(attributes,'path',group)
-         locationP2.classList.add('locationP2')
-         locationP3.classList.add('locationP3')
-         locationP3.classList.add('location')
+         // let group = initlocation.parentElement
+         // let attributes = []
+         // for (i = 0; i < initlocation.attributes.length; i++){
+         //    let names = initlocation.attributes[i].nodeName
+         //    let value = initlocation.attributes[i].nodeValue
+         //    attributes[names] = value
+         // }
+         // //let locationP3 = drawSVGelmt(attributes,'path',group)
+         // //let locationP2 = drawSVGelmt(attributes,'path',group)
+         // let location = drawSVGelmt(attributes,'path',group)
+         // //locationP2.classList.add('locationP2')
+         // //locationP3.classList.add('locationP3')
+         // location.classList.add('location')
 
       }
 
