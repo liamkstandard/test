@@ -364,17 +364,20 @@
             transform: translateY(0);
          }
       }
+      .location{
+         fill: red;
+      }
 
       .locationP2 {
-         fill: rgba(255, 72, 0, 0.705)!important;
+         fill: rgb(255, 90, 24)!important;
          -webkit-animation: locationP2 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s  infinite;
-         animation: locationP2 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s  infinite;
+         animation: locationP2 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s  ;
       }
 
       .locationP3 {
-         fill: rgba(255, 107, 22, 0.705)!important;
+         fill: rgb(255, 146, 22)!important;
          -webkit-animation: locationP3 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s infinite;
-         animation: locationP3 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s infinite;
+         animation: locationP3 cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.8s ;
       }
 
 
@@ -382,24 +385,29 @@
          0% {
             -webkit-transform: scale(1);
          }
+         50% {
+            -webkit-transform: scale(3);
 
+         }
 
          100% {
-            -webkit-transform: scale(3);
-            fill-opacity: 0%;
+            -webkit-transform: scale(1);
+
          }
       }
 
       @keyframes locationP2 {
          0% {
-            transform: scale(1);
+            -webkit-transform: scale(1);
+         }
+         50% {
+            -webkit-transform: scale(3);
+
          }
 
-
-
          100% {
-            transform: scale(3);
-            fill-opacity: 0%;
+            -webkit-transform: scale(1);
+
          }
       }
 
@@ -408,24 +416,30 @@
             -webkit-transform: scale(1);
          }
 
+         50% {
+            -webkit-transform: scale(4);
 
+         }
 
          100% {
-            -webkit-transform: scale(4);
-            fill-opacity: 0%;
+            -webkit-transform: scale(1);
+
          }
       }
 
       @keyframes locationP3 {
          0% {
-            transform: scale(1);
+            -webkit-transform: scale(1);
          }
 
+         50% {
+            -webkit-transform: scale(4);
 
+         }
 
          100% {
-            transform: scale(4);
-            fill-opacity: 0%;
+            -webkit-transform: scale(1);
+
          }
       }
 
@@ -444,7 +458,7 @@
       const SVG_NS = 'http://www.w3.org/2000/svg';
       const queryString = window.location.search;
       let product = ""
-      console.log(queryString)
+     // console.log(queryString)
       if (queryString != "") {
          const urlParams = new URLSearchParams(queryString);
          product = urlParams.get('product').split(',')
@@ -471,11 +485,6 @@
          ]
       };
 
-
-
-
-
-
       function initproductname() {
          let rects = document.querySelectorAll('rect')
          let pn = []
@@ -484,9 +493,7 @@
             pn.push(txtValue)
          }
          productnames = [... new Set(pn)]
-
-
-         console.log(productnames)
+         //console.log(productnames)
       }
 
       function highlightgroup(groupname, classname) {
@@ -495,14 +502,12 @@
          let allelementsh = document.querySelectorAll('rect')
          let elements = document.getElementById(groupname).children
          let subproducts = []
-         document.querySelectorAll('circle').forEach(e => e.remove());
+         removename(groupname)
          //console.log(document.querySelector(`g[id='${groupname}'] > desc`))
          if (document.querySelector(`g[id='${groupname}'] > desc`)) {
             subproducts = document.querySelector(`g[id='${groupname}'] > desc`).innerHTML.split(',')
          }
-
          //console.log(subproducts)
-
          for (let i = 0; i < allelementsh.length; i++) {
             allelementsh[i].classList.remove('highlightgroup')
          }
@@ -611,10 +616,10 @@
       }
       function showname(id) {
 
-         console.log(id)
+        // console.log(id)
          let element = document.getElementById(id)
-         let alltext = document.querySelectorAll("text")
-         console.log(element.getAttributeNames())
+
+         //console.log(element.getAttributeNames())
          let svg1 = document.querySelector(`rect#${id}`)
 
          let svg = svg1.closest('g[id]')
@@ -624,7 +629,6 @@
          let arr = Array(rects.length).fill(true);
          //for each rect in the rects array
          //console.log(alltext)
-         console.log(document.querySelectorAll('text'))
          document.querySelectorAll('text').forEach(e => e.remove());
 
          rects.forEach((r, i) => {
@@ -653,8 +657,15 @@
       function removename(id) {
          let svg1 = document.querySelector(`rect#${id}`)
          //console.log(id)
-         console.log(document.querySelectorAll('circle'))
-         document.querySelectorAll('circle').forEach(e => e.remove())
+         //console.log(document.querySelectorAll('circle'))
+         document.querySelectorAll('circle').forEach(e =>{
+            if(!e.classList.contains('location') && !e.classList.contains('locationP2') && !e.classList.contains('locationP3')){
+               e.remove()
+            }
+
+         }
+         )
+
       }
 
 
@@ -686,7 +697,7 @@
          allresults.forEach(e => {
             e.remove()
          })
-         console.log(fuse.search(filter))
+         //console.log(fuse.search(filter))
          results = fuse.search(filter, { limit: 6 })
          let searchlist = document.querySelector('.searchlist')
          for (i = 0; i < results.length; i++) {
@@ -980,15 +991,6 @@
                height="104.50674" x="250.02179" y="303.90973" inkscape:label="osb plywood" />
             <rect style="fill:#808000;stroke-width:0.89324" id="rect33" width="58.214024" height="6.406569"
                x="934.36414" y="393.28998" inkscape:label="plywood" />
-         </g>
-         <g inkscape:groupmode="layer" id="layer15" inkscape:label="CurrentLocation">
-            <circle class="locationP3" style="fill:#ffeeaa;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
-               r="9.9458628" inkscape:label="YouAreHere" />
-            <circle class="locationP2" style="fill:#ffeeaa;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
-               r="9.9458628" inkscape:label="YouAreHere" />
-            <circle class="location" style="fill:#fc2222;stroke-width:0.94" id="path1" cx="395.92184" cy="386.35849"
-               r="9.9458628" inkscape:label="YouAreHere" />
-
          </g>
          <g inkscape:groupmode="layer" id="layer7" inkscape:label="Concrete"
             transform="translate(-30.184502,-179.71587)" style="display:inline">
