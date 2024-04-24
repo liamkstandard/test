@@ -1,6 +1,4 @@
 
-
-
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const queryString = window.location.search;
@@ -83,7 +81,6 @@ function highlightgroup(groupname, classname) {
          pan(elements[i])
       }
       for (let i = 0; i < allli.length; i++) {
-         console.log(allli)
          allli[i].classList.remove('clicked')
       }
       li[0].classList.toggle('clicked')
@@ -178,14 +175,12 @@ function showonlysubproduct(groupname, product) {
    }
 }
 function showsearchproduct(product) {
-    console.log(product.toUpperCase())
     let allelementsh = document.querySelectorAll(`rect`)
     allelementsh.forEach((e) => {
        e.classList.add('highlightgroup')
        removename(e.id)
     })
     for (let i = 0; i < allelementsh.length; i++) {
-        console.log(allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " "))
        if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
           allelementsh[i].classList.toggle('highlightgroup')
  
@@ -261,13 +256,11 @@ function removename(id) {
 
 // a function to create a new svg element
 function drawSVGelmt(o, tag, parent) {
-   console.log(o)
    let elmt = document.createElementNS(SVG_NS, tag);
    elmt.classList.add("nametext")
 
    //console.log(elmt)
    for (var name in o) {
-      console.log(name)
       if (o.hasOwnProperty(name)) {
          try{
             elmt.setAttributeNS(null, name, o[name]);
@@ -302,8 +295,6 @@ function myFunction() {
       newitem.innerHTML = results[i].item
       newitem.style.animation = `fade-in-top 0.${i + 3}s,  fade-in 0.8s`
       newitem.addEventListener("click", (e) => {
-        console.log(this.className); // WARNING: `this` is not `my_element`
-        console.log(e.srcElement.innerHTML);
         showsearchproduct(e.srcElement.innerHTML) // logs `false`
       });
       searchlist.appendChild(newitem)

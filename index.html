@@ -20,22 +20,29 @@
 </head>
 
 <body onload="document.body.style.opacity='1'">
+
    <ul class="productlist animate__animated animate__fadeInDown w3-bar w3-light-grey">
+      <!-- <div class="logowrapper">
+         <img src="Standard-Building-Supplies-Ltd..jpg">
+      </div> -->
+
       <input class="search animate__animated animate__fadeInDown w3-bar-item w3-input w3-white w3-mobile" id="myInput"
          onkeyup="myFunction()" type="text" placeholder="Search for a product..">
       <ul class="searchlist">
       </ul>
       <ul class="categories">
-         <li class="cedar w3-bar-item w3-button " onclick="highlightgroup('layer1','cedar')">Cedar</li>
+
          <li class="FramingLumber w3-bar-item w3-button " onclick="highlightgroup('layer2','FramingLumber')">
             Framing
             Lumber</li>
+         <li class="Plywood w3-bar-item w3-button" onclick="highlightgroup('layer6','Plywood')">Plywood</li>
          <li class="TreatedLumber w3-bar-item w3-button" onclick="highlightgroup('layer3','TreatedLumber')">
             Treated
             Lumber</li>
+         <li class="cedar w3-bar-item w3-button " onclick="highlightgroup('layer1','cedar')">Cedar</li>
          <li class="Fascia w3-bar-item w3-button" onclick="highlightgroup('layer4','Fascia')">Fascia</li>
          <li class="Rebar w3-bar-item w3-button" onclick="highlightgroup('layer5','Rebar')">Rebar</li>
-         <li class="Plywood w3-bar-item w3-button" onclick="highlightgroup('layer6','Plywood')">Plywood</li>
+
          <li class="Concrete w3-bar-item w3-button" onclick="highlightgroup('layer7','Concrete')">Concrete Products</li>
          <li class="FinishedLumbMould w3-bar-item w3-button" onclick="highlightgroup('layer8','FinishedLumbMould')">
             Finished Lumber / Mouldings</li>
