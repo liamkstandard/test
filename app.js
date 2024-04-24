@@ -84,7 +84,7 @@ function highlightgroup(groupname, classname) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
          pan(elements[i])
-         if(elements.length <= 4){
+         if(elements.length <= 4 && elements[i].id != ''){
             showname(elements[i].id)
           }
       }
@@ -102,7 +102,7 @@ function highlightgroup(groupname, classname) {
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
             pan(elements[i])
-            if(elements.length <= 4){
+            if(elements.length <= 4 && elements[i].id != ''){
                 showname(elements[i].id)
               }
          }
