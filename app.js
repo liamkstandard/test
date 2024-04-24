@@ -60,7 +60,12 @@ function initproductname() {
    //console.log(productnames)
 }
 
+
+
 function highlightgroup(groupname, classname) {
+    let searchbar = document.querySelector('input')
+    searchbar.value = ''
+    myFunction()
    let allli = document.getElementsByClassName('clicked')
    let li = document.getElementsByClassName(classname)
    let allelementsh = document.querySelectorAll('rect')
@@ -79,10 +84,14 @@ function highlightgroup(groupname, classname) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
          pan(elements[i])
+         if(elements.length <= 4){
+            showname(elements[i].id)
+          }
       }
       for (let i = 0; i < allli.length; i++) {
          allli[i].classList.remove('clicked')
       }
+
       li[0].classList.toggle('clicked')
       showsubproducts(groupname, subproducts)
    }
@@ -93,6 +102,9 @@ function highlightgroup(groupname, classname) {
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
             pan(elements[i])
+            if(elements.length <= 4){
+                showname(elements[i].id)
+              }
          }
          for (let i = 0; i < allli.length; i++) {
             allli[i].classList.remove('clicked')
@@ -283,10 +295,14 @@ function myFunction() {
    filter = input.value.toUpperCase().trim();
    allg = document.querySelectorAll('[id*="layer"] > rect')
    rect = allg
+   allg.forEach(e => {
+    removename(e.id)
+   })
    allresults = document.querySelectorAll('.searchlist > li')
    allresults.forEach(e => {
       e.remove()
    })
+
    //console.log(fuse.search(filter))
    results = fuse.search(filter, { limit: 6 })
    let searchlist = document.querySelector('.searchlist')
