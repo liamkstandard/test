@@ -185,11 +185,12 @@ function showsearchproduct(product) {
        removename(e.id)
     })
     for (let i = 0; i < allelementsh.length; i++) {
-       if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().includes(product.toUpperCase())) {
+        console.log(allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " "))
+       if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
           allelementsh[i].classList.toggle('highlightgroup')
  
        }
-       if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().includes(product.toUpperCase())) {
+       if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
           pan(allelementsh[i])
           showname(allelementsh[i].id)
  
