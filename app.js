@@ -39,6 +39,10 @@ function initonclickrect(){
       })
    })
 }
+function removepopup(){
+   let txt = document.querySelectorAll('text').forEach(e => e.remove())
+   let b = document.querySelectorAll('.textbacking').forEach(e => e.remove())
+}
 function createpopup(e){
    
   // console.log(id)
@@ -76,7 +80,7 @@ function createpopup(e){
         let theight = txtbbox.height +10
         let tx = txtbbox.x -10
         let ty = txtbbox.y -5
-        let txtbacking = drawSVGelmt({x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
+        let txtbacking = drawSVGelmt({id:'test',x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
         txtbacking.classList.add('textbacking')
         let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
         txt4.classList.add('text')
@@ -124,9 +128,10 @@ function highlightgroup(groupname, classname) {
     let searchbar = document.querySelector('input')
     searchbar.value = ''
     myFunction()
+    removepopup()
    let allli = document.getElementsByClassName('clicked')
    let li = document.getElementsByClassName(classname)
-   let allelementsh = document.querySelectorAll('rect')
+   let allelementsh = document.querySelectorAll('rect:not(.textbacking)')
    let elements = document.getElementById(groupname).children
    let subproducts = []
    removename(groupname)

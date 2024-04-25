@@ -65,14 +65,14 @@ body {
 
     #svg1 {}
 }
-.textbacking{
+rect.textbacking{
     fill:black !important;
-
+    opacity: 100% ;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
     overflow: visible
 }
-.text{
+text.text{
     fill: white !important;
     transition: 0.3s;
     font:  18px "Roboto" ;
