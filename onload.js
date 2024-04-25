@@ -14,9 +14,7 @@ for (i = 0; i < rect.length; i++) {
    }
 
 }
-document.body.addEventListener('click', function (e) {
-   console.log(e)
-})
+
 initproductname()
 initcurrentlocation()
 initonclickrect()
