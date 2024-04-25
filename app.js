@@ -30,6 +30,64 @@ const fuseOptions = {
    ]
 };
 
+function initonclickrect(){
+   let rects = document.querySelectorAll('rect')
+   rects.forEach(e => {
+      e.addEventListener('click', function() {
+         console.log(e.getAttribute('inkscape:label'))
+         createpopup(e)
+      })
+   })
+}
+function createpopup(e){
+   
+  // console.log(id)
+  let element = document.getElementById(e.id)
+
+  //console.log(element.getAttributeNames())
+  let svg1 = document.querySelector(`rect#${e.id}`)
+
+  let svg = svg1.closest('g[id]')
+  //the array of the rects with a white fill
+  let rects = Array.from(svg.querySelectorAll(`rect[id='${e.id}']`));
+  console.log(rects)
+  //an array of true values as long as the rects array
+  let arr = Array(rects.length).fill(true);
+  //for each rect in the rects array
+  //console.log(alltext)
+  document.querySelectorAll('text').forEach(ed => ed.remove());
+  document.querySelectorAll('.textbacking').forEach(ed => ed.remove());
+  rects.forEach((r, i) => {
+     //get the position end the size of the rect (the bounding box)
+     let bb = r.getBBox();
+     //the center of the rect
+     let x = bb.x + bb.width / 2;
+     let y = bb.y + bb.height / 2;
+     //on click
+     //if there isn't already a text element there
+     if (arr[i]) {
+        //add a text element
+
+        let txt3 = drawSVGelmt({x:x, y:y}, "text", svg)
+        txt3.classList.add('text')
+        txt3.innerHTML = e.getAttribute('inkscape:label')
+        let txtbbox = txt3.getBBox()
+        let twidth = txtbbox.width +20
+        let theight = txtbbox.height +10
+        let tx = txtbbox.x -10
+        let ty = txtbbox.y -5
+        let txtbacking = drawSVGelmt({x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
+        txtbacking.classList.add('textbacking')
+        let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
+        txt4.classList.add('text')
+        txt4.innerHTML = e.getAttribute('inkscape:label')
+        //txt.textContent = svg1.children[1].innerHTML;
+        arr[i] = false;
+     }
+
+  })
+}
+
 function initcurrentlocation(){
    let initlocation = document.querySelector(`g[id="layer15"] > path`)
    initlocation.classList.add('location')
