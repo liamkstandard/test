@@ -90,6 +90,7 @@ text.text{
     background: none;
     border: 2px solid #2a94ff;
     color: #2a94ff;
+    transition: 0.2s;
 
 
 }
@@ -98,9 +99,11 @@ text.text{
     background: #2a94ff;
     color: rgb(255, 255, 255);
     box-shadow: 0 3px 1px rgba(0, 0, 0, .161);
-
-
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
+
+
 
 ::-webkit-input-placeholder {
     opacity: 1;
