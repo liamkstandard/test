@@ -49,14 +49,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="3.6969696"
-     inkscape:cx="154.04509"
-     inkscape:cy="372.06149"
+     inkscape:cx="281.17624"
+     inkscape:cy="168.65164"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer-oc1">
+     inkscape:current-layer="layer18">
     <inkscape:page
        x="0"
        y="0"
@@ -302,7 +302,7 @@
        height="6.0569162"
        x="792.1463"
        y="287.20496"
-       inkscape:label="2x4 2&amp;btr kd sp 8-16' 2x6 spruce framing lumber" />
+       inkscape:label="2x4 2&amp;btr kd sp 8-16s 2x6 spruce framing lumber" />
     <rect
        style="fill:#00ff00;stroke-width:0.413112"
        id="rect12-2"
@@ -398,7 +398,7 @@
        height="18.41519"
        x="673.82483"
        y="246.16759"
-       inkscape:label="fir longs 22-24' MISC overstock framing lumber" />
+       inkscape:label="fir longs 22-24s MISC overstock framing lumber" />
     <rect
        style="fill:#00ff00"
        id="rect16"
@@ -406,7 +406,7 @@
        height="13.047971"
        x="626.30261"
        y="245.97537"
-       inkscape:label="fir longs 22-24' MISC framing lumber" />
+       inkscape:label="fir longs 22-24s MISC framing lumber" />
     <rect
        style="fill:#00ff00"
        id="rect17"
@@ -933,6 +933,30 @@
        x="335.01477"
        y="416.33826"
        inkscape:label="tyvek house wrap" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer18"
+     inkscape:label="Hardi Products">
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke-width:0.94205"
+       id="rect36"
+       width="8.1147451"
+       height="62.213108"
+       x="270.7623"
+       y="200.70493"
+       inkscape:label="hardi plank smooth cedarmil primed">
+      <desc
+         id="desc63">hardi board</desc>
+    </rect>
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke-width:0.97968"
+       id="rect63"
+       width="8.520484"
+       height="27.049177"
+       x="270.35657"
+       y="149.58197"
+       inkscape:label="hardi plank smooth cedarmil primed" />
   </g>
   <g
      inkscape:groupmode="layer"
