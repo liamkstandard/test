@@ -18,5 +18,4 @@ for (i = 0; i < rect.length; i++) {
 initproductname()
 initcurrentlocation()
 initonclickrect()
-initresetpopup()
 const fuse = new Fuse(productnames, fuseOptions);
