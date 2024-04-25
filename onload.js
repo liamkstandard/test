@@ -8,7 +8,7 @@ for (i = 0; i < rect.length; i++) {
       //console.log(product[k].toUpperCase())
       if (txtValue.toUpperCase().indexOf(product[k].toUpperCase()) > -1 && product[k].toUpperCase() != '') {
          rect[i].classList.add('highlightgroup');
-         pan(rect[i])
+         pan(rect[rect.length - 1 ])
 
       }
    }

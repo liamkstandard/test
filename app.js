@@ -148,7 +148,7 @@ function highlightgroup(groupname, classname) {
    if (allli.length == 0) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
-         pan(elements[i])
+         pan(elements[elements.length - 1])
          if(elements.length <= 4 && elements[i].id != ''){
             showname(elements[i].id)
           }
@@ -166,7 +166,7 @@ function highlightgroup(groupname, classname) {
          clearsubproducts()
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
-            pan(elements[i])
+            pan(elements[elements.length - 1])
             if(elements.length <= 4 && elements[i].id != ''){
                 showname(elements[i].id)
               }
@@ -388,7 +388,7 @@ function myFunction() {
       if ((txtValue.toUpperCase().indexOf(filter) > -1 && filter != '')) {
 
          rect[i].classList.add('highlightgroup');
-         pan(rect[i])
+         pan(rect[rect.length -1])
       }
       else {
          rect[i].classList.remove('highlightgroup');
