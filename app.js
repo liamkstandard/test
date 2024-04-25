@@ -30,6 +30,8 @@ const fuseOptions = {
    ]
 };
 
+
+
 function initonclickrect(){
    let rects = document.querySelectorAll('rect')
    rects.forEach(e => {
@@ -112,7 +114,7 @@ function initcurrentlocation(){
 }
 
 function initproductname() {
-   let rects = document.querySelectorAll('rect')
+   let rects = document.querySelectorAll('rect:not(#background)')
    let pn = []
    for (i = 0; i < rects.length; i++) {
       txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
@@ -232,6 +234,7 @@ function randomIntFromInterval(min, max) { // min and max included
 
 function showonlysubproduct(groupname, product) {
    //console.log(product.toUpperCase())
+   removepopup()
    let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > rect`)
    allelementsh.forEach((e) => {
       e.classList.add('highlightgroup')

@@ -14,6 +14,7 @@ for (i = 0; i < rect.length; i++) {
    }
 
 }
+
 initproductname()
 initcurrentlocation()
 initonclickrect()
