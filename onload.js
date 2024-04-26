@@ -14,7 +14,12 @@ for (i = 0; i < rect.length; i++) {
    }
 
 }
-
+let mouseEv = document.querySelector('svg')
+mouseEv.addEventListener('click',function (e){
+   if (!e.target.matches('rect')){
+      removepopup()
+   }
+})
 initproductname()
 initcurrentlocation()
 initonclickrect()
