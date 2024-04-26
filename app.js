@@ -138,8 +138,10 @@ function highlightgroup(groupname, classname) {
    let subproducts = []
    removename(groupname)
    //console.log(document.querySelector(`g[id='${groupname}'] > desc`))
+   let hasdesc=false
    if (document.querySelector(`g[id='${groupname}'] > desc`)) {
       subproducts = document.querySelector(`g[id='${groupname}'] > desc`).innerHTML.split(',')
+      hasdesc=true
    }
    //console.log(subproducts)
    for (let i = 0; i < allelementsh.length; i++) {
@@ -149,7 +151,7 @@ function highlightgroup(groupname, classname) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
          pan(elements[elements.length - 1])
-         if(elements.length <= 4 && elements[i].id != ''){
+         if(elements.length <= 4 && elements[i].id != '' && hasdesc == false){
             showname(elements[i].id)
           }
       }
@@ -167,7 +169,7 @@ function highlightgroup(groupname, classname) {
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
             pan(elements[elements.length - 1])
-            if(elements.length <= 4 && elements[i].id != ''){
+            if(elements.length <= 4 && elements[i].id != '' && hasdesc == false){
                 showname(elements[i].id)
               }
          }

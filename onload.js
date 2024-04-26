@@ -20,6 +20,8 @@ mouseEv.addEventListener('click',function (e){
       removepopup()
    }
 })
+let location2 = document.querySelector('g > path')
+pan(location2)
 initproductname()
 initcurrentlocation()
 initonclickrect()
