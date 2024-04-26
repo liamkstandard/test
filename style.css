@@ -7,15 +7,17 @@ body {
 
 
 @media (min-width: 580px) {
-    body{
+    body {
         overflow: hidden;
     }
+
     .map {
         display: flex;
         justify-content: center;
         transition: 0.4s;
     }
-    ul.productlist{
+
+    ul.productlist {
         display: flex !important;
         padding: 20px !important;
         margin-right: 10%;
@@ -65,25 +67,31 @@ body {
 
     #svg1 {}
 }
-rect.textbacking{
-    fill:black !important;
-    opacity: 100% ;
+
+rect.textbacking {
+    fill: black !important;
+    opacity: 100%;
+    pointer-events: none;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
     overflow: visible
 }
-text.text{
+
+text.text {
     fill: white !important;
     transition: 0.3s;
-    font:  18px "Roboto" ;
-    opacity: 100% ;
+    font: 18px "Roboto";
+    pointer-events: none;
+    opacity: 100%;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
     overflow: visible
 }
-.appear{
+
+.appear {
     opacity: 100% !important;
 }
+
 .searchlist>li {
     margin: 3px 1px;
     padding: 6px;
@@ -197,7 +205,8 @@ rect:hover {
     filter: none;
 
 }
-.highight{
+
+.highight {
     background: #2a94ff;
     color: white;
 }
