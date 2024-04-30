@@ -25,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.1372016"
-     inkscape:cx="477.04822"
-     inkscape:cy="538.60283"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer5" />
+     inkscape:zoom="1.6082459"
+     inkscape:cx="573.6063"
+     inkscape:cy="561.17039"
+     inkscape:window-width="1904"
+     inkscape:window-height="993"
+     inkscape:window-x="1998"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer12" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="0"
@@ -641,22 +641,18 @@
      id="layer9"
      inkscape:label="Insulation"
      transform="translate(-30.184502,-179.71587)">
-    <rect
-       style="fill:#00ffff;stroke-width:0.94"
+    <path
        id="rect2rotate"
-       width="116.27576"
-       height="31.711546"
-       x="731.88068"
-       y="735.60101"
-       inkscape:label="roxul insulation" />
-    <rect
        style="fill:#00ffff;stroke-width:0.94"
+       inkscape:label="roxul insulation"
+       transform="rotate(-21)"
+       d="m 404.64352,975.21625 h 116.27576 v 31.71155 H 404.64352 Z" />
+    <path
        id="rect13rotate"
-       width="47.256454"
-       height="23.939125"
-       x="686.80048"
-       y="762.64911"
-       inkscape:label="insulation" />
+       style="fill:#00ffff;stroke-width:0.94"
+       inkscape:label="insulation"
+       transform="rotate(-21)"
+       d="m 359.56332,1002.2646 h 47.25646 v 23.9391 h -47.25646 z" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -735,6 +731,12 @@
        x="492.76797"
        y="882.5827"
        inkscape:label="rigid insulation styrofoam" />
+    <path
+       id="rect55-5rotate"
+       style="fill:#800080;stroke-width:1.29089"
+       inkscape:label="3-1/2 styrofoam"
+       transform="rotate(-21)"
+       d="m 315.68332,975.68823 h 45.2265 v 22.14542 h -45.2265 z" />
     <rect
        style="fill:#800080;stroke-width:1.54736"
        id="rect55-9"
@@ -748,7 +750,8 @@
      inkscape:groupmode="layer"
      id="layer12"
      inkscape:label="PVC and Poly"
-     transform="translate(-30.184502,-179.71587)">
+     transform="translate(-30.184502,-179.71587)"
+     style="display:inline">
     <rect
        style="fill:#000080;stroke-width:0.436137"
        id="rect56"
@@ -758,6 +761,18 @@
        y="785.46753"
        inkscape:label="PVC Poly"
        ry="1.6487842" />
+    <path
+       id="rect27777rotate"
+       style="fill:#000080;stroke-width:0.878165"
+       inkscape:label="Misc PVC Pipe"
+       transform="rotate(-21)"
+       d="m 244.79869,975.68689 h 38.20004 v 25.46671 h -38.20004 z" />
+    <path
+       id="rect2-333rotate"
+       style="display:inline;fill:#000080;stroke-width:0.7648"
+       inkscape:label="PVC Pipe"
+       transform="rotate(-21)"
+       d="m 282.82993,975.71265 h 33.26869 v 22.17912 h -33.26869 z" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -786,14 +801,12 @@
      id="layer18"
      inkscape:label="Hardi Products"
      style="fill:#ffcc00;fill-opacity:1">
-    <rect
-       style="fill:#ffcc00;fill-opacity:1;stroke-width:0.930384"
+    <path
        id="rect15rotate"
-       width="59.381466"
-       height="29.535284"
-       x="817.66101"
-       y="555.88513"
-       inkscape:label="hardi plank smooth cedarmil primed" />
+       style="stroke-width:1.00473"
+       inkscape:label="hardi plank smooth cedarmil primed"
+       transform="rotate(-21)"
+       d="m 552.60846,796.58392 h 64.12691 v 31.89559 h -64.12691 z" />
   </g>
   <g
      inkscape:groupmode="layer"

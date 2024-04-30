@@ -33,29 +33,39 @@ const fuseOptions = {
 
 
 function initonclickrect(){
-   let rects = document.querySelectorAll('rect')
+   let rects = document.querySelectorAll('[id*="rect"]')
    rects.forEach(e => {
-      e.addEventListener('click', function() {
+      e.addEventListener('click', function(ev) {
          console.log(e.getAttribute('inkscape:label'))
-         createpopup(e)
+         createpopup(e,ev)
       })
    })
 }
+
+function createBox(e,event) {
+   var box = document.createElement('div');
+   box.className = 'box';
+   box.style.left = event.pageX + 'px';
+   box.style.top = event.pageY + 'px';
+   document.body.appendChild(box);
+ }
+
 function removepopup(){
    let txt = document.querySelectorAll('text').forEach(e => e.remove())
    let b = document.querySelectorAll('.textbacking').forEach(e => e.remove())
 }
-function createpopup(e){
-   
+
+function createpopup(e,ev){
+  // createBox(e,ev)
   // console.log(id)
   let element = document.getElementById(e.id)
 
   //console.log(element.getAttributeNames())
-  let svg1 = document.querySelector(`rect#${e.id}`)
+  let svg1 = document.querySelector(`#${e.id}`)
 
   let svg = svg1.closest('g[id]')
   //the array of the rects with a white fill
-  let rects = Array.from(svg.querySelectorAll(`rect[id='${e.id}']`));
+  let rects = Array.from(svg.querySelectorAll(`[id='${e.id}']`));
   console.log(rects)
   //an array of true values as long as the rects array
   let arr = Array(rects.length).fill(true);
@@ -66,6 +76,7 @@ function createpopup(e){
   rects.forEach((r, i) => {
      //get the position end the size of the rect (the bounding box)
      let bb = r.getBBox();
+     console.log(bb)
      //the center of the rect
      let x = bb.x + bb.width / 2;
      let y = bb.y + bb.height / 2;
@@ -114,7 +125,7 @@ function initcurrentlocation(){
 }
 
 function initproductname() {
-   let rects = document.querySelectorAll('rect:not(#background)')
+   let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
    let pn = []
    for (i = 0; i < rects.length; i++) {
       txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
@@ -133,7 +144,7 @@ function highlightgroup(groupname, classname) {
     removepopup()
    let allli = document.getElementsByClassName('clicked')
    let li = document.getElementsByClassName(classname)
-   let allelementsh = document.querySelectorAll('rect:not(.textbacking)')
+   let allelementsh = document.querySelectorAll('[id*="rect"]:not(.textbacking)')
    let elements = document.getElementById(groupname).children
    let subproducts = []
    removename(groupname)
@@ -151,7 +162,7 @@ function highlightgroup(groupname, classname) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
          pan(elements[elements.length - 1])
-         if(elements.length <= 4 && elements[i].id != '' && hasdesc == false){
+         if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].tagName != 'path'){
             showname(elements[i].id)
           }
       }
@@ -169,7 +180,7 @@ function highlightgroup(groupname, classname) {
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
             pan(elements[elements.length - 1])
-            if(elements.length <= 4 && elements[i].id != '' && hasdesc == false){
+            if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].tagName != 'path'){
                 showname(elements[i].id)
               }
          }
@@ -237,7 +248,7 @@ function randomIntFromInterval(min, max) { // min and max included
 function showonlysubproduct(groupname, product) {
    //console.log(product.toUpperCase())
    removepopup()
-   let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > rect`)
+   let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > [id*="rect"]`)
    allelementsh.forEach((e) => {
       e.classList.add('highlightgroup')
       removename(e.id)
@@ -255,7 +266,7 @@ function showonlysubproduct(groupname, product) {
    }
 }
 function showsearchproduct(product) {
-    let allelementsh = document.querySelectorAll(`rect`)
+   let allelementsh = document.querySelectorAll('[id*="rect"]:not(.textbacking)')
     allelementsh.forEach((e) => {
        e.classList.add('highlightgroup')
        removename(e.id)
@@ -285,11 +296,11 @@ function showname(id) {
    let element = document.getElementById(id)
 
    //console.log(element.getAttributeNames())
-   let svg1 = document.querySelector(`rect#${id}`)
+   let svg1 = document.querySelector(`#${id}`)
 
    let svg = svg1.closest('g[id]')
    //the array of the rects with a white fill
-   let rects = Array.from(svg.querySelectorAll(`rect[id='${id}']`));
+   let rects = Array.from(svg.querySelectorAll(`[id='${id}']`));
    //an array of true values as long as the rects array
    let arr = Array(rects.length).fill(true);
    //for each rect in the rects array
@@ -320,7 +331,7 @@ function showname(id) {
    })
 }
 function removename(id) {
-   let svg1 = document.querySelector(`rect#${id}`)
+   let svg1 = document.querySelector(`#${id}`)
    //console.log(id)
    //console.log(document.querySelectorAll('circle'))
    document.querySelectorAll('circle').forEach(e =>{
@@ -361,7 +372,7 @@ function myFunction() {
    var input, filter, ul, li, a, i, txtValue;
    input = document.getElementById('myInput');
    filter = input.value.toUpperCase().trim();
-   allg = document.querySelectorAll('[id*="layer"] > rect')
+   allg = document.querySelectorAll('[id*="layer"] > [id*="rect"]')
    rect = allg
    allg.forEach(e => {
     removename(e.id)

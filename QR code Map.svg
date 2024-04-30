@@ -48,15 +48,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2.6141523"
-     inkscape:cx="277.91036"
-     inkscape:cy="197.96092"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="502.04581"
+     inkscape:cy="110.66221"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer4">
+     inkscape:current-layer="layer19">
     <inkscape:page
        x="0"
        y="0"
@@ -471,7 +471,7 @@
        height="277.49939"
        x="50.172199"
        y="267.5043"
-       inkscape:label="cedar rough clear" />
+       inkscape:label="cedar rough clear lath" />
     <rect
        style="fill:#ff0000;stroke-width:0.652812"
        id="rect2"
@@ -479,7 +479,7 @@
        height="196.80566"
        x="108.36944"
        y="297.34317"
-       inkscape:label="cedar beams" />
+       inkscape:label="3x12 4x4 4x6 6x6 8x8 s4s rough cedar beams" />
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.652924"
        id="rect2-2"
@@ -487,7 +487,7 @@
        height="196.87329"
        x="115.94344"
        y="297.34436"
-       inkscape:label="cedar smooth one side wrc" />
+       inkscape:label="2x10 2x12 2x6 2x8 cedar smooth one side wrc" />
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.65409"
        id="rect2-2-8"
@@ -495,7 +495,7 @@
        height="197.57751"
        x="153.10802"
        y="297.07925"
-       inkscape:label="cedar smooth one side wrc" />
+       inkscape:label="1x10 1x12 1/2x10 1/2x8 1x6 1x8 cedar smooth one side wrc" />
     <rect
        style="fill:#ff0000;stroke-width:0.640199"
        id="rect3"
@@ -503,7 +503,7 @@
        height="197.53383"
        x="161.31502"
        y="297.09225"
-       inkscape:label="cedar knotty decking " />
+       inkscape:label="1x3 1x4 2x4 2x6 5/4x6 cedar knotty decking " />
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.724219"
        id="rect4"
@@ -576,7 +576,7 @@
      style="fill:#008000"
      transform="translate(-30.184502,-179.71587)">
     <desc
-       id="desc4">2x3,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x5,5/4x6</desc>
+       id="desc4">1x2,1x4,1x6,2x2,2x3,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x5,5/4x6,Longs</desc>
     <rect
        style="display:inline;fill:#008000;stroke-width:1.06675"
        id="rect18"
@@ -602,21 +602,37 @@
        y="268.75647"
        inkscape:label="4x6 4x4 6x6 treated lumber" />
     <rect
-       style="display:inline;fill:#008000;stroke-width:1.11102"
+       style="display:inline;fill:#008000;stroke-width:0.889032"
        id="rect19"
-       width="176.54303"
+       width="113.04252"
        height="9.0479784"
-       x="85.404694"
+       x="148.9052"
        y="218.20419"
-       inkscape:label="5/4x5 5/4x6 treated lumber" />
+       inkscape:label="5/4x5 5/4x6 pine decking landscape ties treated lumber" />
     <rect
-       style="display:inline;fill:#008000;stroke-width:1.08519"
+       style="display:inline;fill:#008000;stroke-width:0.667347"
+       id="rect19-4"
+       width="63.69574"
+       height="9.0479784"
+       x="85.64212"
+       y="218.21538"
+       inkscape:label="1x2 1x4 1x6 2x2 treated lumber" />
+    <rect
+       style="display:inline;fill:#008000;stroke-width:0.930768"
        id="rect19-3"
-       width="176.54303"
+       width="129.87398"
        height="8.6322374"
-       x="85.404694"
+       x="132.07375"
        y="225.90714"
        inkscape:label="2x8 2x4 2x6 treated lumber" />
+    <rect
+       style="display:inline;fill:#008000;stroke-width:0.559115"
+       id="rect19-3-4"
+       width="46.864277"
+       height="8.6322374"
+       x="85.729675"
+       y="225.91852"
+       inkscape:label="treated plywood treated lumber" />
     <rect
        style="fill:#008000;stroke-width:1.01366"
        id="rect41"
@@ -624,7 +640,7 @@
        height="6.0325861"
        x="188.1756"
        y="297.28305"
-       inkscape:label="treated lumber" />
+       inkscape:label="2x4 2x6 2x8 2x10 2x12 20s longs treated lumber" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -661,46 +677,57 @@
      id="layer5"
      inkscape:label="Rebar"
      transform="translate(-30.184502,-179.71587)">
+    <desc
+       id="desc8">Corner,Stakes,Bends,10mm,15mm,20mm,WeldMesh</desc>
     <rect
        style="fill:#008080;stroke-width:1.10245"
        id="rect28"
        width="30.152914"
        height="14.130929"
        x="646.02759"
-       y="381.74402"
-       inkscape:label="rebar angles" />
+       y="382.14978"
+       inkscape:label="rebar 10mm 1/2 15mm 5/8 20mm 3/4 " />
     <rect
-       style="fill:#008080;stroke-width:1.10245"
+       style="fill:#008080;stroke-width:0.737897"
+       id="rect28-3"
+       width="11.652914"
+       height="16.380928"
+       x="641.39417"
+       y="408.21463"
+       inkscape:label="weldmesh" />
+    <rect
+       style="fill:#008080;stroke-width:0.985451"
        id="rect29"
        width="19.755356"
-       height="9.420619"
+       height="7.5271764"
        x="673.06122"
-       y="388.80948"
-       inkscape:label="rebar angles" />
+       y="388.75485"
+       inkscape:label="rebar stakes bends corner angles" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Plywood"
-     transform="translate(-30.184502,-179.71587)">
+     transform="translate(-30.184502,-179.71587)"
+     sodipodi:insensitive="true">
     <desc
-       id="desc6">Fir,OSB,Specialty</desc>
+       id="desc6">Fir,Pine,Oak,Mahogany,G1S,G2S,OSB,Fire Treated,Balsa,Medite,Hardboard,Pegboard</desc>
     <rect
-       style="fill:#808000;stroke-width:1.00948"
+       style="fill:#808000;stroke-width:1.00949"
        id="rect30"
        width="101.25875"
        height="9.0332108"
-       x="531.99139"
+       x="532.24139"
        y="402.97809"
-       inkscape:label="plywood" />
+       inkscape:label="g1s fir plywood medite melamine g2s oak maple hardboard pegboard oroboard MDO balsa" />
     <rect
-       style="fill:#808000;stroke-width:0.985039"
+       style="fill:#808000;stroke-width:0.982895"
        id="rect31"
        width="8.02952"
-       height="114.91903"
+       height="114.41903"
        x="633.32843"
        y="416.18262"
-       inkscape:label="specialty plywood" />
+       inkscape:label="baltic birch g1s g2s pine poplar fir u-lay specialty oak mahogany fire treated ultralight medite plywood" />
     <rect
        style="display:inline;fill:#808000;stroke-width:0.622465"
        id="rect32"
@@ -725,6 +752,30 @@
        x="934.36414"
        y="393.28998"
        inkscape:label="plywood" />
+    <rect
+       style="fill:#808000;stroke-width:0.973707"
+       id="rect33-9"
+       width="34.702724"
+       height="12.77053"
+       x="571.61029"
+       y="474.37631"
+       inkscape:label="fir u-lay donnacona g2s oak birch fire treated plywood" />
+    <rect
+       style="fill:#808000;stroke-width:0.973707"
+       id="rect33-9-8"
+       width="34.702724"
+       height="12.77053"
+       x="571.58832"
+       y="460.29126"
+       inkscape:label="g1s fir pine MDO plywood" />
+    <rect
+       style="fill:#808000;stroke-width:0.973707"
+       id="rect33-9-8-3"
+       width="34.702724"
+       height="12.77053"
+       x="571.73047"
+       y="446.10406"
+       inkscape:label="ultra lite medite donnacona mahogany medex plywood" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -753,27 +804,64 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer19"
+     inkscape:label="Building Products">
+    <rect
+       style="fill:#0000ff;stroke-width:0.537266"
+       id="rect42-4"
+       width="24.096798"
+       height="4.3896565"
+       x="551.07275"
+       y="356.01593"
+       inkscape:label="flashing L drip cap white brown black" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.554411"
+       id="rect42-4-9"
+       width="25.659298"
+       height="4.3896565"
+       x="525.44922"
+       y="356.01968"
+       inkscape:label="flashing L drip cap white brown black" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.537266"
+       id="rect42-4-4"
+       width="24.096798"
+       height="4.3896565"
+       x="551.06885"
+       y="359.72266"
+       inkscape:label="flashing L drip cap white brown black" />
+    <rect
+       style="fill:#0000ff;stroke-width:0.554411"
+       id="rect42-4-9-0"
+       width="25.659298"
+       height="4.3896565"
+       x="525.44531"
+       y="359.72641"
+       inkscape:label="Bead O/S Corner Paper round off soffit strip aluminum carry channel" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Finished Lumber / Mouldings"
      transform="translate(-30.184502,-179.71587)">
     <desc
        id="desc7">Finishing Cedar,Balsa,Hemlock,Oak,Pine,Crown,Baseboard</desc>
     <rect
-       style="fill:#ffff00;stroke-width:1.11807"
-       id="rect42"
-       width="49.721798"
-       height="9.2130308"
-       x="555.63684"
-       y="534.93573"
-       inkscape:label="crown primed pine f ultralight  vg fir baseboard moulding Finished Lumber " />
-    <rect
-       style="fill:#ffff00;stroke-width:1.12332"
+       style="fill:#ffff00;stroke-width:0.790665"
        id="rect43"
        width="23.937349"
-       height="8.7586956"
+       height="4.3392782"
        x="612.32385"
        y="535.18665"
-       inkscape:label="crown primed pine f ultralight  vg fir baseboard moulding Finished Lumber " />
+       inkscape:label="1x10 1x12 1x2 1x3 1x5 1x6 1x7 crown ultralight baseboard moulding Finished Lumber " />
+    <rect
+       style="fill:#ffff00;stroke-width:0.810547"
+       id="rect43-9"
+       width="23.937349"
+       height="4.5602489"
+       x="612.32593"
+       y="539.27356"
+       inkscape:label="1x10 1x12 1x2 1x3 1x4 1x5 1x6 1x7 1x8 chair rail brick mould primed pine f/j finger joint baseboard moulding Finished Lumber " />
     <rect
        style="fill:#ffff00;stroke-width:1.0846"
        id="rect44"
@@ -783,13 +871,13 @@
        y="547.70477"
        inkscape:label="crown primed pine f ultralight  vg fir baseboard moulding Finished Lumber " />
     <rect
-       style="fill:#ffff00;stroke-width:1.13169"
+       style="fill:#ffff00;stroke-width:1.12332"
        id="rect45"
        width="24.398191"
-       height="9.0096178"
+       height="8.876812"
        x="612.13354"
        y="547.8974"
-       inkscape:label="finishing cedar balsa hemlock oak pine Finished Lumber " />
+       inkscape:label="ultralight baseboard casing finished lumber" />
     <rect
        style="fill:#ffff00;stroke-width:1.08269"
        id="rect46"
@@ -799,6 +887,23 @@
        y="565.42279"
        inkscape:label="finishing cedar balsa hemlock oak pine Finished Lumber " />
     <rect
+       style="fill:#ffff00;stroke-width:0.456349"
+       id="rect46-0"
+       width="14.920754"
+       height="3.6777163"
+       x="590.06201"
+       y="588.92389"
+       inkscape:label="hemlock casing quarter round half round full round  Finished Lumber " />
+    <rect
+       style="fill:#ffff00;stroke-width:0.440108"
+       id="rect46-0-4"
+       width="3.7691176"
+       height="13.541033"
+       x="590.07916"
+       y="-606.08844"
+       inkscape:label="hemlock crown cove corner shoebase window stool door stop Finished Lumber "
+       transform="scale(1,-1)" />
+    <rect
        style="fill:#ffff00;stroke-width:1.04039"
        id="rect47"
        width="8.818265"
@@ -806,12 +911,22 @@
        x="624.66321"
        y="565.42279"
        inkscape:label="finishing cedar balsa hemlock oak pine Finished Lumber " />
+    <rect
+       style="fill:#ffff00;stroke-width:0.992961"
+       id="rect47-9"
+       width="3.6970563"
+       height="78.215492"
+       x="637.66125"
+       y="530.60284"
+       inkscape:label="1x10 1x12 1x2 1x3 1x4 1x5 1x6 1x8 2x10 2x12 2x2 2x3 2x4 2x6 2x8 4x4 shiplap S4S clear 2&amp;btr KD v/g fir pine Finished Lumber " />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer9"
      inkscape:label="Insulation"
      transform="translate(-30.184502,-179.71587)">
+    <desc
+       id="desc9">Roxul/Rockwool,Fiberglass,ISO</desc>
     <rect
        style="fill:#00ffff;stroke-width:1.02384"
        id="rect48"
@@ -819,7 +934,15 @@
        height="40.688591"
        x="571.62872"
        y="488.6405"
-       inkscape:label="insulation" />
+       inkscape:label="r12 r14 r20 fiberglass Roxul/Rockwool safe n sound r22 insulation" />
+    <rect
+       style="fill:#00ffff;stroke-width:0.404689"
+       id="rect48-5"
+       width="6.6568584"
+       height="12.045175"
+       x="532.19147"
+       y="520.60925"
+       inkscape:label="insulation ISO board 2 3 4x8" />
     <rect
        style="fill:#00ffff;stroke-width:0.982737"
        id="rect49"
@@ -827,38 +950,40 @@
        height="40.398525"
        x="593.90253"
        y="488.89142"
-       inkscape:label="insulation" />
+       inkscape:label="r12 r20 r28 r40  fiberglass Roxul/Rockwool r14 r22 r28 Powerwool rigiboard insulation" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer10"
      inkscape:label="Drywall"
-     style="fill:#008000"
+     style="display:inline;fill:#008000"
      transform="translate(-30.184502,-179.71587)">
+    <desc
+       id="desc10">1/2,Fire stop,Aqua,Denshield,Cement Board</desc>
     <rect
-       style="fill:#008000;stroke-width:1.02921"
+       style="fill:#008000;stroke-width:0.565136"
        id="rect50"
-       width="35.438786"
-       height="12.797048"
-       x="571.17444"
-       y="446.98737"
-       inkscape:label="drywall" />
+       width="8.9387856"
+       height="15.297047"
+       x="532.42444"
+       y="421.48737"
+       inkscape:label="1/2 4x8 4x10 firestop cement board drywall" />
     <rect
-       style="fill:#008000;stroke-width:1.07306"
+       style="fill:#008000;stroke-width:0.801104"
        id="rect51"
-       width="35.18198"
-       height="12.797048"
-       x="571.43121"
-       y="461.16446"
-       inkscape:label="drywall" />
+       width="6.6819801"
+       height="37.553955"
+       x="532.18121"
+       y="469.66443"
+       inkscape:label="denshield densglass firestop aqua regular 4x10 4x8 1/2 drywall" />
     <rect
-       style="fill:#008000;stroke-width:1.03877"
+       style="fill:#008000;stroke-width:0.482359"
        id="rect52"
-       width="34.925175"
-       height="12.169742"
-       x="571.68799"
-       y="475.09067"
-       inkscape:label="drywall" />
+       width="6.6721535"
+       height="13.735803"
+       x="532.18378"
+       y="506.95935"
+       inkscape:label="denshield densglass gold tilebacker" />
   </g>
   <g
      inkscape:groupmode="layer"
