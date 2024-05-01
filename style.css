@@ -74,13 +74,15 @@ body {
     #svg1 {}
 }
 
+
+
 rect.textbacking {
     fill: black !important;
     opacity: 100%;
     pointer-events: none;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
-    overflow: visible
+    overflow: visible !important
 }
 
 text.text {
@@ -91,7 +93,7 @@ text.text {
     opacity: 100%;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
-    overflow: visible
+    overflow: visible !important
 }
 
 .appear {

@@ -2,6 +2,8 @@
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const queryString = window.location.search;
+const el = (sel, par) => (par||document).querySelector(sel);
+
 let product = ""
 // console.log(queryString)
 if (queryString != "") {
@@ -42,12 +44,14 @@ function initonclickrect(){
    })
 }
 
+
 function createBox(e,event) {
    var box = document.createElement('div');
    box.className = 'box';
-   box.style.left = event.pageX + 'px';
-   box.style.top = event.pageY + 'px';
-   document.body.appendChild(box);
+   box.style.left = `${ window.scrollX + event.clientX }px`;
+   box.style.top = `${ window.scrollY + event.clientY }px`;
+   let map = document.querySelector('body')
+   map.appendChild(box);
  }
 
 function removepopup(){
@@ -56,10 +60,11 @@ function removepopup(){
 }
 
 function createpopup(e,ev){
-  // createBox(e,ev)
+
+
   // console.log(id)
   let element = document.getElementById(e.id)
-
+   let parent = document.querySelector('svg')
   //console.log(element.getAttributeNames())
   let svg1 = document.querySelector(`#${e.id}`)
 
@@ -76,19 +81,34 @@ function createpopup(e,ev){
   rects.forEach((r, i) => {
      //get the position end the size of the rect (the bounding box)
      let bb = r.getBBox();
+     let sbb = svg.getBBox()
      console.log(bb)
      //the center of the rect
      let x = bb.x + bb.width / 2;
      let y = bb.y + bb.height / 2;
+     console.log(bb.x + bb.width,bb.y + bb.height)
+      console.log(sbb.width + sbb.x,sbb.height+sbb.y)
+
+
+
+
      //on click
      //if there isn't already a text element there
      if (arr[i]) {
         //add a text element
-
+        //createBox(e,ev)
         let txt3 = drawSVGelmt({x:x, y:y}, "text", svg)
         txt3.classList.add('text')
-        txt3.innerHTML = e.getAttribute('inkscape:label')
+        let tags = e.getAttribute('inkscape:label').split(' ')
+        let taggs = []
+        tags.forEach(tag => {
+         let tspan = `<tspan x=${x} dy = '1.2em'>${tag}</tspan>`
+         taggs.push(tspan)
+        })
+        txt3.innerHTML = taggs.join('\r\n')//e.getAttribute('inkscape:label').split(' ').join("\r\n")
         let txtbbox = txt3.getBBox()
+
+        console.log(txt3.getBBox())
         let twidth = txtbbox.width +20
         let theight = txtbbox.height +10
         let tx = txtbbox.x -10
@@ -97,8 +117,16 @@ function createpopup(e,ev){
         txtbacking.classList.add('textbacking')
         let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
         txt4.classList.add('text')
-        txt4.innerHTML = e.getAttribute('inkscape:label')
+        txt4.innerHTML = taggs.join('\r\n')
         //txt.textContent = svg1.children[1].innerHTML;
+        if(sbb.height + sbb.y <txtbbox.height + txtbbox.y){
+         console.log(sbb.height + sbb.y,txtbbox.height + txtbbox.y)
+         console.log(txtbbox.height)
+         console.log(txt3.y)
+         txt3.setAttribute('y',(txt3.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y)) ))
+         txt4.setAttribute('y',(txt4.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
+         txtbacking.setAttribute('y',(txtbacking.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
+        }
         arr[i] = false;
      }
 
