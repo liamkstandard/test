@@ -3,7 +3,6 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const queryString = window.location.search;
 const el = (sel, par) => (par||document).querySelector(sel);
-
 let product = ""
 // console.log(queryString)
 if (queryString != "") {
@@ -11,8 +10,9 @@ if (queryString != "") {
    product = urlParams.get('product').split(',')
    console.log(product);
 }
-
+console.log(textt)
 let productnames = []
+let NEWproductnames = []
 const fuseOptions = {
    // isCaseSensitive: false,
    // includeScore: false,
@@ -45,30 +45,50 @@ function initonclickrect(){
 }
 
 
-function createBox(e,event) {
+function createBox(texts) {
    var box = document.createElement('div');
    box.className = 'box';
    box.style.left = `${ window.scrollX + event.clientX }px`;
    box.style.top = `${ window.scrollY + event.clientY }px`;
    let map = document.querySelector('body')
+   let ul = document.createElement('ul')
+   texts.forEach(c =>{
+      let li = document.createElement('li')
+      let a =document.createElement('a')
+      a.innerHTML = c[3]
+      a.setAttribute('href',`https://standardbuildingsupplies.ca/catalogsearch/result/?q=${c[3]}`)
+      li.appendChild(a)
+      ul.appendChild(li)
+   })
+   box.appendChild(ul)
    map.appendChild(box);
  }
 
 function removepopup(){
    let txt = document.querySelectorAll('text').forEach(e => e.remove())
    let b = document.querySelectorAll('.textbacking').forEach(e => e.remove())
+   let box = document.querySelectorAll('.box').forEach(e => e.remove())
 }
 
 function createpopup(e,ev){
-
+   removepopup()
 
   // console.log(id)
   let element = document.getElementById(e.id)
    let parent = document.querySelector('svg')
   //console.log(element.getAttributeNames())
+   let list = []
+  NEWproductnames.forEach(f =>{
+     if (f[0].includes(element.querySelector('title').innerHTML)){
+      list.push(f)
+      console.log(f.join('|'))
+     }
+  })
+  createBox(list)
   let svg1 = document.querySelector(`#${e.id}`)
 
   let svg = svg1.closest('g[id]')
+  
   //the array of the rects with a white fill
   let rects = Array.from(svg.querySelectorAll(`[id='${e.id}']`));
   console.log(rects)
@@ -76,61 +96,70 @@ function createpopup(e,ev){
   let arr = Array(rects.length).fill(true);
   //for each rect in the rects array
   //console.log(alltext)
-  document.querySelectorAll('text').forEach(ed => ed.remove());
-  document.querySelectorAll('.textbacking').forEach(ed => ed.remove());
-  rects.forEach((r, i) => {
-     //get the position end the size of the rect (the bounding box)
-     let bb = r.getBBox();
-     let sbb = svg.getBBox()
-     console.log(bb)
-     //the center of the rect
-     let x = bb.x + bb.width / 2;
-     let y = bb.y + bb.height / 2;
-     console.log(bb.x + bb.width,bb.y + bb.height)
-      console.log(sbb.width + sbb.x,sbb.height+sbb.y)
+//   document.querySelectorAll('text').forEach(ed => ed.remove());
+//   document.querySelectorAll('.textbacking').forEach(ed => ed.remove());
+//   let sec = 0
+//   rects.forEach((r, i) => {
+//      //get the position end the size of the rect (the bounding box)
+//      let bb = r.getBBox();
+//      let sbb = svg.getBBox()
+//      console.log(bb)
+//      //the center of the rect
+//      let x = bb.x + bb.width / 2;
+//      let y = bb.y + bb.height / 2;
+//      if (r.tagName == 'path'){
+//             x = x- ((bb.x + bb.width) -(sbb.width + sbb.x))
+//             y = y- ((bb.y + bb.height) -(sbb.height + sbb.y))
+//      }
+//      console.log(bb.x + bb.width,bb.y + bb.height)
+//       console.log(sbb.width + sbb.x,sbb.height+sbb.y)
 
 
 
 
-     //on click
-     //if there isn't already a text element there
-     if (arr[i]) {
-        //add a text element
-        //createBox(e,ev)
-        let txt3 = drawSVGelmt({x:x, y:y}, "text", svg)
-        txt3.classList.add('text')
-        let tags = e.getAttribute('inkscape:label').split(' ')
-        let taggs = []
-        tags.forEach(tag => {
-         let tspan = `<tspan x=${x} dy = '1.2em'>${tag}</tspan>`
-         taggs.push(tspan)
-        })
-        txt3.innerHTML = taggs.join('\r\n')//e.getAttribute('inkscape:label').split(' ').join("\r\n")
-        let txtbbox = txt3.getBBox()
+//      //on click
+//      //if there isn't already a text element there
+//      if (arr[i]) {
+//         //add a text element
+//         //createBox(e,ev)
+//         let txt3 = drawSVGelmt({x:x, y:y}, "text", svg)
+//         txt3.classList.add('text')
+//         let tags = e.getAttribute('inkscape:label').split(' ')
+//         let taggs = []
+//         let sec = 0
+//         tags.forEach(tag => {
+//          sec += 1 / 10
+//          let tspan = `<tspan x=${x} dy = '1.2em'>${tag}</tspan>`
+//          taggs.push(tspan)
+//         })
+//         txt3.innerHTML = taggs.join('\r\n')//e.getAttribute('inkscape:label').split(' ').join("\r\n")
+//         let txtbbox = txt3.getBBox()
 
-        console.log(txt3.getBBox())
-        let twidth = txtbbox.width +20
-        let theight = txtbbox.height +10
-        let tx = txtbbox.x -10
-        let ty = txtbbox.y -5
-        let txtbacking = drawSVGelmt({id:'test',x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
-        txtbacking.classList.add('textbacking')
-        let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
-        txt4.classList.add('text')
-        txt4.innerHTML = taggs.join('\r\n')
-        //txt.textContent = svg1.children[1].innerHTML;
-        if(sbb.height + sbb.y <txtbbox.height + txtbbox.y){
-         console.log(sbb.height + sbb.y,txtbbox.height + txtbbox.y)
-         console.log(txtbbox.height)
-         console.log(txt3.y)
-         txt3.setAttribute('y',(txt3.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y)) ))
-         txt4.setAttribute('y',(txt4.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
-         txtbacking.setAttribute('y',(txtbacking.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
-        }
-        arr[i] = false;
-     }
+//         console.log(txt3.getBBox())
+//         let twidth = txtbbox.width +20
+//         let theight = txtbbox.height +10
+//         let tx = txtbbox.x -10
+//         let ty = txtbbox.y -5
+//         let txtbacking = drawSVGelmt({id:'test',x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
+//         txtbacking.classList.add('textbacking')
+//         let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
+//         txt4.classList.add('text')
+//         txt4.innerHTML = taggs.join('\r\n')
+//         //txt.textContent = svg1.children[1].innerHTML;
+//         if(sbb.height + sbb.y <txtbbox.height + txtbbox.y){
+//          txt3.setAttribute('y',(txt3.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y)) ))
+//          txt4.setAttribute('y',(txt4.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
+//          txtbacking.setAttribute('y',(txtbacking.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
+//         }
+//       //   if(sbb.width + sbb.x <txtbbox.width + txtbbox.x){
+//       //    txt3.setAttribute('x',(txt3.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x)) ))
+//       //    txt4.setAttribute('x',(txt4.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x))))
+//       //    txtbacking.setAttribute('x',(txtbacking.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x))))
+//       //   }
+//         arr[i] = false;
+//      }
 
-  })
+//   })
 }
 
 function initcurrentlocation(){
@@ -160,7 +189,14 @@ function initproductname() {
       pn.push(txtValue)
    }
    productnames = [... new Set(pn)]
-   //console.log(productnames)
+   console.log(productnames)
+
+   textt.forEach(e =>{
+      NEWproductnames.push(e.split('|'))
+   })
+   console.log('newproductnames\n',NEWproductnames)
+
+
 }
 
 
@@ -190,7 +226,7 @@ function highlightgroup(groupname, classname) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
          pan(elements[elements.length - 1])
-         if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].tagName != 'path'){
+         if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].matches('[id*="rect"]')){
             showname(elements[i].id)
           }
       }
@@ -208,7 +244,7 @@ function highlightgroup(groupname, classname) {
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
             pan(elements[elements.length - 1])
-            if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].tagName != 'path'){
+            if(elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].matches('[id*="rect"]')){
                 showname(elements[i].id)
               }
          }
@@ -338,9 +374,14 @@ function showname(id) {
    rects.forEach((r, i) => {
       //get the position end the size of the rect (the bounding box)
       let bb = r.getBBox();
+           let sbb = svg.getBBox()
       //the center of the rect
       let x = bb.x + bb.width / 2;
       let y = bb.y + bb.height / 2;
+      if (r.tagName == 'path'){
+         x = x- ((bb.x + bb.width) -(sbb.width + sbb.x))
+         y = y- ((bb.y + bb.height) -(sbb.height + sbb.y))
+      }
       //on click
       //if there isn't already a text element there
       if (arr[i]) {

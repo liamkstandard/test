@@ -40,13 +40,7 @@ body {
     }
 }
 
-.box {
-    padding: 10px;
-    margin-left: -10px;
-    margin-top: -10px;
-    background-color: blue;
-    position: absolute;
-  }
+
 @media screen {
     ul.productlist {
         margin-top: 0%;
@@ -74,7 +68,47 @@ body {
     #svg1 {}
 }
 
+.box {
+    padding: 10px;
+    margin-left: -10px;
+    margin-top: -10px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 8px;
+    position: absolute;
+    max-height: 150px;
+    -webkit-animation: fade-in 0.2s;
+    animation: fade-in 0.2s;
+}
 
+.box>ul {
+    display: flex;
+    overflow: auto;
+    max-height: 140px;
+    flex-direction: column;
+    align-content: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box>ul>li {
+    background: black;
+    color: white;
+    transition: 0.2s;
+    font-size: 13px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top:1px;
+    border-radius: 6px;
+}
+.box>ul>li>a{
+    margin: 0px;
+}
+
+
+.box>ul>li:hover {
+    background: rgb(143, 143, 143);
+
+}
 
 rect.textbacking {
     fill: black !important;
@@ -88,13 +122,15 @@ rect.textbacking {
 text.text {
     fill: white !important;
     transition: 0.3s;
+    overflow: visible !important;
     font: 18px "Roboto";
     pointer-events: none;
     opacity: 100%;
     -webkit-animation: fade-in 0.3s;
     animation: fade-in 0.3s;
-    overflow: visible !important
 }
+
+
 
 .appear {
     opacity: 100% !important;
@@ -203,7 +239,7 @@ ul.searchlist {
     filter: grayscale(100%);
 }
 
-[id*="rect"]:hover  {
+[id*="rect"]:hover {
     opacity: 100%;
 
     -moz-filter: grayscale(0%);

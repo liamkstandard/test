@@ -16,9 +16,10 @@ for (i = 0; i < rect.length; i++) {
 let mouseEv = document.querySelector('svg')
 mouseEv.addEventListener('click',function (e){
    console.log(e.id)
-   if (!e.target.matches('rect') || !e.target.matches('[id*="rect"]') ){
+   if (!e.target.matches('[id*="rect"]') ){
       removepopup()
    }
+
 })
 let location2 = document.querySelector('g > path')
 pan(location2)
