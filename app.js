@@ -198,12 +198,12 @@ function initproductname() {
    // productnames = [... new Set(pn)]
    // console.log(productnames)
 
-   textt.forEach(e =>{
-      NEWproductnames.push(e.split('|'))
-      let f = e.split('|')
-      searchdata.push({'location':f[0],'product':f[3]})
-   })
-
+   // textt.forEach(e =>{
+   //    NEWproductnames.push(e.split('|'))
+   //    let f = e.split('|')
+   //    searchdata.push({'location':f[0],'product':f[3]})
+   // })
+   searchdata = textt
 }
 
 
