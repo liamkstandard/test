@@ -338,23 +338,43 @@ function showonlysubproduct(groupname, product) {
       }
    }
 }
-function showsearchproduct(product) {
+function showsearchproduct(location) {
    let allelementsh = document.querySelectorAll('[id*="rect"]:not(.textbacking)')
     allelementsh.forEach((e) => {
        e.classList.add('highlightgroup')
        removename(e.id)
     })
-    for (let i = 0; i < allelementsh.length; i++) {
-       if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
-          allelementsh[i].classList.toggle('highlightgroup')
+   for (let i = 0; i < allelementsh.length; i++) {
+      let title = allelementsh[i].querySelector('title')
+
+      try{
+         console.log(location)
+         console.log(title.innerHTML)
+         if(title.innerHTML != location){
+            allelementsh[i].classList.toggle('highlightgroup')
+         }
+         if(title.innerHTML == location){
+               pan(allelementsh[i])
+               showname(allelementsh[i].id)
+         }
+      }
+      catch(e){
+         console.log(e)
+      }
+
+   }
+   //  for (let i = 0; i < allelementsh.length; i++) {
+   //     if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
+   //        allelementsh[i].classList.toggle('highlightgroup')
  
-       }
-       if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
-          pan(allelementsh[i])
-          showname(allelementsh[i].id)
+   //     }
+   //     if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
+   //        pan(allelementsh[i])
+   //        showname(allelementsh[i].id)
  
-       }
-    }
+   //     }
+   //  }
+
  }
 
 function clearsubproducts() {
@@ -467,8 +487,10 @@ function myFunction() {
       let newitem = document.createElement('li')
       newitem.innerHTML = results[i].item.product
       newitem.style.animation = `fade-in-top 0.${i + 3}s,  fade-in 0.8s`
+      let test = results[i].item.location
       newitem.addEventListener("click", (e) => {
-        showsearchproduct(e.srcElement.innerHTML) // logs `false`
+
+        showsearchproduct(test) // logs `false`
       });
       searchlist.appendChild(newitem)
    }

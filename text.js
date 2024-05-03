@@ -2014,6 +2014,8 @@ let stuff = `7502|1018D|1018D|1x8 Diagonal Cedar Lattice-Lat
 7704|TJI56011|TJI56011|TJI 560 Series 11-7/8 I-Joist
 7704|TJI5609|TJI5609|TJI 560 Series 9-1/2 I-Joist
 8888| | |simpson strong tie joist angle hanger post sadle hardware
+8889| | |Parallam PSL
+8889| | |Microllam LVL
 `
 
 

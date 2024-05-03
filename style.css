@@ -38,10 +38,16 @@ body {
         height: 7vw !important;
         transition: height 0.3s;
     }
+    .banner{
+        border-bottom: none !important;
+        margin-bottom: 0px !important;
+    }
+
 }
 
 
 @media screen {
+
     ul.productlist {
         margin-top: 0%;
         margin-bottom: 1%;
@@ -64,8 +70,10 @@ body {
         overflow: auto;
         margin-top: 5%;
     }
-
-    #svg1 {}
+    .banner{
+        
+        margin-bottom: 0px;
+    }
 }
 
 @keyframes fade-in-sizeup {
@@ -87,7 +95,6 @@ body {
 
 @keyframes fade-in-sizeup1 {
     0% {
-        opacity: 0.2;
         max-width: 0px;
         max-height: 0px;
 
@@ -95,7 +102,6 @@ body {
     
 
     100% {
-        opacity: 1;
         max-width: 500px;
         max-height: 120px;
 
@@ -110,8 +116,8 @@ body {
     position: absolute;
     max-height: 150px;
     max-width: 500px;
-    -webkit-animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
-    animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    -webkit-animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
+    animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
     border-radius: 1.5rem;
     padding: 10px;
     background: white;
@@ -123,8 +129,8 @@ body {
     display: flex;
     overflow-y: auto;
     max-height: 120px;
-    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
-    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
+    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
     max-width: 500px;
     flex-direction: column;
     border-radius: 0.7rem;
@@ -139,12 +145,34 @@ body {
     background: rgb(179, 179, 179);
     color: rgb(34, 34, 34);
     transition: 0.2s;
-    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
-    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
+    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.3, 1);
     font-size: 15px;
     font-weight: bold;
     margin: 3px;
     border-radius: 6px;
+}
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.title{
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.logo{
+    margin-left: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 40px;
 }
 
 .box>ul>li>a{
