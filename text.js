@@ -2019,5 +2019,5 @@ let stuff = `7502|1018D|1018D|1x8 Diagonal Cedar Lattice-Lat
 
 
 
-// const textt = stuff.split('\n')
+ const textt = stuff.split('\n')
 

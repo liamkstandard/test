@@ -10369,15 +10369,24 @@ function highlightgroup(groupname, classname) {
 }
 function clearselected() {
    document.querySelectorAll('ul > li').forEach(e => e.classList.remove('clicked'));
-   document.querySelectorAll('div[class="productdropdown"] > ul > li').forEach(e => e.remove('clicked'))
+   document.querySelector('.productdropdown').classList.remove('appearmenu')
+   document.querySelectorAll('.productdropdown > span').forEach(e => e.remove())
+   document.querySelectorAll('.productdropdown > ul > li').forEach(e => e.remove('clicked'))
    document.querySelectorAll('rect[class="highlightgroup"]').forEach(e => e.classList.remove('highlightgroup'));
 }
 function showsubproducts(groupname, subproduct) {
 
-   let ul = document.querySelector('div[class="productdropdown"] > ul')
+   let ul = document.querySelector('.productdropdown > ul')
+   let div = document.querySelector('.productdropdown')
+
+   let span =document.createElement('span')
+   span.classList.add('handle')
+   div.appendChild(span);
    if (subproduct.length != 0) {
+      div.classList.add('appearmenu')
       for (let i = 0; i < subproduct.length; i++) {
          let li = document.createElement("li");
+
          li.classList.add('w3-button')
          li.classList.add(`w3-ripple`)
          li.innerText = subproduct[i];
