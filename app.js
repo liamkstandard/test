@@ -8086,17 +8086,23 @@ let searchdata = [
       "product": "Microllam LVL"
    }
 ]
+temp = searchdata.filter(item => (!( Number(item['location']) < 8887))  );
+searchdata = searchdata.filter(item => (!( Number(item['location']) > 7600)) );
+temp.forEach(e=>{
+   searchdata.push(e)
+})
+console.log(searchdata)
 const fuseOptions = {
    // isCaseSensitive: false,
    // includeScore: false,
-   // shouldSort: true,
+    shouldSort: true,
    // includeMatches: false,
    // findAllMatches: false,
    // minMatchCharLength: 1,
    // location: 0,
-   // threshold: 0.6,
-   // distance: 100,
-   // useExtendedSearch: false,
+   //  threshold: 0.8,
+   //   distance: 300,
+    //useExtendedSearch: true,
    // ignoreLocation: false,
    // ignoreFieldNorm: false,
    // fieldNormWeight: 1,
@@ -8548,9 +8554,10 @@ function myFunction() {
    allresults.forEach(e => {
       e.remove()
    })
-
+   filter2 = filter.split(' ').reduce((previousValue, currentValue) => previousValue + ` '${currentValue}`, '');
    //console.log(fuse.search(filter))
    results = fuse.search(filter, { limit: 6 })
+   console.log(results)
    let searchlist = document.querySelector('.searchlist')
    for (i = 0; i < results.length; i++) {
       let newitem = document.createElement('li')
