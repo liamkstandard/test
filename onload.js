@@ -26,4 +26,5 @@ pan(location2)
 initproductname()
 initcurrentlocation()
 initonclickrect()
-const fuse = new Fuse(productnames, fuseOptions);
+initprodcategory()
+const fuse = new Fuse(searchdata, fuseOptions);

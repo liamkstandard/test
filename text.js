@@ -410,7 +410,6 @@ let stuff = `7502|1018D|1018D|1x8 Diagonal Cedar Lattice-Lat
 7522|HP9C|HP9C|Hardiplank 9.25 Cedarmill Prim
 7522|HP9S|HP9S|Hardiplank 9.25 Smooth    Prim
 7523|0218400|0218400|Concrete Fill Reinforced Fibre
-7523|069606004010|069606004010|NOF ITEM
 7523|100076547|100076547|Deck Block for 4x4 Basalite
 7523|278092|278092|Filler Fastset Green Synko 9kg
 7523|278093|278093|Thinset #52 Grey 25lbs/11.3kg
@@ -2016,4 +2015,8 @@ let stuff = `7502|1018D|1018D|1x8 Diagonal Cedar Lattice-Lat
 7704|TJI5609|TJI5609|TJI 560 Series 9-1/2 I-Joist
 8888| | |simpson strong tie joist angle hanger post sadle hardware
 `
+
+
+
 const textt = stuff.split('\n')
+

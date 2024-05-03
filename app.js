@@ -13,6 +13,7 @@ if (queryString != "") {
 console.log(textt)
 let productnames = []
 let NEWproductnames = []
+let searchdata = []
 const fuseOptions = {
    // isCaseSensitive: false,
    // includeScore: false,
@@ -40,10 +41,16 @@ function initonclickrect(){
       e.addEventListener('click', function(ev) {
          console.log(e.getAttribute('inkscape:label'))
          createpopup(e,ev)
+         removename(e.id)
+         showname(e.id)
       })
    })
 }
 
+function initprodcategory(){
+   let rects = document.querySelectorAll('[id*="rect"]')
+   let title = document.querySelectorAll(`title`)
+}
 
 function createBox(texts) {
    var box = document.createElement('div');
@@ -193,8 +200,10 @@ function initproductname() {
 
    textt.forEach(e =>{
       NEWproductnames.push(e.split('|'))
+      let f = e.split('|')
+      searchdata.push({'location':f[0],'product':f[3]})
    })
-   console.log('newproductnames\n',NEWproductnames)
+   console.log('newproductnames\n',searchdata)
 
 
 }
@@ -456,7 +465,7 @@ function myFunction() {
    let searchlist = document.querySelector('.searchlist')
    for (i = 0; i < results.length; i++) {
       let newitem = document.createElement('li')
-      newitem.innerHTML = results[i].item
+      newitem.innerHTML = results[i].item.product
       newitem.style.animation = `fade-in-top 0.${i + 3}s,  fade-in 0.8s`
       newitem.addEventListener("click", (e) => {
         showsearchproduct(e.srcElement.innerHTML) // logs `false`

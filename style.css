@@ -68,45 +68,95 @@ body {
     #svg1 {}
 }
 
+@keyframes fade-in-sizeup {
+    0% {
+        opacity: 0.2;
+        max-width: 0px;
+        max-height: 0px;
+
+    }
+    
+
+    100% {
+        opacity: 1;
+        max-width: 500px;
+        max-height: 140px;
+
+    }
+}
+
+@keyframes fade-in-sizeup1 {
+    0% {
+        opacity: 0.2;
+        max-width: 0px;
+        max-height: 0px;
+
+    }
+    
+
+    100% {
+        opacity: 1;
+        max-width: 500px;
+        max-height: 120px;
+
+    }
+}
+
+
+
 .box {
-    padding: 10px;
-    margin-left: -10px;
-    margin-top: -10px;
-    background-color: rgb(54, 54, 54);
+
     border-radius: 8px;
     position: absolute;
     max-height: 150px;
-    -webkit-animation: fade-in 0.2s;
-    animation: fade-in 0.2s;
+    max-width: 500px;
+    -webkit-animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    animation: fade-in-sizeup 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    border-radius: 1.5rem;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, .161);
+
 }
 
 .box>ul {
     display: flex;
-    overflow: auto;
-    max-height: 140px;
+    overflow-y: auto;
+    max-height: 120px;
+    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    max-width: 500px;
     flex-direction: column;
+    border-radius: 0.7rem;
     align-content: center;
     margin: 0px;
     padding: 0px;
+ 
+
 }
 
 .box>ul>li {
-    background: black;
-    color: white;
+    background: rgb(179, 179, 179);
+    color: rgb(34, 34, 34);
     transition: 0.2s;
-    font-size: 13px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top:1px;
+    -webkit-animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    animation: fade-in-sizeup1 0.4s cubic-bezier(0.78, -0.01, 0.22, 1.01);
+    font-size: 15px;
+    font-weight: bold;
+    margin: 3px;
     border-radius: 6px;
 }
+
 .box>ul>li>a{
     margin: 0px;
+    text-decoration: none;
 }
 
 
 .box>ul>li:hover {
-    background: rgb(143, 143, 143);
+    background: rgb(109, 109, 109);
+    color: white;
+    margin-left: 10px;
 
 }
 
