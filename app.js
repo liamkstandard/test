@@ -48,8 +48,8 @@ function initonclickrect(){
 }
 
 function initprodcategory(){
-   let rects = document.querySelectorAll('[id*="rect"]')
-   let title = document.querySelectorAll(`title`)
+   // let rects = document.querySelectorAll('[id*="rect"]')
+   // let title = document.querySelectorAll(`title`)
 }
 
 function createBox(texts) {
@@ -189,23 +189,23 @@ function initcurrentlocation(){
 }
 
 function initproductname() {
-   let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
-   let pn = []
-   for (i = 0; i < rects.length; i++) {
-      txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
-      pn.push(txtValue)
-   }
-   productnames = [... new Set(pn)]
-   console.log(productnames)
+   // let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
+   // let pn = []
+   // for (i = 0; i < rects.length; i++) {
+   //    txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
+   //    pn.push(txtValue)
+   // }
+   // productnames = [... new Set(pn)]
+   // console.log(productnames)
 
-   textt.forEach(e =>{
-      NEWproductnames.push(e.split('|'))
-      let f = e.split('|')
-      searchdata.push({'location':f[0],'product':f[3]})
-   })
-   console.log('newproductnames\n',searchdata)
+   // textt.forEach(e =>{
+   //    NEWproductnames.push(e.split('|'))
+   //    let f = e.split('|')
+   //    searchdata.push({'location':f[0],'product':f[3]})
+   // })
 
-
+   // console.log(JSON.stringify(searchdata))
+   searchdata = textt
 }
 
 
