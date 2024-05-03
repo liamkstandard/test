@@ -8135,7 +8135,7 @@ function createBox(texts) {
       let li = document.createElement('li')
       let a = document.createElement('a')
       a.innerHTML = c['product']
-      a.setAttribute('href', `https://standardbuildingsupplies.ca/catalogsearch/result/?q=${c[3]}`)
+      a.setAttribute('href', `https://standardbuildingsupplies.ca/catalogsearch/result/?q=${c['product']}`)
       li.appendChild(a)
       ul.appendChild(li)
    })
