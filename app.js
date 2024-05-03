@@ -8102,7 +8102,7 @@ const fuseOptions = {
    // location: 0,
    //  threshold: 0.8,
    //   distance: 300,
-    //useExtendedSearch: true,
+    useExtendedSearch: true,
    // ignoreLocation: false,
    // ignoreFieldNorm: false,
    // fieldNormWeight: 1,
@@ -8556,7 +8556,16 @@ function myFunction() {
    })
    filter2 = filter.split(' ').reduce((previousValue, currentValue) => previousValue + ` '${currentValue}`, '');
    //console.log(fuse.search(filter))
-   results = fuse.search(filter, { limit: 6 })
+   if(filter2 == " '"){
+      console.log('test')
+      results = fuse.search(filter, { limit: 6 })
+   }
+   else{
+      results = fuse.search(filter2, { limit: 6 })
+   }
+
+   console.log(filter2)
+
    console.log(results)
    let searchlist = document.querySelector('.searchlist')
    for (i = 0; i < results.length; i++) {
