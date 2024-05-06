@@ -560,6 +560,9 @@ g *:not([id*="rotate"]) {
     }
 }
 
+svg{
+    transition:  0.3s;
+}
 
 ul {
     margin-bottom: 10%;
