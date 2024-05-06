@@ -10303,6 +10303,7 @@ function initproductname() {
 
 
 function highlightgroup(groupname, classname) {
+   
    let searchbar = document.querySelector('input')
    searchbar.value = ''
    myFunction()
@@ -10370,19 +10371,31 @@ function highlightgroup(groupname, classname) {
 function clearselected() {
    document.querySelectorAll('ul > li').forEach(e => e.classList.remove('clicked'));
    document.querySelector('.productdropdown').classList.remove('appearmenu')
+   document.querySelectorAll('.handlediv').forEach(e => e.remove())
    document.querySelectorAll('.productdropdown > span').forEach(e => e.remove())
    document.querySelectorAll('.productdropdown > ul > li').forEach(e => e.remove('clicked'))
    document.querySelectorAll('rect[class="highlightgroup"]').forEach(e => e.classList.remove('highlightgroup'));
 }
 function showsubproducts(groupname, subproduct) {
-
    let ul = document.querySelector('.productdropdown > ul')
    let div = document.querySelector('.productdropdown')
-
-   let span =document.createElement('span')
-   span.classList.add('handle')
-   div.appendChild(span);
+   div.classList.remove('hidemenu')
    if (subproduct.length != 0) {
+      let handlediv = document.createElement('div')
+      handlediv.classList.add('handlediv')
+      handlediv.addEventListener('click',(e =>{
+        console.log('test')
+        if(!div.classList.contains('hidemenu')){
+            div.classList.add('hidemenu')
+        }
+        else{
+            div.classList.remove('hidemenu')
+        }
+      }))
+      let span = document.createElement('span')
+      handlediv.appendChild(span)
+      span.classList.add('handle')
+      div.appendChild(handlediv);
       div.classList.add('appearmenu')
       for (let i = 0; i < subproduct.length; i++) {
          let li = document.createElement("li");
@@ -10404,12 +10417,12 @@ function pan(element) {
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
-         block: "center",
+         block: "nearest",
          inline: "center"
       });
    }
    else {
-      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+      element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" })
    }
 
 }

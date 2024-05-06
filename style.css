@@ -141,7 +141,7 @@ body {
 
 .appearmenu{
 
-    animation: subproductappear 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+    animation: subproductappear 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
 }
 
 .box {
@@ -562,8 +562,13 @@ ul {
     margin-bottom: 10%;
 }
 
+.handlediv{
+    width: 100%;
+    height: 31px;
+}
+
 .productdropdown>ul {
-    margin-top: 30px;
+    margin-top: 0px;
     padding: 1px;
 }
 
@@ -601,15 +606,36 @@ div[class="productdropdown"]>ul>li {
     animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
 }
 
+.hidemenu{
+    animation: hidemenu 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+}
+
+@keyframes hidemenu{
+    0% {
+        -webkit-transform:  translateY(-30px);
+        transform: translateY(-30px) ;
+    }
+    100% {
+        -webkit-transform: translateY(+80px);
+        transform: translateY(+80px);
+    }
+}
+
+
+
 @keyframes subproductappear{
     0% {
         -webkit-transform: translateY(+100px);
         transform: translateY(+100px);
     }
 
+    80% {
+        -webkit-transform:  translateY(-35px);
+        transform: translateY(-35px) ;
+    }
     100% {
-        -webkit-transform:  translateY(-100px);
-        transform: translateY(-100px) ;
+        -webkit-transform:  translateY(-30px);
+        transform: translateY(-30px) ;
     }
 }
 
