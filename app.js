@@ -2,7 +2,6 @@
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const queryString = window.location.search;
-const isMobile = navigator.userAgentData.mobile;
 const el = (sel, par) => (par || document).querySelector(sel);
 let product = ""
 // console.log(queryString)
@@ -10384,28 +10383,18 @@ function showsubproducts(groupname, subproduct) {
    if (subproduct.length != 0) {
       let handlediv = document.createElement('div')
       handlediv.classList.add('handlediv')
-      if (isMobile){
-        handlediv.addEventListener('touchend',(e =>{
-            console.log('test2')
-            if(!div.classList.contains('hidemenu')){
-                div.classList.add('hidemenu')
-            }
-            else{
-                div.classList.remove('hidemenu')
-            }
-          }))
-      }
-      else{
-        handlediv.addEventListener('click',(e =>{
-            console.log('test')
-            if(!div.classList.contains('hidemenu')){
-                div.classList.add('hidemenu')
-            }
-            else{
-                div.classList.remove('hidemenu')
-            }
-          }))
-      }
+
+      handlediv.addEventListener('click',(e =>{
+        console.log('test')
+        if(!div.classList.contains('hidemenu')){
+            div.classList.add('hidemenu')
+        }
+        else{
+            div.classList.remove('hidemenu')
+        }
+      }))
+
+
       let span = document.createElement('span')
       handlediv.appendChild(span)
       span.classList.add('handle')
