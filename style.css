@@ -131,7 +131,7 @@ body {
     align-items: center;
     justify-content: center;
     position: fixed;
-    bottom: 0;
+    
     width: 100%;
     
     
@@ -145,6 +145,7 @@ body {
 .appearmenu{
     height: auto;
     animation: subproductappear 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
+    bottom: 0;
 }
 
 .box {
@@ -376,11 +377,16 @@ ul.categories {
     white-space: nowrap;
     padding: 0.1px;
     height: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
+
 
 ul.categories li {
     display: inline-block;
     text-align: center;
+    background: lightgrey;
 }
 
 ul.productlist {
@@ -637,12 +643,12 @@ div[class="productdropdown"]>ul>li {
     }
 
     80% {
-        -webkit-transform:  translateY(-15px);
-        transform: translateY(-15px) ;
+        -webkit-transform:  translateY(-3px);
+        transform: translateY(-3px) ;
     }
     100% {
-        -webkit-transform:  translateY(-10px);
-        transform: translateY(-10px) ;
+        -webkit-transform:  translateY(0px);
+        transform: translateY(0px) ;
     }
 }
 
