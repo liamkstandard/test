@@ -337,12 +337,12 @@ function pan(element) {
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
-         block: "nearest",
+         block: "center",
          inline: "center"
       });
    }
    else {
-      element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" })
+      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
    }
 
 }
