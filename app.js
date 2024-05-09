@@ -64,13 +64,40 @@ function initprodcategory() {
    // let title = document.querySelectorAll(`title`)
 }
 
-function createBox(texts) {
+function createBox(texts,id) {
    var box = document.createElement('div');
    box.className = 'box';
    box.style.left = `${window.scrollX + event.clientX}px`;
    box.style.top = `${window.scrollY + event.clientY}px`;
    let map = document.querySelector('body')
    let ul = document.createElement('ul')
+
+    let rect = document.getElementById(id)
+    let g = rect.parentElement
+    let keyword = g.getAttribute("inkscape:label")
+
+    let search_results = texts
+    .filter(prof => {
+        // Filter results by doing case insensitive match on name here
+        return prof.product.toLowerCase().includes(keyword.toLowerCase());
+    })
+    .sort((a, b) => {
+        // Sort results by matching name with keyword position in name
+        if(a.product.toLowerCase().indexOf(keyword.toLowerCase()) > b.product.toLowerCase().indexOf(keyword.toLowerCase())) {
+            return 1;
+        } else if (a.product.toLowerCase().indexOf(keyword.toLowerCase()) < b.product.toLowerCase().indexOf(keyword.toLowerCase())) {
+            return -1;
+        } else {
+            if(a.product > b.product)
+                return 1;
+            else
+                return -1;
+        }
+    });
+    texts.sort(function(a, b){  
+        return search_results.indexOf(a) - search_results.indexOf(b);
+    });
+    texts.reverse()
    texts.forEach(c => {
       let li = document.createElement('li')
       let a = document.createElement('a')
@@ -102,7 +129,7 @@ function createpopup(e, ev) {
          list.push(f)
       }
    })
-   createBox(list)
+   createBox(list,e.id)
    let svg1 = document.querySelector(`#${e.id}`)
 
    let svg = svg1.closest('g[id]')
@@ -199,22 +226,22 @@ function initcurrentlocation() {
 }
 
 function initproductname() {
-   // // let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
-   //  let pn = []
-   // // for (i = 0; i < rects.length; i++) {
-   // //    txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
-   // //    pn.push(txtValue)
-   // // }
-   // // productnames = [... new Set(pn)]
-   // // console.log(productnames)
+//    // // let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
+//     let pn = []
+//    // // for (i = 0; i < rects.length; i++) {
+//    // //    txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
+//    // //    pn.push(txtValue)
+//    // // }
+//    // // productnames = [... new Set(pn)]
+//    // // console.log(productnames)
 
-   // textt.forEach(e => {
-   //    NEWproductnames.push(e.split('|'))
-   //    let f = e.split('|')
-   //    pn.push({ 'location': f[0], 'product': f[3] ,'productshortcode' :f[1]})
-   // })
-   // console.log(pn)
-   // console.log(searchdata)
+//    textt.forEach(e => {
+//       NEWproductnames.push(e.split('|'))
+//       let f = e.split('|')
+//       pn.push({ 'location': f[0], 'product': f[3] ,'productshortcode' :f[1]})
+//    })
+//    console.log(pn)
+//    // console.log(searchdata)
 }
 
 
