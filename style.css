@@ -347,9 +347,7 @@ ul.searchlist {
 [id*="rect"] {
     opacity: 20%;
     transition: 0.35s;
-    -webkit-transform: translateZ(0);
-    -webkit-perspective: 1000;
-    -webkit-backface-visibility: hidden;
+    -webkit-backdrop-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
@@ -359,7 +357,7 @@ ul.searchlist {
 
 [id*="rect"]:hover {
     opacity: 100%;
-
+    -webkit-backdrop-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);
     -o-filter: grayscale(0%);
