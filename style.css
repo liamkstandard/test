@@ -347,7 +347,9 @@ ul.searchlist {
 [id*="rect"] {
     opacity: 20%;
     transition: 0.35s;
-
+    -webkit-transform: translateZ(0);
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
     -moz-filter: grayscale(100%);
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
