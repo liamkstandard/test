@@ -372,7 +372,7 @@ ul.categories {
     overflow: auto;
     white-space: nowrap;
     padding: 0.1px;
-    height: 30vw;
+    height: 32vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;

@@ -6103,5 +6103,25 @@ let searchdata = [
         "location": "9985",
         "product": "TJI 560 Series 14 I-Joist",
         "productshortcode": "TJI56014"
+    },
+    {
+        "location": "8888",
+        "product": "coil nails hardware",
+        "productshortcode": ""
+    },
+    {
+        "location": "8889",
+        "product": "screws hardware",
+        "productshortcode": ""
+    },
+    {
+        "location": "8890",
+        "product": "screws loop ties hardware",
+        "productshortcode": ""
+    },
+    {
+        "location": "8891",
+        "product": "simpson strong tie joist angle hanger post sadle hardware",
+        "productshortcode": ""
     }
 ]

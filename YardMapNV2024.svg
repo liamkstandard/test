@@ -25,15 +25,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.80412295"
-     inkscape:cx="448.93632"
-     inkscape:cy="323.95543"
-     inkscape:window-width="1904"
-     inkscape:window-height="993"
-     inkscape:window-x="1920"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer14" />
+     inkscape:zoom="1"
+     inkscape:cx="575"
+     inkscape:cy="679.5"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer19" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="0"
@@ -236,7 +236,10 @@
        height="17.911474"
        x="208.72314"
        y="435.42581"
-       inkscape:label="1x2  framing lumber" />
+       inkscape:label="1x2  framing lumber">
+      <title
+         id="title77">9958</title>
+    </rect>
     <rect
        style="fill:#00ff00;stroke-width:0.500828"
        id="rect14-6"
@@ -379,9 +382,9 @@
          id="title26">9940</title>
     </rect>
     <rect
-       style="display:inline;fill:#ff0000;stroke-width:1.89706"
+       style="display:inline;fill:#ff0000;stroke-width:1.84265"
        id="rect5-4"
-       width="93.299484"
+       width="88.024033"
        height="36.332447"
        x="267.65515"
        y="814.70148"
@@ -570,7 +573,10 @@
        height="109.56153"
        x="32.781696"
        y="541.02692"
-       inkscape:label="2x8 2x10 8-16 treated lumber" />
+       inkscape:label="2x8 2x10 8-16 treated lumber">
+      <title
+         id="title82">9950</title>
+    </rect>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -745,12 +751,12 @@
      transform="translate(-30.184502,-179.71587)"
      style="display:inline">
     <rect
-       style="fill:#ff6600;stroke-width:1.11591"
+       style="fill:#ff6600;stroke-width:0.989274"
        id="rect34"
-       width="70.269135"
-       height="33.472717"
-       x="81.797913"
-       y="244.05054"
+       width="70.831635"
+       height="26.097717"
+       x="81.360413"
+       y="246.17554"
        inkscape:label="concrete mortar portland cement sand play sand thinset top n bond cold patch">
       <title
          id="title59">9979</title>
@@ -761,16 +767,29 @@
      id="layer19"
      inkscape:label="Building Products"
      style="display:inline">
+    <desc
+       id="desc82">Drywall Hardware,Snow Fence,Roofing Products</desc>
     <rect
-       style="fill:#0000e9;fill-opacity:1;stroke-width:0.928742"
+       style="fill:#0000e9;fill-opacity:1;stroke-width:0.950417"
        id="rect29"
-       width="107.28089"
+       width="112.34686"
        height="36.053413"
-       x="320.08398"
+       x="315.01801"
        y="634.89185"
-       inkscape:label="tar paper">
+       inkscape:label="tar asphalt roofing products paper">
       <title
          id="title30">9941</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#0000e9;fill-opacity:1;stroke-width:0.703749"
+       id="rect29-9"
+       width="112.34558"
+       height="19.767847"
+       x="315.02094"
+       y="617.27747"
+       inkscape:label="snow fence">
+      <title
+         id="title30-4">9942</title>
     </rect>
     <rect
        style="display:inline;fill:#0000ff;stroke-width:1.68848"
@@ -779,7 +798,7 @@
        height="39.944946"
        x="770.30127"
        y="49.908207"
-       inkscape:label="drywall">
+       inkscape:label="drywall hardware building products">
       <title
          id="title70">9915</title>
     </rect>
@@ -790,7 +809,7 @@
        height="49.271877"
        x="770.29803"
        y="1.0481006"
-       inkscape:label="drywall">
+       inkscape:label="drywall hardware building products">
       <title
          id="title70-4">9915</title>
     </rect>
@@ -1044,12 +1063,12 @@
          id="title22">9932</title>
     </path>
     <rect
-       style="fill:#800080;stroke-width:1.54736"
+       style="fill:#800080;stroke-width:1.45548"
        id="rect55-9"
-       width="51.288967"
-       height="28.058245"
-       x="30.091503"
-       y="244.25616"
+       width="48.706936"
+       height="26.141045"
+       x="32.654003"
+       y="246.17337"
        inkscape:label="rigid insulation styrofoam">
       <title
          id="title62">9979</title>
@@ -1149,7 +1168,10 @@
        height="78.182846"
        x="826.27673"
        y="126.33148"
-       inkscape:label="coil nails hardware" />
+       inkscape:label="coil nails hardware">
+      <title
+         id="title78">8888</title>
+    </rect>
     <rect
        style="display:inline;fill:#6c6753;stroke:#000000;stroke-width:0;stroke-dasharray:none"
        id="rect24"
@@ -1157,7 +1179,10 @@
        height="78.394035"
        x="881.08051"
        y="126.00257"
-       inkscape:label="screws hardware" />
+       inkscape:label="screws hardware">
+      <title
+         id="title79">8889</title>
+    </rect>
     <rect
        style="display:inline;fill:#6c6753;stroke:#000000;stroke-width:0;stroke-dasharray:none"
        id="rect53"
@@ -1165,7 +1190,10 @@
        height="79.22702"
        x="918.87866"
        y="126.316"
-       inkscape:label="screws loop ties hardware" />
+       inkscape:label="screws loop ties hardware">
+      <title
+         id="title80">8890</title>
+    </rect>
     <rect
        style="fill:#6c6753;stroke:#000000;stroke-width:0;stroke-dasharray:none"
        id="rect59"
@@ -1173,6 +1201,9 @@
        height="119.99858"
        x="954.15692"
        y="126.17443"
-       inkscape:label="simpson strong tie joist angle hanger post sadle hardware" />
+       inkscape:label="simpson strong tie joist angle hanger post sadle hardware">
+      <title
+         id="title81">8891</title>
+    </rect>
   </g>
 </svg>
