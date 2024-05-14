@@ -360,16 +360,22 @@ function showsubproducts(groupname, subproduct) {
 
    }
 }
+
+
+
+
+
 function pan(element) {
+
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
-         block: "center",
-         inline: "center"
+         block: "nearest",
+         inline: "nearest"
       });
    }
    else {
-      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+      element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" })
    }
 
 }
