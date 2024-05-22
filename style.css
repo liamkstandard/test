@@ -382,7 +382,8 @@ ul.categories {
 ul.categories li {
     display: inline-block;
     text-align: center;
-    background: lightgrey;
+    background: none;
+    border: #161616 1.6px solid;
 }
 
 ul.productlist {

@@ -4,42 +4,16 @@ const SVG_NS = 'http://www.w3.org/2000/svg';
 const queryString = window.location.search;
 const el = (sel, par) => (par || document).querySelector(sel);
 let product = ""
-// console.log(queryString)
 if (queryString != "") {
    const urlParams = new URLSearchParams(queryString);
    product = urlParams.get('product').split(',')
-   console.log(product);
 }
 let productnames = []
 let NEWproductnames = []
 
-// temp = searchdata.filter(item => (!( Number(item['location']) < 8887))  );
-
-// searchdata = searchdata.filter(item => (!( Number(item['location']) > 7600)) );
-// temp.forEach(e=>{
-//    searchdata.push(e)
-// })
-// searchdata = searchdata.filter(item => (!( Number(item['location']) == 7524)) );
-// searchdata = searchdata.filter(item => (!( Number(item['location']) == 7520)) );
-// searchdata = searchdata.filter(item => (!( Number(item['location']) == 7544)) );
-// searchdata = searchdata.filter(item => (!( Number(item['location']) == 7525)) );
-// console.log(searchdata)
-
-
 const fuseOptions = {
-   // isCaseSensitive: false,
-   // includeScore: false,
     shouldSort: true,
-   // includeMatches: false,
-   // findAllMatches: false,
-   // minMatchCharLength: 1,
-   // location: 0,
-   //  threshold: 0.8,
-   //   distance: 300,
     useExtendedSearch: true,
-   // ignoreLocation: false,
-   // ignoreFieldNorm: false,
-   // fieldNormWeight: 1,
    keys: [
       "product",
       "productshortcode"
@@ -59,10 +33,6 @@ function initonclickrect() {
    })
 }
 
-function initprodcategory() {
-   // let rects = document.querySelectorAll('[id*="rect"]')
-   // let title = document.querySelectorAll(`title`)
-}
 
 function createBox(texts,id) {
    var box = document.createElement('div');
@@ -118,11 +88,8 @@ function removepopup() {
 
 function createpopup(e, ev) {
    removepopup()
-
-   // console.log(id)
    let element = document.getElementById(e.id)
    let parent = document.querySelector('svg')
-   //console.log(element.getAttributeNames())
    let list = []
    searchdata.forEach(f => {
       if (f['location'].includes(element.querySelector('title').innerHTML)) {
@@ -131,118 +98,17 @@ function createpopup(e, ev) {
    })
    createBox(list,e.id)
    let svg1 = document.querySelector(`#${e.id}`)
-
    let svg = svg1.closest('g[id]')
-
-   //the array of the rects with a white fill
    let rects = Array.from(svg.querySelectorAll(`[id='${e.id}']`));
-   //an array of true values as long as the rects array
    let arr = Array(rects.length).fill(true);
-   //for each rect in the rects array
-   //console.log(alltext)
-   //   document.querySelectorAll('text').forEach(ed => ed.remove());
-   //   document.querySelectorAll('.textbacking').forEach(ed => ed.remove());
-   //   let sec = 0
-   //   rects.forEach((r, i) => {
-   //      //get the position end the size of the rect (the bounding box)
-   //      let bb = r.getBBox();
-   //      let sbb = svg.getBBox()
-   //      console.log(bb)
-   //      //the center of the rect
-   //      let x = bb.x + bb.width / 2;
-   //      let y = bb.y + bb.height / 2;
-   //      if (r.tagName == 'path'){
-   //             x = x- ((bb.x + bb.width) -(sbb.width + sbb.x))
-   //             y = y- ((bb.y + bb.height) -(sbb.height + sbb.y))
-   //      }
-   //      console.log(bb.x + bb.width,bb.y + bb.height)
-   //       console.log(sbb.width + sbb.x,sbb.height+sbb.y)
-
-
-
-
-   //      //on click
-   //      //if there isn't already a text element there
-   //      if (arr[i]) {
-   //         //add a text element
-   //         //createBox(e,ev)
-   //         let txt3 = drawSVGelmt({x:x, y:y}, "text", svg)
-   //         txt3.classList.add('text')
-   //         let tags = e.getAttribute('inkscape:label').split(' ')
-   //         let taggs = []
-   //         let sec = 0
-   //         tags.forEach(tag => {
-   //          sec += 1 / 10
-   //          let tspan = `<tspan x=${x} dy = '1.2em'>${tag}</tspan>`
-   //          taggs.push(tspan)
-   //         })
-   //         txt3.innerHTML = taggs.join('\r\n')//e.getAttribute('inkscape:label').split(' ').join("\r\n")
-   //         let txtbbox = txt3.getBBox()
-
-   //         console.log(txt3.getBBox())
-   //         let twidth = txtbbox.width +20
-   //         let theight = txtbbox.height +10
-   //         let tx = txtbbox.x -10
-   //         let ty = txtbbox.y -5
-   //         let txtbacking = drawSVGelmt({id:'test',x:tx, y:ty,width:twidth,height:theight,rx:"8"}, "rect", svg)
-   //         txtbacking.classList.add('textbacking')
-   //         let txt4 = drawSVGelmt({x:x, y:y}, "text", svg)
-   //         txt4.classList.add('text')
-   //         txt4.innerHTML = taggs.join('\r\n')
-   //         //txt.textContent = svg1.children[1].innerHTML;
-   //         if(sbb.height + sbb.y <txtbbox.height + txtbbox.y){
-   //          txt3.setAttribute('y',(txt3.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y)) ))
-   //          txt4.setAttribute('y',(txt4.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
-   //          txtbacking.setAttribute('y',(txtbacking.getAttribute('y') - ((txtbbox.y+ txtbbox.height) - (sbb.height + sbb.y))))
-   //         }
-   //       //   if(sbb.width + sbb.x <txtbbox.width + txtbbox.x){
-   //       //    txt3.setAttribute('x',(txt3.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x)) ))
-   //       //    txt4.setAttribute('x',(txt4.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x))))
-   //       //    txtbacking.setAttribute('x',(txtbacking.getAttribute('x') - ((txtbbox.x+ txtbbox.width) - (sbb.width + sbb.x))))
-   //       //   }
-   //         arr[i] = false;
-   //      }
-
-   //   })
 }
 
 function initcurrentlocation() {
    let initlocation = document.querySelector(`g[id="layer15"] > path`)
    initlocation.classList.add('location')
-   // let group = initlocation.parentElement
-   // let attributes = []
-   // for (i = 0; i < initlocation.attributes.length; i++){
-   //    let names = initlocation.attributes[i].nodeName
-   //    let value = initlocation.attributes[i].nodeValue
-   //    attributes[names] = value
-   // }
-   // //let locationP3 = drawSVGelmt(attributes,'path',group)
-   // //let locationP2 = drawSVGelmt(attributes,'path',group)
-   // let location = drawSVGelmt(attributes,'path',group)
-   // //locationP2.classList.add('locationP2')
-   // //locationP3.classList.add('locationP3')
-   // location.classList.add('location')
-
 }
 
-function initproductname() {
-//    // // let rects = document.querySelectorAll('[id*="rect"]:not(#background)')
-//     let pn = []
-//    // // for (i = 0; i < rects.length; i++) {
-//    // //    txtValue = rects[i].getAttribute('inkscape:label').replace(/\s+/g, " ") || "";
-//    // //    pn.push(txtValue)
-//    // // }
-//    // // productnames = [... new Set(pn)]
-//    // // console.log(productnames)
 
-//    textt.forEach(e => {
-//       NEWproductnames.push(e.split('|'))
-//       let f = e.split('|')
-//       pn.push({ 'location': f[0], 'product': f[3] ,'productshortcode' :f[1]})
-//    })
-//    console.log(pn)
-//    // console.log(searchdata)
-}
 
 
 
@@ -258,13 +124,11 @@ function highlightgroup(groupname, classname) {
    let elements = document.getElementById(groupname).children
    let subproducts = []
    removename(groupname)
-   //console.log(document.querySelector(`g[id='${groupname}'] > desc`))
    let hasdesc = false
    if (document.querySelector(`g[id='${groupname}'] > desc`)) {
       subproducts = document.querySelector(`g[id='${groupname}'] > desc`).innerHTML.split(',')
       hasdesc = true
    }
-   //console.log(subproducts)
    for (let i = 0; i < allelementsh.length; i++) {
       allelementsh[i].classList.remove('highlightgroup')
    }
@@ -327,9 +191,7 @@ function showsubproducts(groupname, subproduct) {
    if (subproduct.length != 0) {
       let handlediv = document.createElement('div')
       handlediv.classList.add('handlediv')
-
       handlediv.addEventListener('click',(e =>{
-        console.log('test')
         if(!div.classList.contains('hidemenu')){
             div.classList.add('hidemenu')
         }
@@ -361,10 +223,6 @@ function showsubproducts(groupname, subproduct) {
    }
 }
 
-
-
-
-
 function pan(element) {
 
    if (isSafari) {
@@ -386,7 +244,6 @@ function randomIntFromInterval(min, max) { // min and max included
 
 
 function showonlysubproduct(groupname, product) {
-   //console.log(product.toUpperCase())
    removepopup()
    let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > [id*="rect"]`)
    let div = document.querySelector('.productdropdown')
@@ -415,10 +272,7 @@ function showsearchproduct(location) {
    })
    for (let i = 0; i < allelementsh.length; i++) {
       let title = allelementsh[i].querySelector('title')
-
       try {
-         console.log(location)
-         console.log(title.innerHTML)
          if (title.innerHTML != location) {
             allelementsh[i].classList.toggle('highlightgroup')
          }
@@ -432,18 +286,6 @@ function showsearchproduct(location) {
       }
 
    }
-   //  for (let i = 0; i < allelementsh.length; i++) {
-   //     if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
-   //        allelementsh[i].classList.toggle('highlightgroup')
-
-   //     }
-   //     if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().replace(/\s+/g, " ").includes(product.toUpperCase().replace(/\s+/g, " "))) {
-   //        pan(allelementsh[i])
-   //        showname(allelementsh[i].id)
-
-   //     }
-   //  }
-
 }
 
 function clearsubproducts() {
@@ -453,62 +295,40 @@ function clearsubproducts() {
 
 }
 function showname(id) {
-
-   // console.log(id)
    let element = document.getElementById(id)
-
-   //console.log(element.getAttributeNames())
    let svg1 = document.querySelector(`#${id}`)
-
    let svg = svg1.closest('g[id]')
-   //the array of the rects with a white fill
    let rects = Array.from(svg.querySelectorAll(`[id='${id}']`));
-   //an array of true values as long as the rects array
    let arr = Array(rects.length).fill(true);
-   //for each rect in the rects array
-   //console.log(alltext)
    document.querySelectorAll('text').forEach(e => e.remove());
-
    rects.forEach((r, i) => {
-      //get the position end the size of the rect (the bounding box)
       let bb = r.getBBox();
       let sbb = svg.getBBox()
-      //the center of the rect
       let x = bb.x + bb.width / 2;
       let y = bb.y + bb.height / 2;
       if (r.tagName == 'path') {
          x = x - ((bb.x + bb.width) - (sbb.width + sbb.x))
          y = y - ((bb.y + bb.height) - (sbb.height + sbb.y))
       }
-      //on click
-      //if there isn't already a text element there
       if (arr[i]) {
-         //add a text element
          let txt3 = drawSVGelmt({ cx: x * 1.00, cy: y * 1.0, r: '8' }, "circle", svg)
          txt3.classList.add('pulse')
          let txt2 = drawSVGelmt({ cx: x * 1.00, cy: y * 1.0, r: '6' }, "circle", svg)
          txt2.classList.add('pulse2')
          let txt = drawSVGelmt({ cx: x * 1.0, cy: y * 1.0, r: '8' }, "circle", svg)
          txt.classList.add('dot')
-
-         //txt.textContent = svg1.children[1].innerHTML;
          arr[i] = false;
       }
-
    })
 }
 function removename(id) {
    let svg1 = document.querySelector(`#${id}`)
-   //console.log(id)
-   //console.log(document.querySelectorAll('circle'))
    document.querySelectorAll('circle').forEach(e => {
       if (!e.classList.contains('location') && !e.classList.contains('locationP2') && !e.classList.contains('locationP3')) {
          e.remove()
       }
-
    }
    )
-
 }
 
 
@@ -516,25 +336,20 @@ function removename(id) {
 function drawSVGelmt(o, tag, parent) {
    let elmt = document.createElementNS(SVG_NS, tag);
    elmt.classList.add("nametext")
-
-   //console.log(elmt)
    for (var name in o) {
       if (o.hasOwnProperty(name)) {
          try {
             elmt.setAttributeNS(null, name, o[name]);
             //code that causes an error
-
          } catch (e) {
             console.log(e)
          }
-
       }
    }
    parent.appendChild(elmt);
    return elmt;
 }
 function myFunction() {
-   // Declare variables
    clearselected()
    var input, filter, ul, li, a, i, txtValue;
    input = document.getElementById('myInput');
@@ -549,18 +364,12 @@ function myFunction() {
       e.remove()
    })
    filter2 = filter.split(' ').reduce((previousValue, currentValue) => previousValue + ` '${currentValue}`, '');
-   //console.log(fuse.search(filter))
    if(filter2 == " '"){
-      console.log('test')
       results = fuse.search(filter, { limit: 6 })
    }
    else{
       results = fuse.search(filter2, { limit: 6 })
    }
-
-   console.log(filter2)
-
-   console.log(results)
    let searchlist = document.querySelector('.searchlist')
    for (i = 0; i < results.length; i++) {
       let newitem = document.createElement('li')
@@ -573,7 +382,6 @@ function myFunction() {
       });
       searchlist.appendChild(newitem)
    }
-
    // Loop through all list items, and hide those who don't match the search query
    for (i = 0; i < rect.length; i++) {
       txtValue = rect[i].getAttribute('inkscape:label') || "";
@@ -586,6 +394,4 @@ function myFunction() {
          rect[i].classList.remove('highlightgroup');
       }
    }
-
-
 }
