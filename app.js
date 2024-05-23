@@ -109,7 +109,20 @@ function initcurrentlocation() {
 }
 
 
+function createwarning(){
+   let parent = document.querySelector('.map')
+   let warningbox = document.createElement('div')
+   let warningtext = document.createElement('p')
+   warningtext.innerHTML = 'This product is out of bounds,  ask the <span style="font-weight:bold;">Yard Service desk </span> for more information'
+   warningbox.classList.add('warningbox')
+   warningtext.classList.add('warningtext')
+   warningbox.appendChild(warningtext)
+   parent.appendChild(warningbox)
 
+}
+function removewarning(){
+   document.querySelectorAll('.warningbox').forEach(e => e.remove())
+}
 
 
 function highlightgroup(groupname, classname) {
@@ -118,6 +131,7 @@ function highlightgroup(groupname, classname) {
    searchbar.value = ''
    myFunction()
    removepopup()
+   removewarning()
    let allli = document.getElementsByClassName('clicked')
    let li = document.getElementsByClassName(classname)
    let allelementsh = document.querySelectorAll('[id*="rect"]:not(.textbacking)')
@@ -125,6 +139,9 @@ function highlightgroup(groupname, classname) {
    let subproducts = []
    removename(groupname)
    let hasdesc = false
+   if (document.querySelector(`g[id='${groupname}'] > title`) && document.querySelector(`g[id='${groupname}'] > title`).innerHTML == 'offlimits') {
+      createwarning()
+   }
    if (document.querySelector(`g[id='${groupname}'] > desc`)) {
       subproducts = document.querySelector(`g[id='${groupname}'] > desc`).innerHTML.split(',')
       hasdesc = true
