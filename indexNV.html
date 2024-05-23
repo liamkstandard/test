@@ -26,19 +26,13 @@
       <h1 class="title">North Vancouver Yard Map</h1>
    </div>
    <ul class="productlist animate__animated animate__fadeInDown w3-bar w3-light-grey">
-      <!-- <div class="logowrapper">
-         <img src="Standard-Building-Supplies-Ltd..jpg">
-      </div> -->
-
       <input class="search animate__animated animate__fadeInDown w3-bar-item w3-input w3-white w3-mobile" id="myInput"
          onkeyup="myFunction()" type="text" placeholder="Search for a product..">
       <ul class="searchlist">
       </ul>
       <ul class="categories">
-
-         <li class="FramingLumber" onclick="highlightgroup('layer2','FramingLumber')">
-            Framing
-            Lumber</li>
+         <li class="Spruce" onclick="highlightgroup('layer2','Spruce')">Spruce</li>
+         <li class="Fir" onclick="highlightgroup('layer24','Fir')">Fir</li>
          <li class="Plywood" onclick="highlightgroup('layer6','Plywood')">Plywood</li>
          <li class="TreatedLumber" onclick="highlightgroup('layer3','TreatedLumber')">
             Treated Lumber</li>
@@ -65,16 +59,27 @@
    </div>
    <div class="map" style="margin-top: 1%;">
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
       <svg version="1.1" id="svg1" width="1024" height="500" viewBox="0 0 1024 733" sodipodi:docname="YardMapNV2024.svg"
          inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
          xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
          xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink"
          xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-         <defs id="defs1" />
+         <defs id="defs1">
+            <pattern inkscape:collect="always" xlink:href="#Strips1_1.5" preserveAspectRatio="xMidYMid" id="pattern13"
+               patternTransform="matrix(2.1053898,2.1112156,-2.1053898,2.1112156,177.50086,-100.83923)" x="0" y="0" />
+            <pattern inkscape:collect="always" patternUnits="userSpaceOnUse" width="2.5" height="1"
+               patternTransform="translate(0,0) scale(2,2)" preserveAspectRatio="xMidYMid" id="Strips1_1.5"
+               style="fill:#a2a2a2" inkscape:stockid="Stripes 02 (2:3)" inkscape:isstock="true"
+               inkscape:label="Stripes 02 (2:3)">
+               <rect style="stroke:none" x="0" y="-0.5" width="1" height="2" id="rect140" />
+
+            </pattern>
+         </defs>
          <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
             inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
-            inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.4142136" inkscape:cx="280.01428" inkscape:cy="328.4511"
-            inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="1912" inkscape:window-y="-8"
+            inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.7071068" inkscape:cx="308.29855" inkscape:cy="383.95897"
+            inkscape:window-width="1920" inkscape:window-height="1009" inkscape:window-x="-8" inkscape:window-y="-8"
             inkscape:window-maximized="1" inkscape:current-layer="layer17" />
          <g inkscape:groupmode="layer" inkscape:label="0" id="layer-oc1">
             <image width="1024" height="733" preserveAspectRatio="none"
@@ -85,6 +90,7 @@
          </g>
          <g inkscape:groupmode="layer" id="layer17" inkscape:label="Engineered Wood"
             transform="translate(-50.21405,-338.77896)" style="display:inline">
+            <title id="title96">offlimits</title>
             <desc id="desc5">Parallam PSL,Microllam LVL</desc>
             <rect style="fill:#008000;stroke:none;stroke-width:1.58834" id="rect60-2" width="23.513163"
                height="19.686815" x="125.92098" y="574.85071"
@@ -149,10 +155,54 @@
                <title id="title95">9968</title>
             </rect>
          </g>
-         <g inkscape:groupmode="layer" id="layer2" inkscape:label="Framing Lumber" style="display:inline;fill:#00ff00"
+         <g inkscape:groupmode="layer" id="layer23" inkscape:label="OutOfBounds" style="display:inline;fill:#333333"
+            transform="translate(-736.4715,3.57262)">
+            <path
+               style="opacity:0.7;fill:url(#pattern13);fill-opacity:1;stroke:#a2a2a2;stroke-width:2.98159;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:2.16;stroke-opacity:1"
+               d="m 813.0525,231.36498 0,-61.8616 h 282.47 c 0,7.46428 1.2403,61.8616 1.2403,61.8616 z" id="OffLimits"
+               inkscape:label="OffLimits" sodipodi:nodetypes="ccccc" />
+         </g>
+         <g inkscape:groupmode="layer" id="layer2" inkscape:label="Spruce" style="display:inline;fill:#00ff00"
             transform="translate(-30.184502,-179.71587)">
-            <desc id="desc2">1x2,2x2,2x3,2x4,2x6,2x8,2x10,2x12,4x4,6x6,Fir,Spruce,Studs,SPF,Longs</desc>
-            <rect style="fill:#00ff00;stroke:none;stroke-width:0.961345;stroke-dasharray:none;stroke-opacity:1"
+            <desc id="desc2">2x4,2x6,2x8,2x10,2x12,Studs,SPF,Longs</desc>
+            <rect style="display:inline;fill:#00ffff;stroke-width:1.37841" id="rect10" width="178.32986"
+               height="20.500435" x="247.1212" y="578.65234"
+               inkscape:label="2x4 2x6 2x8 studs 116-1/4 104-1/4 92-1/4 spf framing lumber">
+               <title id="title37">9954</title>
+            </rect>
+            <rect style="display:inline;fill:#00ffff;stroke-width:0.60774" id="rect12-2-0" width="71.987282"
+               height="20.525011" x="175.35385" y="578.62665" inkscape:label="2x10 spf 8-16 framing lumber">
+               <title id="title38">9954</title>
+            </rect>
+            <rect style="display:inline;fill:#00ffff;stroke-width:1.38607" id="rect17" width="130.73808"
+               height="19.62944" x="350.16211" y="521.25104" inkscape:label="spruce longs framing lumber">
+               <title id="title40">9956</title>
+            </rect>
+            <rect style="display:inline;fill:#00ffff;stroke-width:1.42427" id="rect17-5" width="138.04417"
+               height="19.62944" x="74.981041" y="521.2066" inkscape:label="spruce longs framing lumber">
+               <title id="title43">9956</title>
+            </rect>
+            <rect
+               style="display:inline;fill:#00ffff;stroke:none;stroke-width:0.715624;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8-6" width="68.878944" height="19.602526" x="212.87868" y="521.22705"
+               inkscape:label="2x8 KD spruce framing lumber">
+               <title id="title42">9956</title>
+            </rect>
+            <rect
+               style="display:inline;fill:#00ffff;stroke:none;stroke-width:0.715624;stroke-dasharray:none;stroke-opacity:1"
+               id="rect8-6-8" width="68.878944" height="19.602526" x="281.53699" y="521.23901"
+               inkscape:label="2x12 KD spruce framing lumber">
+               <title id="title41">9956</title>
+            </rect>
+            <rect style="display:inline;fill:#00ffff;stroke-width:0.709302" id="rect12" width="97.741173"
+               height="20.591385" x="77.75856" y="578.59937" inkscape:label="2x4 2x6 KF j grade spruce framing lumber">
+               <title id="title39">9954</title>
+            </rect>
+         </g>
+         <g inkscape:groupmode="layer" id="layer24" inkscape:label="Fir" transform="translate(-30.184502,-179.71587)">
+            <desc id="desc8">1x2,1x4,2x2,2x3,2x4,2x6,2x8,2x10,2x12,4x4</desc>
+            <rect
+               style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.961345;stroke-dasharray:none;stroke-opacity:1"
                id="rect8" width="114.83173" height="21.219105" x="77.444023" y="643.83667"
                inkscape:label="2x4 8-16 KD fir framing lumber">
                <title id="title33">9949</title>
@@ -162,18 +212,6 @@
                id="rect8-2" width="140.19435" height="21.116055" x="191.83543" y="643.92767"
                inkscape:label="2x6 8-16 KD fir framing lumber">
                <title id="title34">9949</title>
-            </rect>
-            <rect
-               style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.715624;stroke-dasharray:none;stroke-opacity:1"
-               id="rect8-6" width="68.878944" height="19.602526" x="212.87868" y="521.22705"
-               inkscape:label="2x8 KD spruce framing lumber">
-               <title id="title42">9956</title>
-            </rect>
-            <rect
-               style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.715624;stroke-dasharray:none;stroke-opacity:1"
-               id="rect8-6-8" width="68.878944" height="19.602526" x="281.53699" y="521.23901"
-               inkscape:label="2x12 KD spruce framing lumber">
-               <title id="title41">9956</title>
             </rect>
             <rect
                style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.584492;stroke-dasharray:none;stroke-opacity:1"
@@ -197,50 +235,29 @@
                height="19.603733" x="105.27293" y="452.82651" inkscape:label="fir 1x4 common utility framing lumber">
                <title id="title53">9958</title>
             </rect>
-            <rect style="display:inline;fill:#00ff00;stroke-width:1.37841" id="rect10" width="178.32986"
-               height="20.500435" x="247.1212" y="578.65234"
-               inkscape:label="2x4 2x6 2x8 studs 116-1/4 104-1/4 92-1/4 spf framing lumber">
-               <title id="title37">9954</title>
-            </rect>
             <rect style="display:inline;fill:#00ff00;stroke-width:0.887589" id="rect11" width="142.22202"
                height="18.119169" x="239.97484" y="503.42471" inkscape:label="4x4 GRN FIR 8-12  framing lumber">
                <title id="title45">9957</title>
-            </rect>
-            <rect style="display:inline;fill:#00ff00;stroke-width:0.709302" id="rect12" width="97.741173"
-               height="20.591385" x="77.75856" y="578.59937" inkscape:label="2x4 2x6 KF j grade spruce framing lumber">
-               <title id="title39">9954</title>
             </rect>
             <rect style="display:inline;fill:#00ff00;stroke-width:0.737225" id="rect12-2" width="112.19401"
                height="19.378937" x="208.41965" y="453.07907" inkscape:label="2x8 KD fir framing lumber">
                <title id="title52">9958</title>
             </rect>
-            <rect style="display:inline;fill:#00ff00;stroke-width:0.60774" id="rect12-2-0" width="71.987282"
-               height="20.525011" x="175.35385" y="578.62665" inkscape:label="2x10 spf 8-16 framing lumber">
-               <title id="title38">9954</title>
-            </rect>
-            <rect style="fill:#00ff00;stroke-width:0.632752" id="rect14" width="39.226578" height="17.911474"
-               x="208.72314" y="435.42581" inkscape:label="1x2  framing lumber">
+            <rect style="display:inline;fill:#00ff00;stroke-width:0.632752" id="rect14" width="39.226578"
+               height="17.911474" x="208.72314" y="435.42581" inkscape:label="1x2  framing lumber">
                <title id="title77">9958</title>
             </rect>
-            <rect style="fill:#00ff00;stroke-width:0.500828" id="rect14-6" width="24.574821" height="17.911474"
-               x="246.97704" y="435.43262" inkscape:label="2x2  framing lumber">
+            <rect style="display:inline;fill:#00ff00;stroke-width:0.500828" id="rect14-6" width="24.574821"
+               height="17.911474" x="246.97704" y="435.43262" inkscape:label="2x2  framing lumber">
                <title id="title54">9958</title>
             </rect>
-            <rect style="fill:#00ff00;stroke-width:0.720388" id="rect14-6-2" width="50.844872" height="17.911474"
-               x="270.11816" y="435.43643" inkscape:label="2x3  framing lumber">
+            <rect style="display:inline;fill:#00ff00;stroke-width:0.720388" id="rect14-6-2" width="50.844872"
+               height="17.911474" x="270.11816" y="435.43643" inkscape:label="2x3  framing lumber">
                <title id="title55">9958</title>
             </rect>
             <rect style="display:inline;fill:#00ff00;stroke-width:0.748439" id="rect14-6-2-0" width="53.605354"
                height="18.337917" x="186.42052" y="503.37436" inkscape:label="2x12 fir  framing lumber">
                <title id="title46">9957</title>
-            </rect>
-            <rect style="display:inline;fill:#00ff00;stroke-width:1.38607" id="rect17" width="130.73808"
-               height="19.62944" x="350.16211" y="521.25104" inkscape:label="spruce longs framing lumber">
-               <title id="title40">9956</title>
-            </rect>
-            <rect style="display:inline;fill:#00ff00;stroke-width:1.42427" id="rect17-5" width="138.04417"
-               height="19.62944" x="74.981041" y="521.2066" inkscape:label="spruce longs framing lumber">
-               <title id="title43">9956</title>
             </rect>
             <rect style="display:inline;fill:#00ff00;stroke-width:2.94787" id="rect37" width="103.73141"
                height="18.228664" x="105.22821" y="435.45035" inkscape:label="6x6 GRN FIR 8-12 framing lumber">
@@ -441,7 +458,8 @@
          </g>
          <g inkscape:groupmode="layer" id="layer8" inkscape:label="Finished Lumber / Mouldings"
             transform="translate(-30.184502,-179.71587)" style="display:inline">
-            <desc id="desc7">Moulding,Crown,Baseboard,Primed Pine,Finger Joint,Finishing Cedar,Balsa,Hemlock,Oak,Pine,Casing</desc>
+            <desc id="desc7">Moulding,Crown,Baseboard,Primed Pine,Finger Joint,Finishing
+               Cedar,Balsa,Hemlock,Oak,Pine,Casing</desc>
             <rect style="fill:#ffff00;stroke-width:3.29526" id="rect42" width="162.6181" height="24.46929" x="636.18988"
                y="180.38031" inkscape:label="ultralight baseboard moulding Finished Lumber ">
                <title id="title63">9923</title>
@@ -599,7 +617,6 @@
             </rect>
          </g>
       </svg>
-
 
    </div>
    <div class="productdropdown">

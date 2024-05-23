@@ -19,6 +19,35 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs1">
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Strips1_1.5"
+       preserveAspectRatio="xMidYMid"
+       id="pattern13"
+       patternTransform="matrix(2.1053898,2.1112156,-2.1053898,2.1112156,4.6015843,2.0526837)"
+       x="0"
+       y="0" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="2.5"
+       height="1"
+       patternTransform="translate(0,0) scale(2,2)"
+       preserveAspectRatio="xMidYMid"
+       id="Strips1_1.5"
+       style="fill:#a2a2a2"
+       inkscape:stockid="Stripes 02 (2:3)"
+       inkscape:isstock="true"
+       inkscape:label="Stripes 02 (2:3)">
+      <rect
+   style="stroke:none"
+   x="0"
+   y="-0.5"
+   width="1"
+   height="2"
+   id="rect140" />
+
+    </pattern>
     <clipPath
        clipPathUnits="userSpaceOnUse"
        id="clipPath787">
@@ -52,15 +81,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2"
-     inkscape:cx="431.75"
-     inkscape:cy="238.75"
-     inkscape:window-width="1920"
-     inkscape:window-height="1009"
+     inkscape:zoom="1"
+     inkscape:cx="473.5"
+     inkscape:cy="378"
+     inkscape:window-width="1478"
+     inkscape:window-height="1000"
      inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer19">
+     inkscape:window-y="3"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer17">
     <inkscape:page
        x="0"
        y="0"
@@ -90,10 +119,23 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer23"
+     inkscape:label="OutOfBounds"
+     style="fill:#333333">
+    <path
+       style="stroke-opacity:1;stroke-dashoffset:2.16;stroke-dasharray:none;stroke-linejoin:round;stroke-linecap:butt;stroke-width:2.98159;stroke:#a2a2a2;fill-opacity:1;fill:url(#pattern13);opacity:0.7;"
+       d="M 613.99058,429.0092 V 249.36898 c 0,0 -0.74436,-2.9857 4.46621,-2.73688 5.21057,0.24878 109.69706,0 109.69706,0 0,0 2.5784,-0.24882 3.07463,-2.4881 0.49627,-2.23929 0,-15.79937 0,-15.79937 0,0 -0.8684,-5.1006 4.09404,-4.35418 4.96245,0.74643 266.73178,0 266.73178,0 0,0 4.7144,-0.74642 4.7144,6.71785 0,7.46428 1.2405,198.3009 1.2405,198.3009 z"
+       id="OffLimits"
+       inkscape:label="OffLimits" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer17"
      inkscape:label="Engineered Wood"
      transform="translate(-50.21405,-338.77896)"
      style="display:inline">
+    <title
+       id="title89">offlimits</title>
     <desc
        id="desc5">Parallam PSL,Microllam LVL</desc>
     <rect
@@ -292,134 +334,24 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Framing Lumber"
+     inkscape:label="Spruce"
      style="display:inline;fill:#00ff00"
      transform="translate(-30.184502,-179.71587)">
     <desc
-       id="desc2">1x2,2x2,2x3,2x4,2x6,2x8,2x10,2x12,CANTSTRIPS </desc>
+       id="desc2">2x4,2x6,2x8,2x10,2x12,Longs</desc>
     <rect
-       style="fill:#00ff00;stroke:none;stroke-width:0.516149;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8"
-       width="54.596153"
-       height="12.865264"
-       x="466.99677"
-       y="189.29506"
-       inkscape:label="2x4 KD fir framing lumber">
-      <title
-         id="title2">7531</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke:none;stroke-width:0.513264;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8-2"
-       width="54.596153"
-       height="12.721815"
-       x="520.89661"
-       y="189.27283"
-       inkscape:label="2x6 KD fir framing lumber">
-      <title
-         id="title3">7531</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke:none;stroke-width:0.543186;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8-6"
-       width="60.95105"
-       height="12.762775"
-       x="574.34552"
-       y="189.32182"
-       inkscape:label="2x8 KD fir framing lumber">
-      <title
-         id="title4">7531</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke:none;stroke-width:0.388376;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8-6-7"
-       width="31.196074"
-       height="12.747776"
-       x="634.54114"
-       y="189.30766"
-       inkscape:label="2x10 KD fir framing lumber">
-      <title
-         id="title21">7531</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.807123"
-       id="rect9"
-       width="213.15434"
-       height="9.0332108"
-       x="822.198"
-       y="189.30603"
-       inkscape:label="fir 1x4 common 1x10 hemboard 1x8 shiplap framing lumber">
-      <title
-         id="title6">7535</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.693823"
-       id="rect9-2"
-       width="157.51166"
-       height="9.0332108"
-       x="665.55481"
-       y="189.30751"
-       inkscape:label="fir 1x4 common 1x10 hemboard 1x8 shiplap framing lumber">
-      <title
-         id="title5">7533</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.910375"
+       style="fill:#00ffff;stroke-width:0.910375"
        id="rect10"
        width="7.5535455"
        height="211.11551"
        x="1034.5804"
        y="189.30377"
-       inkscape:label="studs 116-1/4 104-1/4 92-1/4 framing lumber">
+       inkscape:label="studs 116-1/4 104-1/4 92-1/4 spruce framing lumber">
       <title
          id="title7">7538</title>
     </rect>
     <rect
-       style="display:inline;fill:#00ff00;stroke-width:0.736086"
-       id="rect10-0"
-       width="141.58347"
-       height="7.3633733"
-       x="486.49265"
-       y="244.75049"
-       inkscape:label="studs 116-1/4 104-1/4 92-1/4 framing lumber">
-      <title
-         id="title7-4">7532</title>
-    </rect>
-    <rect
-       style="display:inline;fill:#00ff00;stroke-width:0.417407"
-       id="rect10-0-8"
-       width="45.527431"
-       height="7.3633733"
-       x="625.93805"
-       y="251.61967"
-       inkscape:label="studs 116-1/4 104-1/4 92-1/4 framing lumber">
-      <title
-         id="title7-4-6">7532</title>
-    </rect>
-    <rect
-       style="display:inline;fill:#00ff00;stroke-width:0.59385"
-       id="rect10-0-8-8"
-       width="92.152428"
-       height="7.3633733"
-       x="673.69922"
-       y="257.16995"
-       inkscape:label="studs 116-1/4 104-1/4 92-1/4 framing lumber">
-      <title
-         id="title7-4-6-8">7532</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.880216"
-       id="rect11"
-       width="193.86874"
-       height="13.072327"
-       x="802.75983"
-       y="234.12331"
-       inkscape:label="longs misc fir 6x6 4x4 ship framing lumber">
-      <title
-         id="title8">7537</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.373441"
+       style="fill:#00ffff;stroke-width:0.373441"
        id="rect12"
        width="92.107292"
        height="6.0569162"
@@ -430,7 +362,7 @@
          id="title10">7539</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.413112"
+       style="fill:#00ffff;stroke-width:0.413112"
        id="rect12-2"
        width="92.141106"
        height="7.4093752"
@@ -441,7 +373,7 @@
          id="title12">7540</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.397451"
+       style="fill:#00ffff;stroke-width:0.397451"
        id="rect12-2-0"
        width="92.005859"
        height="6.8683915"
@@ -452,7 +384,7 @@
          id="title11">7540</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.414028"
+       style="fill:#00ffff;stroke-width:0.414028"
        id="rect13"
        width="79.365311"
        height="6.4057021"
@@ -463,7 +395,7 @@
          id="title13">7541</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.455436"
+       style="fill:#00ffff;stroke-width:0.455436"
        id="rect13-2"
        width="79.460945"
        height="7.7417526"
@@ -474,7 +406,7 @@
          id="title20">7542</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.47521"
+       style="fill:#00ffff;stroke-width:0.47521"
        id="rect13-2-9"
        width="92.084541"
        height="7.2731981"
@@ -485,7 +417,7 @@
          id="title9">7539</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.494172"
+       style="fill:#00ffff;stroke-width:0.494172"
        id="rect13-2-3"
        width="105.96914"
        height="6.8346438"
@@ -496,84 +428,7 @@
          id="title19">7542</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.359873"
-       id="rect14"
-       width="30.439896"
-       height="7.4662285"
-       x="486.49612"
-       y="237.37219"
-       inkscape:label="1x2  framing lumber">
-      <title
-         id="title82">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.284843"
-       id="rect14-6"
-       width="19.070107"
-       height="7.4662285"
-       x="516.18121"
-       y="237.42892"
-       inkscape:label="2x2  framing lumber">
-      <title
-         id="title83">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.409716"
-       id="rect14-6-2"
-       width="39.455715"
-       height="7.4662285"
-       x="534.13879"
-       y="237.35468"
-       inkscape:label="2x3  framing lumber">
-      <title
-         id="title84">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.396422"
-       id="rect14-6-2-0"
-       width="36.897675"
-       height="7.4741459"
-       x="573.33521"
-       y="237.35251"
-       inkscape:label="2x12  framing lumber">
-      <title
-         id="title85">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.2854"
-       id="rect14-6-2-0-0"
-       width="18.9366"
-       height="7.5483127"
-       x="609.14429"
-       y="237.32846"
-       inkscape:label="cantstrips framing lumber">
-      <title
-         id="title86">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.799889"
-       id="rect15"
-       width="92.151375"
-       height="11.41519"
-       x="673.69983"
-       y="246.16759"
-       inkscape:label="fir longs 22-24s MISC overstock framing lumber">
-      <title
-         id="title88">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00;stroke-width:0.680822"
-       id="rect16"
-       width="45.16605"
-       height="6.0479708"
-       x="626.30261"
-       y="245.97537"
-       inkscape:label="fir longs 22-24s MISC framing lumber">
-      <title
-         id="title87">7534</title>
-    </rect>
-    <rect
-       style="fill:#00ff00"
+       style="fill:#00ffff"
        id="rect17"
        width="221.81549"
        height="6.02214"
@@ -584,7 +439,7 @@
          id="title56">7543</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.686252"
+       style="fill:#00ffff;stroke-width:0.686252"
        id="rect35"
        width="28.932224"
        height="6.8214703"
@@ -595,7 +450,7 @@
          id="title14">7541</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.677901"
+       style="fill:#00ffff;stroke-width:0.677901"
        id="rect37"
        width="13.817718"
        height="7.2367711"
@@ -606,7 +461,7 @@
          id="title18">7541</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.701377"
+       style="fill:#00ffff;stroke-width:0.701377"
        id="rect38"
        width="18.867701"
        height="7.2230754"
@@ -617,7 +472,7 @@
          id="title16">7541</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.84318"
+       style="fill:#00ffff;stroke-width:0.84318"
        id="rect39"
        width="30.381872"
        height="7.0484715"
@@ -628,7 +483,7 @@
          id="title15">7541</title>
     </rect>
     <rect
-       style="fill:#00ff00;stroke-width:0.66179"
+       style="fill:#00ffff;stroke-width:0.66179"
        id="rect40"
        width="15.540908"
        height="7.2820024"
@@ -641,12 +496,223 @@
   </g>
   <g
      inkscape:groupmode="layer"
+     id="layer21"
+     inkscape:label="Fir"
+     style="display:inline">
+    <desc
+       id="desc12">1x2,2x2,2x3,2x4,2x6,2x8,2x10,2x12,4x4,6x6,CANTSTRIPS</desc>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.359873"
+       id="rect14"
+       width="30.439896"
+       height="7.4662285"
+       x="486.49612"
+       y="237.37219"
+       inkscape:label="1x2 fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title82">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.284843"
+       id="rect14-6"
+       width="19.070107"
+       height="7.4662285"
+       x="516.18121"
+       y="237.42892"
+       inkscape:label="2x2 fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title83">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.409716"
+       id="rect14-6-2"
+       width="39.455715"
+       height="7.4662285"
+       x="534.13879"
+       y="237.35468"
+       inkscape:label="2x3 fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title84">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.396422"
+       id="rect14-6-2-0"
+       width="36.897675"
+       height="7.4741459"
+       x="573.33521"
+       y="237.35251"
+       inkscape:label="2x12 fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title85">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.2854"
+       id="rect14-6-2-0-0"
+       width="18.9366"
+       height="7.5483127"
+       x="609.14429"
+       y="237.32846"
+       inkscape:label="cantstrips fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title86">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.799889"
+       id="rect15"
+       width="92.151375"
+       height="11.41519"
+       x="673.69983"
+       y="246.16759"
+       inkscape:label="fir longs 22-24s MISC overstock framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title88">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.680822"
+       id="rect16"
+       width="45.16605"
+       height="6.0479708"
+       x="626.30261"
+       y="245.97537"
+       inkscape:label="fir longs 22-24s MISC framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title87">7534</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.516149;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8"
+       width="54.596153"
+       height="12.865264"
+       x="466.99677"
+       y="189.29506"
+       inkscape:label="2x4 KD fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title2">7531</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.513264;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-2"
+       width="54.596153"
+       height="12.721815"
+       x="520.89661"
+       y="189.27283"
+       inkscape:label="2x6 KD fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title3">7531</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.543186;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-6"
+       width="60.95105"
+       height="12.762775"
+       x="574.34552"
+       y="189.32182"
+       inkscape:label="2x8 KD fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title4">7531</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke:none;stroke-width:0.388376;stroke-dasharray:none;stroke-opacity:1"
+       id="rect8-6-7"
+       width="31.196074"
+       height="12.747776"
+       x="634.54114"
+       y="189.30766"
+       inkscape:label="2x10 KD fir framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title21">7531</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.805699"
+       id="rect9"
+       width="212.40305"
+       height="9.0332108"
+       x="792.01349"
+       y="9.5901604"
+       inkscape:label="fir 1x4 common 1x10 hemboard 1x8 shiplap framing lumber">
+      <title
+         id="title6">7535</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.693823"
+       id="rect9-2"
+       width="157.51166"
+       height="9.0332108"
+       x="665.55481"
+       y="189.30751"
+       inkscape:label="fir 1x4 common 1x10 hemboard 1x8 shiplap framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title5">7533</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.736086"
+       id="rect10-0"
+       width="141.58347"
+       height="7.3633733"
+       x="486.49265"
+       y="244.75049"
+       inkscape:label="2x4 2x6 2x8 2x10 2x12 KD Fir SPF framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title7-4">7532</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.417407"
+       id="rect10-0-8"
+       width="45.527431"
+       height="7.3633733"
+       x="625.93805"
+       y="251.61967"
+       inkscape:label="2x4 2x6 2x8 2x10 2x12 KD Fir SPF framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title7-4-6">7532</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.59385"
+       id="rect10-0-8-8"
+       width="92.152428"
+       height="7.3633733"
+       x="673.69922"
+       y="257.16995"
+       inkscape:label="2x4 2x6 2x8 2x10 2x12 KD Fir SPF framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title7-4-6-8">7532</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#00ff00;stroke-width:0.880216"
+       id="rect11"
+       width="193.86874"
+       height="13.072327"
+       x="802.75983"
+       y="234.12331"
+       inkscape:label="longs misc fir 6x6 4x4 ship framing lumber"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title8">7537</title>
+    </rect>
+  </g>
+  <g
+     inkscape:groupmode="layer"
      id="layer1"
      inkscape:label="cedar"
      style="display:inline"
      transform="translate(-40.567035,-179.71587)">
     <desc
-       id="desc3">Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles,Decking,Clear,Rough,Knotty</desc>
+       id="desc3">1x1,1x2,1x3,1x4,1x6,1x8,1x10,1x12,2x2,2x3,2x4,2x6,2x8,2x10,2x12,3x12,4x4,4x6,6x6,8x8,Decking,Clear,Rough,Knotty,Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles</desc>
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.977733;stroke-dasharray:none"
        id="rect1-5"
@@ -654,7 +720,7 @@
        height="278.71912"
        x="50.170731"
        y="266.13254"
-       inkscape:label="cedar rough clear lath">
+       inkscape:label="1x1 1x2 1x3 1x4 1x6 1x8 2x2 2x3 2x4 2x6 2x8 2x10 2x12 4x4 cedar rough clear lath">
       <title
          id="title22">7506</title>
     </rect>
@@ -725,24 +791,13 @@
          id="title31-8">7588</title>
     </rect>
     <rect
-       style="fill:#ff0000;stroke-width:1.02829"
-       id="rect5"
-       width="17.062731"
-       height="58.370232"
-       x="51.18819"
-       y="548.86224"
-       inkscape:label="rough cedar">
-      <title
-         id="title89">7505</title>
-    </rect>
-    <rect
        style="fill:#ff0000;stroke-width:0.89507"
        id="rect6"
        width="18.494473"
        height="71.261993"
        x="50.184502"
        y="196.72325"
-       inkscape:label="cedar fence panels">
+       inkscape:label="1x3 1x4 1x6 1x8 2x2 cedar fence panels">
       <title
          id="title24">7507</title>
     </rect>
@@ -753,7 +808,7 @@
        height="9.6211586"
        x="73.841339"
        y="189.48833"
-       inkscape:label="cedar fence boards">
+       inkscape:label="1x6 1x8 post cap cedar fence boards">
       <title
          id="title25">7508</title>
     </rect>
@@ -764,7 +819,7 @@
        height="28.103321"
        x="357.203"
        y="413.85364"
-       inkscape:label="Cedar siding">
+       inkscape:label="1x6 1x10 1x8 1x12 1/2x4 bevel Cedar siding">
       <title
          id="title32">7577</title>
     </rect>
@@ -775,7 +830,7 @@
        height="29.05135"
        x="389.5361"
        y="412.72833"
-       inkscape:label="Cedar siding">
+       inkscape:label="1x6 1x10 1x8 1x12 1/2x4 bevel Cedar siding">
       <title
          id="title33">7576</title>
     </rect>
@@ -786,7 +841,7 @@
        height="26.722788"
        x="424.50998"
        y="415.00125"
-       inkscape:label="Cedar siding">
+       inkscape:label="shiplap t&amp;g Cedar siding">
       <title
          id="title34">7576</title>
     </rect>
@@ -800,6 +855,41 @@
        inkscape:label="cedar lattice">
       <title
          id="title26">7502</title>
+    </rect>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer22"
+     inkscape:label="Siding">
+    <rect
+       style="display:inline;fill:#800000;stroke-width:0.973843"
+       id="rect58"
+       width="111.17905"
+       height="84.73304"
+       x="341.16046"
+       y="330.27185"
+       inkscape:label="fir siding"
+       onclick=""
+       onmouseover=""
+       onmouseout=""
+       transform="translate(-30.184502,-179.71587)">
+      <desc
+         id="desc1">Fir Siding
+</desc>
+      <title
+         id="title1">7578</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#800000;stroke-width:0.305371"
+       id="rect58-8"
+       width="11.416886"
+       height="81.134956"
+       x="330.75223"
+       y="330.34653"
+       inkscape:label="fir siding"
+       transform="translate(-30.184502,-179.71587)">
+      <title
+         id="title98">7582</title>
     </rect>
   </g>
   <g
@@ -1405,7 +1495,7 @@
      style="display:inline;fill:#008000"
      transform="translate(-30.184502,-179.71587)">
     <desc
-       id="desc10">1/2,Fire stop,Aqua,Denshield,Cement Board</desc>
+       id="desc10">1/2,Firestop,Aqua,Denshield,Cement Board</desc>
     <rect
        style="fill:#008000;stroke-width:0.565136"
        id="rect50"
@@ -1438,41 +1528,6 @@
        inkscape:label="denshield densglass gold tilebacker">
       <title
          id="title80">7568</title>
-    </rect>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer14"
-     inkscape:label="Siding"
-     transform="translate(-30.184502,-179.71587)"
-     style="display:inline">
-    <rect
-       style="fill:#800000;stroke-width:0.973843"
-       id="rect58"
-       width="111.17905"
-       height="84.73304"
-       x="341.16046"
-       y="330.27185"
-       inkscape:label="fir siding"
-       onclick=""
-       onmouseover=""
-       onmouseout="">
-      <desc
-         id="desc1">Fir Siding
-</desc>
-      <title
-         id="title1">7578</title>
-    </rect>
-    <rect
-       style="fill:#800000;stroke-width:0.305371"
-       id="rect58-8"
-       width="11.416886"
-       height="81.134956"
-       x="330.75223"
-       y="330.34653"
-       inkscape:label="fir siding">
-      <title
-         id="title98">7582</title>
     </rect>
   </g>
   <g
