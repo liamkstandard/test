@@ -203,6 +203,7 @@ function clearselected() {
 }
 function showsubproducts(groupname, subproduct) {
    let ul = document.querySelector('.productdropdown > ul')
+   ul.style = ''
    let div = document.querySelector('.productdropdown')
    div.classList.remove('hidemenu')
    if (subproduct.length != 0) {
