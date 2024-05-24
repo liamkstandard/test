@@ -711,8 +711,7 @@
      inkscape:label="cedar"
      style="display:inline"
      transform="translate(-40.567035,-179.71587)">
-    <desc
-       id="desc3">1x1,1x2,1x3,1x4,1x6,1x8,1x10,1x12,2x2,2x3,2x4,2x6,2x8,2x10,2x12,3x12,4x4,4x6,6x6,8x8,Decking,Clear,Rough,Knotty,Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles</desc>
+    <desc id="desc3">1x1,1x2,1x3,1x4,1x6,1x8,1x10,1x12,2x2,2x3,2x4,2x6,2x8,2x10,2x12,3x6,3x8,3x12,4x4,4x6,6x6,8x8,Decking,Clear,Rough,Knotty,Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles</desc>
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.977733;stroke-dasharray:none"
        id="rect1-5"
@@ -852,7 +851,7 @@
        height="12.416381"
        x="105.8893"
        y="544.28595"
-       inkscape:label="cedar lattice">
+       inkscape:label="3x6 3x8 cedar lattice">
       <title
          id="title26">7502</title>
     </rect>
@@ -898,8 +897,7 @@
      inkscape:label="Treated Lumber"
      style="display:inline;fill:#008000"
      transform="translate(-30.184502,-179.71587)">
-    <desc
-       id="desc4">1x2,1x4,1x6,2x2,2x3,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x5,5/4x6,Longs</desc>
+    <desc id="desc4">1x2,1x4,1x6,2x2,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x6,Longs</desc>
     <rect
        style="display:inline;fill:#008000;stroke-width:1.06675"
        id="rect18"
@@ -989,46 +987,25 @@
          id="title41">7521</title>
     </rect>
   </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer4"
-     inkscape:label="Fascia"
-     transform="translate(-30.184502,-179.71587)"
-     style="display:inline">
-    <rect
-       style="display:inline;fill:#ff00ff;stroke-width:0.595044"
-       id="rect20"
-       width="150.18327"
-       height="7.7854528"
-       x="300.66818"
-       y="267.92889"
-       inkscape:label="1x12 2x4 2x6 2x8 2x10 2x12 5/4x4 5/4x6 5/4x8 S4S primed comb fascia">
-      <title
-         id="title55">7526</title>
-    </rect>
-    <rect
-       style="display:inline;fill:#ff00ff;stroke-width:0.595044"
-       id="rect20-3"
-       width="150.18327"
-       height="7.7854528"
-       x="300.66788"
-       y="260.64304"
-       inkscape:label="1x6 2x4 2x6 2x8 2x10 2x12 primed comb fascia">
-      <title
-         id="title54">7527</title>
-    </rect>
-    <rect
-       style="fill:#ff00ff;stroke-width:1.10231"
-       id="rect22"
-       width="96.519775"
-       height="7.3050108"
-       x="356.42804"
-       y="227.0188"
-       inkscape:label="1x3 1x4 1x6 1x8 2x2 primed comb fascia 1x4 5/4x4 2x5 primed spf corner">
-      <title
-         id="title52">7528</title>
-    </rect>
-  </g>
+         <g inkscape:groupmode="layer" id="layer4" inkscape:label="Fascia" transform="translate(-30.184502,-179.71587)"
+            style="display:inline">
+            <desc id="desc23">1x3,1x4,1x6,1x8,1x10,1x12,5/4x4,5/4x6,5/4x8,2x2,2x4,2x6,2x8,2x10,2x12,S4S,Primed Comb</desc>
+            <rect style="display:inline;fill:#ff00ff;stroke-width:0.595044" id="rect20" width="150.18327"
+               height="7.7854528" x="300.66818" y="267.92889"
+               inkscape:label="1x12 2x4 2x6 2x8 2x10 2x12 5/4x4 5/4x6 5/4x8 S4S primed comb fascia">
+               <title id="title55">7526</title>
+            </rect>
+            <rect style="display:inline;fill:#ff00ff;stroke-width:0.595044" id="rect20-3" width="150.18327"
+               height="7.7854528" x="300.66788" y="260.64304"
+               inkscape:label="1x6 2x4 2x6 2x8 2x10 2x12 primed comb fascia">
+               <title id="title54">7527</title>
+            </rect>
+            <rect style="fill:#ff00ff;stroke-width:1.10231" id="rect22" width="96.519775" height="7.3050108"
+               x="356.42804" y="227.0188"
+               inkscape:label="1x3 1x4 1x6 1x8 1x10 1x12 2x2 primed comb fascia 1x4 5/4x4 2x5 primed spf corner">
+               <title id="title52">7528</title>
+            </rect>
+         </g>
   <g
      inkscape:groupmode="layer"
      id="layer5"
