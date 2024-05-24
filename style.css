@@ -137,6 +137,18 @@ body {
     }
 }
 
+
+li.subheading {
+    margin: 0px !important;
+    border-radius: 0px;
+    width: 100%;
+    display: block;
+    background: none !important;
+    text-align: center;
+    font-weight: bold;
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.123); */
+}
+
 .handle{
     position: absolute;
     top: 12px;

@@ -223,17 +223,72 @@ function showsubproducts(groupname, subproduct) {
       span.classList.add('handle')
       div.appendChild(handlediv);
       div.classList.add('appearmenu')
+      let allsubheadings = []
       for (let i = 0; i < subproduct.length; i++) {
-         let li = document.createElement("li");
-
-         li.classList.add('w3-button')
-         li.classList.add(`w3-ripple`)
-         li.innerText = subproduct[i];
-         li.style.animation = 'fade-in  0.5s';
-         li.setAttribute('onclick', `showonlysubproduct(${groupname},"${subproduct[i]}")`)
-         li.classList.toggle('slide-top')
-         ul.appendChild(li);
+         if (subproduct[i].indexOf(':') > -1 ){
+            let subproductsitems = subproduct[i].split(':')
+            allsubheadings.push(subproductsitems[0])
+         }
       }
+      allsubheadings =[... new Set(allsubheadings)]
+      if (allsubheadings.length > 0 ){
+         //subproduct.sort((a, b) => allsubheadings.indexOf(a) - allsubheadings.indexOf(b))
+         ul.style.width = '100%'
+         let subheadingHEND = document.createElement('li')
+         subheadingHEND.classList.add('subheading')
+         subheadingHEND.innerText = ''
+         ul.appendChild(subheadingHEND)
+         for (let i = 0; i < subproduct.length; i++) {
+            let subproductsitems = subproduct[i].split(':')
+
+            if(!subproductsitems[1]){
+               let li = document.createElement("li");
+               li.classList.add('w3-button')
+               li.classList.add(`w3-ripple`)
+               li.innerText = subproduct[i];
+               li.style.animation = 'fade-in  0.5s';
+               li.setAttribute('onclick', `showonlysubproduct(${groupname},"${subproduct[i]}")`)
+               li.classList.toggle('slide-top')
+               ul.appendChild(li)
+            }
+         }
+
+         for (let k = 0; k < allsubheadings.length; k++) {
+            let subheadingH = document.createElement('li')
+            subheadingH.classList.add('subheading')
+            subheadingH.innerText = allsubheadings[k]
+            ul.appendChild(subheadingH)
+            for (let i = 0; i < subproduct.length; i++) {
+               let subproductsitems = subproduct[i].split(':')
+               if(subproductsitems[0] == allsubheadings[k]){
+                  let li = document.createElement("li");
+                  li.classList.add('w3-button')
+                  li.classList.add(`w3-ripple`)
+                  li.innerText = subproductsitems[1];
+                  li.style.animation = 'fade-in  0.5s';
+                  li.setAttribute('onclick', `showonlysubproduct(${groupname},"${subproduct[i]}")`)
+                  li.classList.toggle('slide-top')
+                  ul.appendChild(li)
+               }
+
+            }
+         }
+      }
+      else{
+         for (let i = 0; i < subproduct.length; i++) {
+            let subproductsitems = subproduct[i].split(':')
+            let li = document.createElement("li");
+   
+            li.classList.add('w3-button')
+            li.classList.add(`w3-ripple`)
+            li.innerText = subproduct[i];
+            li.style.animation = 'fade-in  0.5s';
+            li.setAttribute('onclick', `showonlysubproduct(${groupname},"${subproduct[i]}")`)
+            li.classList.toggle('slide-top')
+            ul.appendChild(li);
+         }
+      }
+
    }
    else {
 
@@ -367,6 +422,7 @@ function drawSVGelmt(o, tag, parent) {
    return elmt;
 }
 function myFunction() {
+   removewarning()
    clearselected()
    var input, filter, ul, li, a, i, txtValue;
    input = document.getElementById('myInput');
