@@ -311,6 +311,21 @@ function pan(element) {
 
 }
 
+function panCenter(element) {
+   if (isSafari) {
+      seamless.scrollIntoView(element, {
+         behavior: "smooth",
+         block: "center",
+         inline: "center"
+      });
+   }
+   else {
+      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+   }
+
+}
+
+
 function randomIntFromInterval(min, max) { // min and max included 
    return Math.floor(Math.random() * (max - min + 1) + min)
 }

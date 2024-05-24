@@ -18,8 +18,8 @@ mouseEv.addEventListener('click',function (e){
       removepopup()
    }
 })
-let location2 = document.querySelector('g > path')
-pan(location2)
+let location2 = document.querySelector('g > path[id="path1-0"]')
+panCenter(location2)
 initcurrentlocation()
 initonclickrect()
 const fuse = new Fuse(searchdata, fuseOptions);
