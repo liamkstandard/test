@@ -856,41 +856,40 @@
          id="title26">7502</title>
     </rect>
   </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer22"
-     inkscape:label="Siding">
-    <rect
-       style="display:inline;fill:#800000;stroke-width:0.973843"
-       id="rect58"
-       width="111.17905"
-       height="84.73304"
-       x="341.16046"
-       y="330.27185"
-       inkscape:label="fir siding"
-       onclick=""
-       onmouseover=""
-       onmouseout=""
-       transform="translate(-30.184502,-179.71587)">
-      <desc
-         id="desc1">Fir Siding
-</desc>
-      <title
-         id="title1">7578</title>
-    </rect>
-    <rect
-       style="display:inline;fill:#800000;stroke-width:0.305371"
-       id="rect58-8"
-       width="11.416886"
-       height="81.134956"
-       x="330.75223"
-       y="330.34653"
-       inkscape:label="fir siding"
-       transform="translate(-30.184502,-179.71587)">
-      <title
-         id="title98">7582</title>
-    </rect>
-  </g>
+         <g
+         inkscape:groupmode="layer"
+         id="layer22"
+         inkscape:label="Siding"
+         transform="translate(-30.184502,-179.71587)">
+        <rect
+           style="display:inline;fill:#800000;stroke-width:0.973843"
+           id="rect58"
+           width="111.17905"
+           height="84.73304"
+           x="341.16046"
+           y="330.27185"
+           inkscape:label="fir siding"
+           onclick=""
+           onmouseover=""
+           onmouseout="">
+          <desc
+             id="desc1">Fir Siding
+    </desc>
+          <title
+             id="title1">7578</title>
+        </rect>
+        <rect
+           style="display:inline;fill:#800000;stroke-width:0.305371"
+           id="rect58-8"
+           width="11.416886"
+           height="81.134956"
+           x="330.75223"
+           y="330.34653"
+           inkscape:label="fir siding">
+          <title
+             id="title98">7582</title>
+        </rect>
+      </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
@@ -989,7 +988,7 @@
   </g>
          <g inkscape:groupmode="layer" id="layer4" inkscape:label="Fascia" transform="translate(-30.184502,-179.71587)"
             style="display:inline">
-            <desc id="desc23">1x3,1x6,1x8,1x10,1x12,Corners:1x4,Corners:5/4x4,Corners:2x5,Dado:2x4,Dado:2x6,Dado:2x10,5/4x6,5/4x8,2x2,2x4,2x6,2x8,2x10,2x12,S4S,Primed Comb</desc>
+            <desc id="desc23">1x3,1x4,1x6,1x8,1x10,1x12,Corners:1x4,Corners:5/4x4,Corners:2x5,Dado:2x4,Dado:2x6,Dado:2x10,5/4x4,5/4x6,5/4x8,2x2,2x4,2x6,2x8,2x10,2x12,S4S,Primed Comb</desc>
             <rect style="display:inline;fill:#ff00ff;stroke-width:0.595044" id="rect20" width="150.18327"
                height="7.7854528" x="300.66818" y="267.92889"
                inkscape:label="1x12 2x4 2x6 2x8 2x10 2x12 5/4x4 5/4x6 5/4x8 Dado:2x4 Dado:2x6 Dado:2x10 S4S primed comb fascia">
@@ -1227,7 +1226,7 @@
        height="5.7283955"
        x="316.63281"
        y="235.1875"
-       inkscape:label="6x12 8x12 10x12 12x12 14x12 16x12 18x12 24x12 20x12 sonotube">
+       inkscape:label="6x12 8x12 10x12 12x12 14x12 16x12 18x12 24x12 20x12 sonotubes">
       <title
          id="title35">7577</title>
     </rect>
