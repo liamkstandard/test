@@ -8,7 +8,7 @@ body {
 
     :root {
         --change: 280px;
-        --hidemenutranslate: 86%;
+        --hidemenutranslate: 86% !important;
       }
 }
 
