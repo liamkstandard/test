@@ -205,16 +205,22 @@ function showsubproducts(groupname, subproduct) {
    let ul = document.querySelector('.productdropdown > ul')
    ul.style = ''
    let div = document.querySelector('.productdropdown')
+   ul.classList.remove('hideul')
    div.classList.remove('hidemenu')
    if (subproduct.length != 0) {
       let handlediv = document.createElement('div')
       handlediv.classList.add('handlediv')
       handlediv.addEventListener('click',(e =>{
         if(!div.classList.contains('hidemenu')){
+            let h = document.querySelector('.productdropdown > ul')
+            let r = document.querySelector(':root');
+            r.style.setProperty('--change',h.offsetHeight + 'px');
             div.classList.add('hidemenu')
+            ul.classList.add('hideul')
         }
         else{
             div.classList.remove('hidemenu')
+            ul.classList.remove('hideul')
         }
       }))
 
@@ -335,6 +341,10 @@ function showonlysubproduct(groupname, product) {
    removepopup()
    let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > [id*="rect"]`)
    let div = document.querySelector('.productdropdown')
+   let h = document.querySelector('.productdropdown > ul')
+   let r = document.querySelector(':root');
+   r.style.setProperty('--change',h.offsetHeight + 'px');
+   h.classList.add('hideul')
    div.classList.add('hidemenu')
    allelementsh.forEach((e) => {
       e.classList.add('highlightgroup')
