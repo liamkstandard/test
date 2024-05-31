@@ -2,7 +2,6 @@ body {
     font-family: "Roboto", sans-serif !important;
     opacity: 0;
     transition: opacity 1.2s;
-    height: 100dvh;
 
 }
 @media (min-width: 650px) {
@@ -688,7 +687,7 @@ div[class="productdropdown"]>ul>li {
 
 :root {
     --change: 280px;
-    --hidemenutranslate: 5dvh;
+    --hidemenutranslate: 73%;
   }
 
 @keyframes hideul{
