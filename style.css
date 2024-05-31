@@ -687,7 +687,7 @@ div[class="productdropdown"]>ul>li {
 
 :root {
     --change: 280px;
-    --hidemenutranslate: 8dvh;
+    --hidemenutranslate: 8.5dvh;
   }
 
 @keyframes hideul{
