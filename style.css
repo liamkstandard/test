@@ -691,6 +691,7 @@ div[class="productdropdown"]>ul>li {
 
 @keyframes hideul{
     0% {
+        -webkit-transform: translateZ(0);
         max-height:min-content;
         height: var(--change);
     }
@@ -702,10 +703,12 @@ div[class="productdropdown"]>ul>li {
 
 @keyframes hidemenu{
     0% {
+        -webkit-transform: translateZ(0);
         -webkit-transform:  translateY(0%);
         transform: translateY(0%) ;
     }
     100% {
+        -webkit-transform: translateZ(0);
         -webkit-transform: translateY(var(--hidemenutranslate));
         transform: translateY(var(--hidemenutranslate));
     }
