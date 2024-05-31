@@ -677,13 +677,12 @@ div[class="productdropdown"]>ul>li {
 .hidemenu{
     height: auto;
     animation: hidemenu 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
-    -webkit-animation-delay: 0.2s;
 }
 
 .hideul{
     height: 0px;
     animation: hideul 0.6s ease-in-out ;
-    -webkit-animation-delay: 0.2s;
+
 }
 
 :root {
@@ -693,7 +692,6 @@ div[class="productdropdown"]>ul>li {
 
 @keyframes hideul{
     0% {
-        -webkit-transform: translateZ(0);
         max-height:min-content;
         height: var(--change);
     }
@@ -705,12 +703,10 @@ div[class="productdropdown"]>ul>li {
 
 @keyframes hidemenu{
     0% {
-        -webkit-transform: translateZ(0);
         -webkit-transform:  translateY(0%);
         transform: translateY(0%) ;
     }
     100% {
-        -webkit-transform: translateZ(0);
         -webkit-transform: translateY(var(--hidemenutranslate));
         transform: translateY(var(--hidemenutranslate));
     }
