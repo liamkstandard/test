@@ -1,6 +1,8 @@
-header {
-    height: 100vh;
+html {
+    min-height: calc(100vh - 6rem);
 }
+
+
 body {
     font-family: "Roboto", sans-serif !important;
     opacity: 0;
