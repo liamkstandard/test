@@ -40,13 +40,12 @@
        inkscape:isstock="true"
        inkscape:label="Stripes 02 (2:3)">
       <rect
-   style="stroke:none"
-   x="0"
-   y="-0.5"
-   width="1"
-   height="2"
-   id="rect140" />
-
+         style="stroke:none"
+         x="0"
+         y="-0.5"
+         width="1"
+         height="2"
+         id="rect140" />
     </pattern>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -81,15 +80,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1"
-     inkscape:cx="473.5"
-     inkscape:cy="378"
-     inkscape:window-width="1478"
-     inkscape:window-height="1000"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="258.44753"
+     inkscape:cy="190.56528"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
      inkscape:window-x="1912"
-     inkscape:window-y="3"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer17">
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
     <inkscape:page
        x="0"
        y="0"
@@ -711,7 +710,8 @@
      inkscape:label="cedar"
      style="display:inline"
      transform="translate(-40.567035,-179.71587)">
-    <desc id="desc3">1x1,1x2,1x3,1x4,1x6,1x8,1x10,1x12,2x2,2x3,2x4,2x6,2x8,2x10,2x12,3x6,3x8,3x12,4x4,4x6,6x6,8x8,Decking,Clear,Rough,Knotty,Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles</desc>
+    <desc
+       id="desc3">1x1,1x2,1x3,1x4,1x6,1x8,1x10,1x12,2x2,2x3,2x4,2x6,2x8,2x10,2x12,3x6,3x8,3x12,4x4,4x6,6x6,8x8,Decking,Clear,Rough,Knotty,Lattice,Siding,Fence boards,Fence panels,Smooth one side,Beams,Shingles</desc>
     <rect
        style="display:inline;fill:#ff0000;stroke-width:0.977733;stroke-dasharray:none"
        id="rect1-5"
@@ -823,80 +823,92 @@
          id="title32">7577</title>
     </rect>
     <rect
-       style="fill:#ff0000;stroke-width:1.05316"
+       style="fill:#ff0000;stroke-width:1.05843"
        id="rect26"
-       width="34.269371"
+       width="34.613121"
        height="29.05135"
-       x="389.5361"
+       x="389.19235"
        y="412.72833"
        inkscape:label="1x6 1x10 1x8 1x12 1/2x4 bevel Cedar siding">
       <title
          id="title33">7576</title>
     </rect>
     <rect
-       style="fill:#ff0000;stroke-width:1.0557"
+       style="fill:#ff0000;stroke-width:1.06129"
        id="rect27"
-       width="37.435421"
+       width="37.833168"
        height="26.722788"
-       x="424.50998"
+       x="424.11224"
        y="415.00125"
        inkscape:label="shiplap t&amp;g Cedar siding">
       <title
          id="title34">7576</title>
     </rect>
     <rect
-       style="fill:#ff0000;stroke-width:1.07038"
+       style="fill:#ff0000;stroke-width:1.02205"
        id="rect54"
-       width="49.149834"
-       height="12.416381"
+       width="47.692726"
+       height="11.666381"
        x="105.8893"
        y="544.28595"
        inkscape:label="3x6 3x8 cedar lattice">
       <title
          id="title26">7502</title>
     </rect>
+    <rect
+       style="display:inline;fill:#ff0000;stroke-width:0.438552"
+       id="rect114"
+       width="6.3993149"
+       height="27.945208"
+       x="344.76492"
+       y="414.952"
+       inkscape:label="cedar shingles">
+      <title
+         id="title114">7588</title>
+    </rect>
   </g>
-         <g
-         inkscape:groupmode="layer"
-         id="layer22"
-         inkscape:label="Siding"
-         transform="translate(-30.184502,-179.71587)">
-        <rect
-           style="display:inline;fill:#800000;stroke-width:0.973843"
-           id="rect58"
-           width="111.17905"
-           height="84.73304"
-           x="341.16046"
-           y="330.27185"
-           inkscape:label="fir siding"
-           onclick=""
-           onmouseover=""
-           onmouseout="">
-          <desc
-             id="desc1">Fir Siding
+  <g
+     inkscape:groupmode="layer"
+     id="layer22"
+     inkscape:label="Siding"
+     transform="translate(-30.184502,-179.71587)">
+    <rect
+       style="display:inline;fill:#800000;stroke-width:0.973843"
+       id="rect58"
+       width="111.17905"
+       height="84.73304"
+       x="341.16046"
+       y="330.27185"
+       inkscape:label="fir siding"
+       onclick=""
+       onmouseover=""
+       onmouseout="">
+      <desc
+         id="desc1">Fir Siding
     </desc>
-          <title
-             id="title1">7578</title>
-        </rect>
-        <rect
-           style="display:inline;fill:#800000;stroke-width:0.305371"
-           id="rect58-8"
-           width="11.416886"
-           height="81.134956"
-           x="330.75223"
-           y="330.34653"
-           inkscape:label="fir siding">
-          <title
-             id="title98">7582</title>
-        </rect>
-      </g>
+      <title
+         id="title1">7578</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#800000;stroke-width:0.305371"
+       id="rect58-8"
+       width="11.416886"
+       height="81.134956"
+       x="330.75223"
+       y="330.34653"
+       inkscape:label="fir siding">
+      <title
+         id="title98">7582</title>
+    </rect>
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Treated Lumber"
      style="display:inline;fill:#008000"
      transform="translate(-30.184502,-179.71587)">
-    <desc id="desc4">1x2,1x4,1x6,2x2,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x6,Longs</desc>
+    <desc
+       id="desc4">1x2,1x4,1x6,2x2,2x4,2x6,2x8,2x10,2x12,4x4,4x6,6x6,5/4x6,Longs</desc>
     <rect
        style="display:inline;fill:#008000;stroke-width:1.06675"
        id="rect18"
@@ -986,26 +998,54 @@
          id="title41">7521</title>
     </rect>
   </g>
-         <g inkscape:groupmode="layer" id="layer4" inkscape:label="Fascia" transform="translate(-30.184502,-179.71587)"
-            style="display:inline">
-            <desc id="desc23">1x3,1x4,1x6,1x8,1x10,1x12,Corners:1x4,Corners:5/4x4,Corners:2x5,Dado:2x4,Dado:2x6,Dado:2x10,5/4x4,5/4x6,5/4x8,2x2,2x4,2x6,2x8,2x10,2x12,S4S,Primed Comb</desc>
-            <rect style="display:inline;fill:#ff00ff;stroke-width:0.595044" id="rect20" width="150.18327"
-               height="7.7854528" x="300.66818" y="267.92889"
-               inkscape:label="1x12 2x4 2x6 2x8 2x10 2x12 5/4x4 5/4x6 5/4x8 Dado:2x4 Dado:2x6 Dado:2x10 S4S primed comb fascia">
-               <title id="title55">7526</title>
-            </rect>
-            <rect style="display:inline;fill:#ff00ff;stroke-width:0.595044" id="rect20-3" width="150.18327"
-               height="7.7854528" x="300.66788" y="260.64304"
-               inkscape:label="1x6 2x4 2x6 2x8 2x10 2x12 primed comb fascia">
-               <title id="title54">7527</title>
-            </rect>
-            <rect style="fill:#ff00ff;stroke-width:1.10231" id="rect22" width="96.519775" height="7.3050108"
-               x="356.42804" y="227.0188"
-               inkscape:label="1x3 1x4 1x6 1x8 1x10 1x12 2x2 Corners:1x4 Corners:5/4x4 Corners:2x5 primed comb fascia 1x4 5/4x4 2x5 primed spf corner">
-               <title id="title52">7528</title>
-            </rect>
-         </g>
-   <g inkscape:groupmode="layer" id="layer5" inkscape:label="Rebar" transform="translate(-30.184502,-179.71587)" style="display:inline">
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Fascia"
+     transform="translate(-30.184502,-179.71587)"
+     style="display:inline">
+    <desc
+       id="desc23">1x3,1x4,1x6,1x8,1x10,1x12,Corners:1x4,Corners:5/4x4,Corners:2x5,Dado:2x4,Dado:2x6,Dado:2x10,5/4x4,5/4x6,5/4x8,2x2,2x4,2x6,2x8,2x10,2x12,S4S,Primed Comb</desc>
+    <rect
+       style="display:inline;fill:#ff00ff;stroke-width:0.595044"
+       id="rect20"
+       width="150.18327"
+       height="7.7854528"
+       x="300.66818"
+       y="267.92889"
+       inkscape:label="1x12 2x4 2x6 2x8 2x10 2x12 5/4x4 5/4x6 5/4x8 Dado:2x4 Dado:2x6 Dado:2x10 S4S primed comb fascia">
+      <title
+         id="title55">7526</title>
+    </rect>
+    <rect
+       style="display:inline;fill:#ff00ff;stroke-width:0.595044"
+       id="rect20-3"
+       width="150.18327"
+       height="7.7854528"
+       x="300.66788"
+       y="260.64304"
+       inkscape:label="1x6 2x4 2x6 2x8 2x10 2x12 primed comb fascia">
+      <title
+         id="title54">7527</title>
+    </rect>
+    <rect
+       style="fill:#ff00ff;stroke-width:1.10231"
+       id="rect22"
+       width="96.519775"
+       height="7.3050108"
+       x="356.42804"
+       y="227.0188"
+       inkscape:label="1x3 1x4 1x6 1x8 1x10 1x12 2x2 Corners:1x4 Corners:5/4x4 Corners:2x5 primed comb fascia 1x4 5/4x4 2x5 primed spf corner">
+      <title
+         id="title52">7528</title>
+    </rect>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="Rebar"
+     transform="translate(-30.184502,-179.71587)"
+     style="display:inline">
     <desc
        id="desc8">Corner,Stakes,Bends,10mm,15mm,20mm,WeldMesh</desc>
     <rect
@@ -1220,10 +1260,10 @@
          id="title68">7566</title>
     </rect>
     <rect
-       style="fill:#0000ff;stroke-width:1.61137"
+       style="fill:#0000ff;stroke-width:1.48352"
        id="rect21"
-       width="27.646669"
-       height="5.7283955"
+       width="27.709169"
+       height="4.844512"
        x="316.63281"
        y="235.1875"
        inkscape:label="6x12 8x12 10x12 12x12 14x12 16x12 18x12 24x12 20x12 sonotubes">
@@ -1537,12 +1577,12 @@
      transform="translate(-30.184502,-179.71587)"
      style="display:inline">
     <rect
-       style="fill:#000080;stroke-width:1.1099"
+       style="fill:#000080;stroke-width:0.524292"
        id="rect56"
-       width="160.78352"
-       height="12.642677"
-       x="291.89114"
-       y="189.31122"
+       width="68.283524"
+       height="6.6426773"
+       x="143.60582"
+       y="550.04352"
        inkscape:label="ABS PVC conduit pipe tee wye elbow Poly">
       <title
          id="title49">7530</title>
@@ -1566,12 +1606,12 @@
      transform="translate(-30.184502,-179.71587)"
      style="display:inline">
     <rect
-       style="fill:#aa8800;stroke-width:1.02264"
+       style="fill:#aa8800;stroke-width:0.864777"
        id="rect57"
-       width="5.7712178"
-       height="25.454088"
-       x="335.01477"
-       y="417.13632"
+       width="4.9670577"
+       height="21.148949"
+       x="373.6701"
+       y="420.81171"
        inkscape:label="tyvek house wrap">
       <title
          id="title90">7577</title>
@@ -1656,6 +1696,22 @@
        inkscape:label="simpson strong tie joist angle hanger post sadle hardware">
       <title
          id="title94">8888</title>
+    </rect>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer14"
+     inkscape:label="Ladders">
+    <rect
+       style="display:inline;fill:#666666;stroke:#000000;stroke-width:0;stroke-dasharray:none"
+       id="rect115"
+       width="61.990658"
+       height="5.7100153"
+       x="30"
+       y="428.5"
+       inkscape:label="ladders">
+      <title
+         id="title115">7569</title>
     </rect>
   </g>
 </svg>
