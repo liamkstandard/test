@@ -152,11 +152,12 @@ function highlightgroup(groupname, classname) {
    if (allli.length == 0) {
       for (let i = 0; i < elements.length; i++) {
          elements[i].classList.add('highlightgroup');
-         pan(elements[elements.length - 1])
+         
          if (elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].matches('[id*="rect"]')) {
             showname(elements[i].id)
          }
       }
+      pan(elements[elements.length - 1])
       for (let i = 0; i < allli.length; i++) {
          allli[i].classList.remove('clicked')
       }
@@ -170,11 +171,12 @@ function highlightgroup(groupname, classname) {
          clearsubproducts()
          for (let i = 0; i < elements.length; i++) {
             elements[i].classList.add('highlightgroup');
-            pan(elements[elements.length - 1])
+            
             if (elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].matches('[id*="rect"]')) {
                showname(elements[i].id)
             }
          }
+         pan(elements[elements.length - 1])
          for (let i = 0; i < allli.length; i++) {
             allli[i].classList.remove('clicked')
          }
@@ -303,7 +305,17 @@ function showsubproducts(groupname, subproduct) {
 }
 
 function pan(element) {
-
+   if (isSafari) {
+      seamless.scrollIntoView(element, {
+         behavior: "smooth",
+         block: "center",
+         inline: "center"
+      });
+   }
+   else {
+      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+   }
+/*
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
@@ -314,7 +326,7 @@ function pan(element) {
    else {
       element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" })
    }
-
+*/
 }
 
 function panCenter(element) {
@@ -488,7 +500,10 @@ function myFunction() {
       if ((txtValue.toUpperCase().indexOf(filter) > -1 && filter != '')) {
 
          rect[i].classList.add('highlightgroup');
-         pan(rect[rect.length - 1])
+         if (i == rect.length - 1){
+            pan(rect[rect.length - 1])
+         }
+
       }
       else {
          rect[i].classList.remove('highlightgroup');
