@@ -303,7 +303,7 @@ function showsubproducts(groupname, subproduct) {
 }
 
 function pan(element) {
-/*
+
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
@@ -314,20 +314,6 @@ function pan(element) {
    else {
       element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" })
    }
-
-*/
-if (isSafari) {
-   seamless.scrollIntoView(element, {
-      behavior: "smooth",
-      block: "center",
-      inline: "center"
-   });
-}
-else {
-   element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
-}
-
-
 
 }
 
