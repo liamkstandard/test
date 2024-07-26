@@ -766,7 +766,7 @@ div[class="productdropdown"]>ul>li {
 }
 
 .location {
-    fill: rgb(0, 0, 0) !important;
+    fill: rgb(255 0 0) !important;
     -webkit-animation: location cubic-bezier(0.4, 0.01, 0.64, 0.99) 4s infinite;
     animation: location cubic-bezier(0.4, 0.01, 0.64, 0.99) 4s infinite;
 }
