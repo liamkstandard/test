@@ -303,7 +303,7 @@ function showsubproducts(groupname, subproduct) {
 }
 
 function pan(element) {
-
+/*
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
@@ -314,6 +314,20 @@ function pan(element) {
    else {
       element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" })
    }
+
+*/
+if (isSafari) {
+   seamless.scrollIntoView(element, {
+      behavior: "smooth",
+      block: "center",
+      inline: "center"
+   });
+}
+else {
+   element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+}
+
+
 
 }
 
@@ -463,6 +477,7 @@ function myFunction() {
       e.remove()
    })
    filter2 = filter.split(' ').reduce((previousValue, currentValue) => previousValue + ` '${currentValue}`, '');
+
    if(filter2 == " '"){
       results = fuse.search(filter, { limit: 6 })
    }
