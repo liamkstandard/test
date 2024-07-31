@@ -753,6 +753,56 @@ div[class="productdropdown"]>ul>li {
     }
 }
 
+.dashed{
+    fill:none; 
+    stroke:white;
+    stroke-width:5;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 10;
+    animation: dash2 20s linear forwards infinite, fadein-path 1s ease-in-out;
+  }
+
+.pathtoproduct {
+    fill:none;
+    stroke-width:4;
+    stroke:#000000;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: dash 3s linear ;
+}
+
+@keyframes fadein-path {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+  }
+  
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash2 {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+      }
+  }
+
+
 @keyframes slide-top {
     0% {
         -webkit-transform: translateY(+100px);

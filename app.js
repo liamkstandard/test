@@ -130,6 +130,7 @@ function highlightgroup(groupname, classname) {
    let searchbar = document.querySelector('input')
    searchbar.value = ''
    myFunction()
+   removepathstoproduct()
    removepopup()
    removewarning()
    let allli = document.getElementsByClassName('clicked')
@@ -139,6 +140,7 @@ function highlightgroup(groupname, classname) {
    let subproducts = []
    removename(groupname)
    let hasdesc = false
+   let ranonce = false
    if (document.querySelector(`g[id='${groupname}'] > title`) && document.querySelector(`g[id='${groupname}'] > title`).innerHTML == 'offlimits') {
       createwarning()
    }
@@ -154,7 +156,13 @@ function highlightgroup(groupname, classname) {
          elements[i].classList.add('highlightgroup');
          
          if (elements.length <= 4 && elements[i].id != '' && hasdesc == false && elements[i].matches('[id*="rect"]')) {
+            if (ranonce == false){
+               console.log(elements[i])
+               drawpathtoproduct(elements[i])
+               ranonce = true
+            }
             showname(elements[i].id)
+
          }
       }
       pan(elements[elements.length - 1])
@@ -210,6 +218,7 @@ function showsubproducts(groupname, subproduct) {
    ul.classList.remove('hideul')
    div.classList.remove('hidemenu')
    if (subproduct.length != 0) {
+      removepathstoproduct()
       let handlediv = document.createElement('div')
       handlediv.classList.add('handlediv')
       handlediv.addEventListener('click',(e =>{
@@ -308,17 +317,6 @@ function pan(element) {
    if (isSafari) {
       seamless.scrollIntoView(element, {
          behavior: "smooth",
-         block: "center",
-         inline: "center"
-      });
-   }
-   else {
-      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
-   }
-/*
-   if (isSafari) {
-      seamless.scrollIntoView(element, {
-         behavior: "smooth",
          block: "nearest",
          inline: "nearest"
       });
@@ -326,7 +324,7 @@ function pan(element) {
    else {
       element.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" })
    }
-*/
+
 }
 
 function panCenter(element) {
@@ -350,6 +348,7 @@ function randomIntFromInterval(min, max) { // min and max included
 
 
 function showonlysubproduct(groupname, product) {
+   removepathstoproduct()
    removepopup()
    let allelementsh = document.querySelectorAll(`g[id='${groupname.getAttribute('id')}'] > [id*="rect"]`)
    let div = document.querySelector('.productdropdown')
@@ -362,6 +361,7 @@ function showonlysubproduct(groupname, product) {
       e.classList.add('highlightgroup')
       removename(e.id)
    })
+   let ranonce = false
    for (let i = 0; i < allelementsh.length; i++) {
       if (!allelementsh[i].getAttribute('inkscape:label').toUpperCase().includes(product.toUpperCase())) {
          allelementsh[i].classList.toggle('highlightgroup')
@@ -369,12 +369,93 @@ function showonlysubproduct(groupname, product) {
       }
       if (allelementsh[i].getAttribute('inkscape:label').toUpperCase().includes(product.toUpperCase())) {
          pan(allelementsh[i])
+         if (ranonce == false){
+            drawpathtoproduct(allelementsh[i])
+            ranonce = true
+         }
          showname(allelementsh[i].id)
 
       }
    }
 }
+
+function drawpathtoproduct(product){
+   const ns = "http://www.w3.org/2000/svg";
+   let container = document.querySelector('svg')
+   let location1 = document.querySelector('.location')
+   let location = location1.getBBox()
+   let destination = product.getBBox()
+   
+
+   let svg1 = document.querySelector(`#${product.id}`)
+   let svg = svg1.closest('g[id]')
+   let sbb = svg.getBBox()
+   console.log(location)
+   var xforms = svg.getAttribute('transform');
+   if (xforms == null){
+      var firstX = 0,firstY = 0;
+   }
+   else{
+      var parts  = /translate\(\s*([^\s,)]+)[ ,]([^\s,)]+)/.exec(xforms);
+      var firstX = parts[1],
+       firstY = parts[2];
+   }
+
+   console.log(firstX,firstY)
+   let x1 = location.x + location.width /2
+   let y1 = location.y + location.height /2
+   x1 = x1 - (firstX)
+   y1 = y1 - (firstY)
+
+   let x2 = destination.x + destination.width/2
+   let y2 = destination.y + destination.height /2
+
+   let svgPath = document.createElementNS(ns, "path");
+   svgPath.setAttribute(
+     "d",
+     `M ${x1},${y1} L ${x2},${y2}`
+   );
+   svgPath.setAttribute("stroke", "black");
+   svgPath.setAttribute("stroke-width", "2");
+   svgPath.setAttribute("fill", "none");
+   svgPath.classList.add('pathtoproduct')
+   console.log(svgPath)
+
+   // append to container div
+   svg.append(svgPath);
+   //container.insertBefore(svg, container);
+
+   let svgPath2 = document.createElementNS(ns, "path");
+   svgPath2.setAttribute(
+     "d",
+     `M ${x1},${y1} L ${x2},${y2}`
+   );
+   svgPath2.setAttribute("stroke", "black");
+   svgPath2.setAttribute("stroke-width", "2");
+   svgPath2.setAttribute("fill", "none");
+   svgPath2.classList.add('dashed')
+   console.log(svgPath2)
+
+   // append to container div
+   svg.append(svgPath2);
+
+}
+
+function removepathstoproduct(){
+   let paths = document.querySelectorAll('.pathtoproduct')
+   paths.forEach(e=>{
+      e.remove()
+   })
+   let paths2 = document.querySelectorAll('.dashed')
+   paths2.forEach(e=>{
+      e.remove()
+   })
+}
+
+
+
 function showsearchproduct(location) {
+   removepathstoproduct()
    let allelementsh = document.querySelectorAll('[id*="rect"]:not(.textbacking)')
    allelementsh.forEach((e) => {
       e.classList.add('highlightgroup')
@@ -389,6 +470,7 @@ function showsearchproduct(location) {
          if (title.innerHTML == location) {
             pan(allelementsh[i])
             showname(allelementsh[i].id)
+
          }
       }
       catch (e) {
@@ -462,6 +544,7 @@ function drawSVGelmt(o, tag, parent) {
 function myFunction() {
    removewarning()
    clearselected()
+   removepathstoproduct()
    var input, filter, ul, li, a, i, txtValue;
    input = document.getElementById('myInput');
    filter = input.value.toUpperCase().trim();
