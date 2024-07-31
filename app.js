@@ -390,6 +390,7 @@ function drawpathtoproduct(product){
    let svg1 = document.querySelector(`#${product.id}`)
    let svg = svg1.closest('g[id]')
    let sbb = svg.getBBox()
+   console.log(svg)
    console.log(location)
    var xforms = svg.getAttribute('transform');
    if (xforms == null){
@@ -400,7 +401,6 @@ function drawpathtoproduct(product){
       var firstX = parts[1],
        firstY = parts[2];
    }
-
    console.log(firstX,firstY)
    let x1 = location.x + location.width /2
    let y1 = location.y + location.height /2
@@ -409,6 +409,22 @@ function drawpathtoproduct(product){
 
    let x2 = destination.x + destination.width/2
    let y2 = destination.y + destination.height /2
+
+   if(product.tagName.toLowerCase() == 'path'){
+      console.log(product)
+      x1 = location.x + location.width /2
+      y1 = location.y + location.height /2
+   
+      x2 = destination.x + destination.width/2
+      y2 = destination.y+ destination.height/2
+
+      x2 = x2 - ((destination.x + destination.width) - (sbb.width + sbb.x))
+      y2 = y2 - ((destination.y + destination.height) - (sbb.height + sbb.y))
+
+   }
+
+
+
 
    let svgPath = document.createElementNS(ns, "path");
    svgPath.setAttribute(
@@ -422,7 +438,14 @@ function drawpathtoproduct(product){
    console.log(svgPath)
 
    // append to container div
-   svg.append(svgPath);
+   if(product.tagName.toLowerCase() == 'path'){
+   let base = document.querySelector('svg')
+   base.append(svgPath)
+   }
+   else{
+      svg.append(svgPath);
+   }
+
    //container.insertBefore(svg, container);
 
    let svgPath2 = document.createElementNS(ns, "path");
@@ -437,8 +460,13 @@ function drawpathtoproduct(product){
    console.log(svgPath2)
 
    // append to container div
-   svg.append(svgPath2);
-
+   if(product.tagName.toLowerCase() == 'path'){
+      let base = document.querySelector('svg')
+      base.append(svgPath2)
+      }
+      else{
+         svg.append(svgPath2);
+      }
 }
 
 function removepathstoproduct(){
