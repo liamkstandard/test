@@ -1,10 +1,17 @@
+
 body {
     font-family: "Roboto", sans-serif !important;
     opacity: 0;
     transition: opacity 1.2s;
 
 }
+@media (min-width: 650px) {
 
+    :root {
+        --change: 280px;
+        --hidemenutranslate: 86% !important;
+      }
+}
 
 @media (min-width: 580px) {
     body {
@@ -20,9 +27,9 @@ body {
     ul.productlist {
         display: flex !important;
         padding: 20px !important;
-        margin-right: 15%;
-        margin-left: 15%;
-        width: 70% !important;
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 80% !important;
         border-radius: 8px;
         flex-direction: column;
         align-items: stretch;
@@ -43,10 +50,40 @@ body {
         margin-bottom: 0px !important;
     }
 
+    .warningbox {
+        transition: 0.2s;
+        background: #2d2d2d;
+        border-radius: 20px;
+        padding: 10px;
+        position: absolute;
+        left: 40%;
+        text-align: center;
+        top: 55%;
+        align-content: center;
+        animation: warningappear 2s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+    }
+    .NV{
+        height: 500px !important;
+    }
+
 }
 
 
 @media screen {
+
+    .warningbox {
+        transition: 0.2s;
+        background: #2d2d2d;
+        border-radius: 20px;
+        position: absolute;
+        padding: 10px;
+        left: 40%;
+        text-align: center;
+        top: 55%;
+        align-content: center;
+        animation: warningappear 2s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
+    }
+    
 
     ul.productlist {
         margin-top: 0%;
@@ -107,6 +144,18 @@ body {
         max-height: 120px;
 
     }
+}
+
+
+li.subheading {
+    margin: 0px !important;
+    border-radius: 0px;
+    width: 100%;
+    display: block;
+    background: none !important;
+    text-align: center;
+    font-weight: bold;
+    /* box-shadow: 0 3px 3px rgba(0, 0, 0, 0.123); */
 }
 
 .handle{
@@ -362,6 +411,12 @@ ul.searchlist {
 
 }
 
+
+p.warningtext {
+    color: white;
+    font-weight: 300;
+}
+
 .highight {
     background: #2a94ff;
     color: white;
@@ -382,7 +437,8 @@ ul.categories {
 ul.categories li {
     display: inline-block;
     text-align: center;
-    background: lightgrey;
+    background: none;
+    border: #161616 1.6px solid;
 }
 
 ul.productlist {
@@ -567,7 +623,7 @@ svg{
 }
 
 ul {
-    margin-bottom: 10%;
+    margin-bottom: 13%;
 }
 
 .handlediv{
@@ -576,6 +632,7 @@ ul {
 }
 
 .productdropdown>ul {
+    transition: 0.2s;
     margin-top: 0px;
     padding: 1px;
 }
@@ -609,6 +666,10 @@ div[class="productdropdown"]>ul>li {
     font-weight: 300;
 }
 
+.NV{
+    height: 410px;
+}
+
 .slide-top {
     -webkit-animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
     animation: fade-in 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both, slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both !important;
@@ -619,33 +680,64 @@ div[class="productdropdown"]>ul>li {
     animation: hidemenu 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both ;
 }
 
+.hideul{
+    height: 0px;
+    animation: hideul 0.6s ease-in-out ;
+
+}
+
+:root {
+    --change: 280px;
+    --hidemenutranslate: 73%;
+  }
+
+@keyframes hideul{
+    0% {
+        max-height:min-content;
+        height: var(--change);
+    }
+    100% {
+        height: 0px;
+    }
+
+}
+
 @keyframes hidemenu{
     0% {
+
         -webkit-transform:  translateY(0%);
         transform: translateY(0%) ;
     }
     100% {
-        -webkit-transform: translateY(85%);
-        transform: translateY(85%);
+        -webkit-transform: translateY(var(--hidemenutranslate));
+        transform: translateY(var(--hidemenutranslate));
     }
 }
 
-
+@keyframes warningappear {
+    0%{
+        scale: 0;
+        opacity: 0%;
+    }
+    100%{
+        scale: 1;
+        opacity: 100%;
+    }
+}
 
 @keyframes subproductappear{
     0% {
-        -webkit-transform: translateY(+150px);
-        transform: translateY(+150px);
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
     }
-
     80% {
-        -webkit-transform:  translateY(-3px);
-        transform: translateY(-3px) ;
+        -webkit-transform: translateY(-1%);
+        transform: translateY(-1%);
     }
     100% {
-        -webkit-transform:  translateY(0px);
-        transform: translateY(0px) ;
-    }
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+}
 }
 
 
@@ -661,6 +753,56 @@ div[class="productdropdown"]>ul>li {
     }
 }
 
+.dashed{
+    fill:none; 
+    stroke:white;
+    stroke-width:5;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 10;
+    animation: dash2 20s linear forwards infinite, fadein-path 1s ease-in-out;
+  }
+
+.pathtoproduct {
+    fill:none;
+    stroke-width:4;
+    stroke:#000000;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: dash 3s linear ;
+}
+
+@keyframes fadein-path {
+    from {
+      opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+  }
+  
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash2 {
+    from {
+      stroke-dashoffset: 1000;
+    }
+    to {
+        stroke-dashoffset: 0;
+      }
+  }
+
+
 @keyframes slide-top {
     0% {
         -webkit-transform: translateY(+100px);
@@ -674,7 +816,7 @@ div[class="productdropdown"]>ul>li {
 }
 
 .location {
-    fill: rgb(0, 0, 0) !important;
+    fill: rgb(255 0 0) !important;
     -webkit-animation: location cubic-bezier(0.4, 0.01, 0.64, 0.99) 4s infinite;
     animation: location cubic-bezier(0.4, 0.01, 0.64, 0.99) 4s infinite;
 }
