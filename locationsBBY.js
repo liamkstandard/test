@@ -4175,27 +4175,22 @@ let searchdata = [
         "productshortcode": "25142R"
     },
     {
-        "location": "7548",
+        "location": "7568",
         "product": "Drywall Regular 4'X10'X1/2",
         "productshortcode": "100060"
     },
     {
-        "location": "7548",
-        "product": "Drywall Regular 4'X8'X1/2",
-        "productshortcode": "100090"
-    },
-    {
-        "location": "7548",
+        "location": "7568",
         "product": "Drywall Firestop Type X 4'X8'X",
         "productshortcode": "100140"
     },
     {
-        "location": "7548",
+        "location": "7568",
         "product": "Drywall Firestop Type X 4'X10'",
         "productshortcode": "100160"
     },
     {
-        "location": "7548",
+        "location": "7568",
         "product": "Cement Board 3'X5'X1/2 DUROCK",
         "productshortcode": "134820"
     },
@@ -4395,27 +4390,27 @@ let searchdata = [
         "productshortcode": "12BB55"
     },
     {
-        "location": "7549",
+        "location": "7568",
         "product": "Cement Board 3'X5'X1/2 DUROCK",
         "productshortcode": "134820"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Ultralight 1x3 - 11/16x2-1/2x1",
         "productshortcode": "13UL"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Ultralight 1x4 - 11/16x3-1/2x1",
         "productshortcode": "14UL"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 1X10'",
         "productshortcode": "1RR10"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "1 Ultra Lite Medite 4x8",
         "productshortcode": "1UL"
     },
@@ -4435,12 +4430,12 @@ let searchdata = [
         "productshortcode": "21341P"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "3/16 Acrylic 4x8 Clear EX F2 O",
         "productshortcode": "21360102"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "1/4 Acrylic 4x8 Clear EX F2 Op",
         "productshortcode": "21361102"
     },
@@ -4535,82 +4530,82 @@ let searchdata = [
         "productshortcode": "38BEAD"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Track Pocket 120 (Kt40-120)",
         "productshortcode": "606700"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Track Pocket 144 (Kt40-144)",
         "productshortcode": "606701"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Track Pocket 96 (Kt40-96)",
         "productshortcode": "606702"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 1/4X10'",
         "productshortcode": "615640"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 5/16X10'",
         "productshortcode": "615650"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 3/8X10' Z",
         "productshortcode": "615660"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 1/2X10'",
         "productshortcode": "615670"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 5/8X10'",
         "productshortcode": "615680"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 3/4X10' A",
         "productshortcode": "615690"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Plated Zinc 7/8X10'",
         "productshortcode": "615695"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Galvanized 1/2X10'",
         "productshortcode": "615700"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Galvanized 5/8X10'",
         "productshortcode": "615701"
     },
     {
-        "location": "7549",
+        "location": "7566",
         "product": "Redi Rod Galvanized 3/4X10'",
         "productshortcode": "615702"
     },
     {
-        "location": "7549",
+        "location": "7568",
         "product": "Hardi Backer Board 3'X5'X1/2",
         "productshortcode": "651121"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Track Barn Door 10' (41-4580)",
         "productshortcode": "BDT10"
     },
     {
-        "location": "7549",
+        "location": "9999",
         "product": "Track Barn Door 8' (41-4540)",
         "productshortcode": "BDT8"
     },
@@ -6066,18 +6061,8 @@ let searchdata = [
     },
     {
         "location": "7568",
-        "product": "Drywall Regular 4'X10'X1/2",
-        "productshortcode": "100060"
-    },
-    {
-        "location": "7568",
         "product": "Drywall Regular 4'X8'X1/2",
         "productshortcode": "100090"
-    },
-    {
-        "location": "7568",
-        "product": "Drywall Firestop Type X 4'X8'X",
-        "productshortcode": "100140"
     },
     {
         "location": "7568",
@@ -6085,42 +6070,42 @@ let searchdata = [
         "productshortcode": "256020"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079359"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079366"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079380"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079403"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079410"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079427"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Door Prehung Hollow Core Hard",
         "productshortcode": "777123079441"
     },
     {
-        "location": "7568",
+        "location": "9999",
         "product": "Denshield 4'X8'1/2 (R/Value .4",
         "productshortcode": "DENS12"
     },
